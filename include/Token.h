@@ -10,6 +10,15 @@
 #include <variant>
 #include "Position.h"
 
+/**
+ * @brief TokenType is an enum class for storing the type of a token.
+ * It contains all the types of tokens that can be found in the language.
+ *
+ * @note This class is part of a larger system for parsing and interpreting a programming language.
+ *
+ * @see Lexer, Parser, AstVisitor, Tree.h
+ */
+
 enum class TokenType
 {
     // TOKENS

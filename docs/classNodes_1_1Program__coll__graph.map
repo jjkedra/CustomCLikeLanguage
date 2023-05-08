@@ -1,7 +1,7 @@
 <map id="Nodes::Program" name="Nodes::Program">
 <area shape="rect" id="node1" title=" " alt="" coords="331,572,461,693"/>
 <area shape="rect" id="node2" href="$classNode.html" title=" " alt="" coords="171,403,291,509"/>
-<area shape="rect" id="node3" href="$classPosition.html" title=" " alt="" coords="107,160,237,340"/>
+<area shape="rect" id="node3" href="$classPosition.html" title="Position is a class for storing the position of a character in a file. It contains functions for retu..." alt="" coords="107,160,237,340"/>
 <area shape="rect" id="node4" title=" " alt="" coords="5,5,88,83"/>
 <area shape="rect" id="node5" title=" " alt="" coords="127,5,217,83"/>
 <area shape="rect" id="node6" title=" " alt="" coords="249,5,287,83"/>

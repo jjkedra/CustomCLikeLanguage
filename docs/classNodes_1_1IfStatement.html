@@ -24,7 +24,7 @@
    <div id="projectname">Custom language with dictionary support
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Language written in C++ with dictionary support made for the course of Compilers at the University of Technology</div>
+   <div id="projectbrief">Language written in C++ with dictionary support made for the course of Compilers at the Warsaw University of Technology</div>
   </td>
  </tr>
  </tbody>
@@ -95,7 +95,7 @@ Collaboration diagram for Nodes::IfStatement:</div>
 <area shape="rect" title=" " alt="" coords="325,728,478,879"/>
 <area shape="rect" href="classNodes_1_1Statement.html" title=" " alt="" coords="161,559,300,651"/>
 <area shape="rect" href="classNode.html" title=" " alt="" coords="171,403,291,509"/>
-<area shape="rect" href="classPosition.html" title=" " alt="" coords="107,160,237,340"/>
+<area shape="rect" href="classPosition.html" title="Position is a class for storing the position of a character in a file. It contains functions for retu..." alt="" coords="107,160,237,340"/>
 <area shape="rect" title=" " alt="" coords="5,5,88,83"/>
 <area shape="rect" title=" " alt="" coords="127,5,217,83"/>
 <area shape="rect" title=" " alt="" coords="249,5,287,83"/>
@@ -147,7 +147,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00318">318</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00329">329</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a55d3bb444f2b21e37ebd2de0a786cce2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a55d3bb444f2b21e37ebd2de0a786cce2">&#9670;&nbsp;</a></span>IfStatement()</h2>
@@ -195,14 +195,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00324">324</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                                                                             : <a class="code" href="classNodes_1_1Statement.html#ae31dba4ae3a304bdbfb1ad6ee2b75f9e">Statement</a>() {</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            <a class="code" href="classNode.html#af4ce41258acdedd4c4678f182ae46e93">position_</a> = pos;</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            <a class="code" href="classNode.html#ad9c07781117c5862d49c5488acc1dedc">nodeName_</a> = <span class="stringliteral">&quot;If statement&quot;</span>;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            this-&gt;<a class="code" href="classNodes_1_1IfStatement.html#a411233b8cf2619dbaaaaea1a727c91a9">condition_</a> = std::move(con);</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            this-&gt;<a class="code" href="classNodes_1_1IfStatement.html#a54a5e4bdc2fb559f089ecd440c456f93">ifBlock_</a> = std::move(ib);</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            this-&gt;<a class="code" href="classNodes_1_1IfStatement.html#aa86967bd35c266d654497a1618c573e7">elseBlock_</a> = std::move(eb);</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        }</div>
+<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00335">335</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                                                                             : <a class="code" href="classNodes_1_1Statement.html#ae31dba4ae3a304bdbfb1ad6ee2b75f9e">Statement</a>() {</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;            <a class="code" href="classNode.html#af4ce41258acdedd4c4678f182ae46e93">position_</a> = pos;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;            <a class="code" href="classNode.html#ad9c07781117c5862d49c5488acc1dedc">nodeName_</a> = <span class="stringliteral">&quot;If statement&quot;</span>;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;            this-&gt;<a class="code" href="classNodes_1_1IfStatement.html#a411233b8cf2619dbaaaaea1a727c91a9">condition_</a> = std::move(con);</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;            this-&gt;<a class="code" href="classNodes_1_1IfStatement.html#a54a5e4bdc2fb559f089ecd440c456f93">ifBlock_</a> = std::move(ib);</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;            this-&gt;<a class="code" href="classNodes_1_1IfStatement.html#aa86967bd35c266d654497a1618c573e7">elseBlock_</a> = std::move(eb);</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -368,8 +368,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00335">335</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="classNodes_1_1IfStatement.html#aa86967bd35c266d654497a1618c573e7">elseBlock_</a> != <span class="keyword">nullptr</span>; }</div>
+<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00346">346</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="classNodes_1_1IfStatement.html#aa86967bd35c266d654497a1618c573e7">elseBlock_</a> != <span class="keyword">nullptr</span>; }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -403,7 +403,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00320">320</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00331">331</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
 
 </div>
 </div>
@@ -427,7 +427,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00322">322</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00333">333</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
 
 </div>
 </div>
@@ -451,7 +451,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00321">321</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00332">332</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
 
 </div>
 </div>
@@ -460,13 +460,13 @@ Here is the caller graph for this function:</div>
 <li>src/<a class="el" href="Tree_8cpp_source.html">Tree.cpp</a></li>
 </ul>
 </div><!-- contents -->
-<div class="ttc" id="aclassNodes_1_1IfStatement_html_aa86967bd35c266d654497a1618c573e7"><div class="ttname"><a href="classNodes_1_1IfStatement.html#aa86967bd35c266d654497a1618c573e7">Nodes::IfStatement::elseBlock_</a></div><div class="ttdeci">std::unique_ptr&lt; StatementBlock &gt; elseBlock_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00322">Tree.h:322</a></div></div>
-<div class="ttc" id="aclassNode_html_ad9c07781117c5862d49c5488acc1dedc"><div class="ttname"><a href="classNode.html#ad9c07781117c5862d49c5488acc1dedc">Node::nodeName_</a></div><div class="ttdeci">std::string nodeName_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00085">Tree.h:85</a></div></div>
-<div class="ttc" id="aclassNode_html_af4ce41258acdedd4c4678f182ae46e93"><div class="ttname"><a href="classNode.html#af4ce41258acdedd4c4678f182ae46e93">Node::position_</a></div><div class="ttdeci">Position position_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00084">Tree.h:84</a></div></div>
-<div class="ttc" id="aclassNodes_1_1Statement_html_ae31dba4ae3a304bdbfb1ad6ee2b75f9e"><div class="ttname"><a href="classNodes_1_1Statement.html#ae31dba4ae3a304bdbfb1ad6ee2b75f9e">Nodes::Statement::Statement</a></div><div class="ttdeci">Statement()</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00258">Tree.h:258</a></div></div>
-<div class="ttc" id="aclassNodes_1_1IfStatement_html_a411233b8cf2619dbaaaaea1a727c91a9"><div class="ttname"><a href="classNodes_1_1IfStatement.html#a411233b8cf2619dbaaaaea1a727c91a9">Nodes::IfStatement::condition_</a></div><div class="ttdeci">std::unique_ptr&lt; Expression &gt; condition_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00320">Tree.h:320</a></div></div>
+<div class="ttc" id="aclassNodes_1_1IfStatement_html_aa86967bd35c266d654497a1618c573e7"><div class="ttname"><a href="classNodes_1_1IfStatement.html#aa86967bd35c266d654497a1618c573e7">Nodes::IfStatement::elseBlock_</a></div><div class="ttdeci">std::unique_ptr&lt; StatementBlock &gt; elseBlock_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00333">Tree.h:333</a></div></div>
+<div class="ttc" id="aclassNode_html_ad9c07781117c5862d49c5488acc1dedc"><div class="ttname"><a href="classNode.html#ad9c07781117c5862d49c5488acc1dedc">Node::nodeName_</a></div><div class="ttdeci">std::string nodeName_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00096">Tree.h:96</a></div></div>
+<div class="ttc" id="aclassNode_html_af4ce41258acdedd4c4678f182ae46e93"><div class="ttname"><a href="classNode.html#af4ce41258acdedd4c4678f182ae46e93">Node::position_</a></div><div class="ttdeci">Position position_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00095">Tree.h:95</a></div></div>
+<div class="ttc" id="aclassNodes_1_1Statement_html_ae31dba4ae3a304bdbfb1ad6ee2b75f9e"><div class="ttname"><a href="classNodes_1_1Statement.html#ae31dba4ae3a304bdbfb1ad6ee2b75f9e">Nodes::Statement::Statement</a></div><div class="ttdeci">Statement()</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00269">Tree.h:269</a></div></div>
+<div class="ttc" id="aclassNodes_1_1IfStatement_html_a411233b8cf2619dbaaaaea1a727c91a9"><div class="ttname"><a href="classNodes_1_1IfStatement.html#a411233b8cf2619dbaaaaea1a727c91a9">Nodes::IfStatement::condition_</a></div><div class="ttdeci">std::unique_ptr&lt; Expression &gt; condition_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00331">Tree.h:331</a></div></div>
 <div class="ttc" id="aclassAstVisitor_html_ab7254159710c18a403acc498b4bf6752"><div class="ttname"><a href="classAstVisitor.html#ab7254159710c18a403acc498b4bf6752">AstVisitor::visitIfStatement</a></div><div class="ttdeci">virtual void visitIfStatement(Nodes::IfStatement *)=0</div></div>
-<div class="ttc" id="aclassNodes_1_1IfStatement_html_a54a5e4bdc2fb559f089ecd440c456f93"><div class="ttname"><a href="classNodes_1_1IfStatement.html#a54a5e4bdc2fb559f089ecd440c456f93">Nodes::IfStatement::ifBlock_</a></div><div class="ttdeci">std::unique_ptr&lt; StatementBlock &gt; ifBlock_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00321">Tree.h:321</a></div></div>
+<div class="ttc" id="aclassNodes_1_1IfStatement_html_a54a5e4bdc2fb559f089ecd440c456f93"><div class="ttname"><a href="classNodes_1_1IfStatement.html#a54a5e4bdc2fb559f089ecd440c456f93">Nodes::IfStatement::ifBlock_</a></div><div class="ttdeci">std::unique_ptr&lt; StatementBlock &gt; ifBlock_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00332">Tree.h:332</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

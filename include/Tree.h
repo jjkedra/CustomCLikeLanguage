@@ -9,7 +9,16 @@
 #include <map>
 #include "Position.h"
 
-class AstVisitor;
+/**
+ * @brief Node is a class for storing the position of a character in a file.
+ * It contains functions for returning the line and column of the character.
+ *
+ * @note This class is part of a larger system for parsing and interpreting a programming language.
+ *
+ * @see Lexer, Parser, AstVisitor, Tree.h
+ */
+
+
 
 typedef enum idType
 {
@@ -73,6 +82,8 @@ typedef enum NodeType
     FUNCDECL,
     PROGRAM
 } NodeType;
+
+class AstVisitor;
 
 class Node {
 public:
@@ -191,14 +202,14 @@ namespace Nodes {
 
     class Number : public Factor
     {
-        std::variant<int, float> value_;
+        std::variant<int, float, std::string> value_;
     public:
-        Number(std::variant<int, float> v, Position pos) : Factor() {
+        Number(std::variant<int, float, std::string> v, Position pos) : Factor() {
             position_ = pos;
             nodeName_ = "Number";
             this->value_ = v;
         }
-        std::variant<int, float> getValue() const;
+        std::variant<int, float, std::string> getValue() const;
         idType getType() const;
         virtual void accept(AstVisitor &v);
     };

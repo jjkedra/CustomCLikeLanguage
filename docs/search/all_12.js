@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['value_5f_224',['value_',['../classNodes_1_1Number.html#a0abcd6455ae115aaae345f0fc4eda18d',1,'Nodes::Number']]],
+  ['value_5f_224',['value_',['../classNodes_1_1Number.html#acfbadbc0cd43758ea49bede87ac4892e',1,'Nodes::Number']]],
   ['valuecontainer_225',['valueContainer',['../classToken.html#a93933b972e7e6059810955bad14e2f63',1,'Token']]],
   ['variablereference_226',['VariableReference',['../classNodes_1_1VariableReference.html',1,'Nodes::VariableReference'],['../classNodes_1_1VariableReference.html#ae695af7fb76e7df22bac3abc210404df',1,'Nodes::VariableReference::VariableReference()']]],
   ['variables_5f_227',['variables_',['../classParser.html#a5f42db47d3fa5ae6235a4a5dcd5703a0',1,'Parser::variables_()'],['../classNodes_1_1Program.html#a16592b53b1e8e7b4afd2a10247a19b64',1,'Nodes::Program::variables_()']]],

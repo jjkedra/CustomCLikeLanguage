@@ -1,9 +1,7 @@
 PROJECT_NAME = "Custom language with dictionary support"
 PROJECT_NUMBER = 1.0
-PROJECT_BRIEF = "Language written in C++ with dictionary support made for the course of Compilers at the University of Technology"
+PROJECT_BRIEF = "Language written in C++ with dictionary support made for the course of Compilers at the Warsaw University of Technology"
 OUTPUT_LANGUAGE = English
-USE_MDFILE_AS_MAINPAGE = README.md
-
 
 EXTRACT_ALL            = YES
 EXTRACT_PRIVATE        = YES
@@ -27,8 +25,6 @@ DOT_MULTI_TARGETS      = YES
 GENERATE_LATEX         = NO
 HTML_OUTPUT = ./docs/
 CREATE_SUBDIRS = NO
-
-
 
 # Specify the input directories for Doxygen
 INPUT = include \

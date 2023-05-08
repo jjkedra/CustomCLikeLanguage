@@ -13,6 +13,19 @@
 #include "Token.h"
 #include "Position.h"
 
+/**
+ * @brief Lexer is a class for lexical analysis of a programming language.
+ * It contains functions for reading the source code and returning tokens.
+ * The tokens are used by the parser to build an abstract syntax tree.
+ * The lexer also contains functions for skipping whitespace and comments.
+ * The lexer is implemented as a finite state machine.
+ * The states are represented by the functions in the class.
+ *
+ * @note This class is part of a larger system for parsing and interpreting a programming language.
+ *
+ * @see Token, Position, Parser, AstVisitor, Tree.h
+ */
+
 class Lexer
 {
 public:

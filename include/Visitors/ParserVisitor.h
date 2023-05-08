@@ -7,6 +7,15 @@
 
 #include "AstVisitor.h"
 
+/**
+ * @brief ParserVisitor is a concrete class for visiting the nodes in an abstract syntax tree.
+ * This code declares a C++ class called parserVisitor that inherits from the abstract base class AstVisitor.
+ * The class is used for visiting nodes of an Abstract Syntax Tree (AST) representing a programming language.
+ * The parserVisitor class has private member variables parsed and ident of type std::vector<std::string> and int, respectively.
+ * The parsed vector is used to store the parsed results during the AST traversal process,
+ * while ident is used to keep track of the current indentation level.
+ */
+
 class parserVisitor: public AstVisitor
 {
 private:

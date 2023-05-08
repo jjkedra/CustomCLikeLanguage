@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.25)
 project(lexer)
-set(CMAKE_CXX_STANDARD 17 "-Wall -Wextra -Wconversion")
+set(CMAKE_CXX_STANDARD 17 "-Wall -Wextra -Wconversion -std=c++17")
 add_definitions(-Werror)
 
 # Find Google Test
@@ -36,12 +36,12 @@ add_library(Lexer
 target_include_directories(Lexer PUBLIC include)
 
 # Below for Linux
-# target_link_libraries(main Lexer gtest_main gtest)
-# target_link_libraries(google_test Lexer gtest_main gtest)
+#target_link_libraries(main Lexer gtest_main gtest)
+#target_link_libraries(google_test Lexer gtest_main gtest)
 
 # Below for MacOS X
-target_link_libraries(main Lexer)
-target_link_libraries(google_test Lexer)
+ target_link_libraries(main Lexer)
+ target_link_libraries(google_test Lexer)
 
 # Link against Google Test
 target_link_libraries(main ${GTEST_LIBRARIES} pthread)

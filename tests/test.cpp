@@ -1,16 +1,19 @@
 //
 // Created by Jan Kędra on 16/04/2023.
 //
+
 #include <gtest/gtest.h>
+#include <gmock/gmock.h>
 #include <variant>
 #include <limits.h>
+#include <string>
 #include "../include/Token.h"
 #include "../include/Lexer.h"
 #include "Parser.h"
 #include "Visitors/ParserVisitor.h"
 
 typedef TokenType tt;
-typedef std::variant<int, float, std::string> tv;
+using tv = std::variant<int, float, std::string>;
 
 TEST(GeneralSuite, TestGTest) {
     EXPECT_EQ(2 + 2, 4);
@@ -94,7 +97,7 @@ TEST(LexerSuite, simpleCommentContent) {
         tokens.push_back(t.getValue());
     } while (t.getType() != tt::EoF);
 
-    EXPECT_EQ(std::get<std::string>(tokens.at(0)), "I'm a helpful comment!");
+    EXPECT_EQ(static_cast<std::string>(std::get<std::string>(tokens.at(0))), "I'm a helpful comment!");
 }
 
 TEST(LexerSuite, simpleSunnyInt) {
@@ -504,41 +507,41 @@ TEST(ParserSuite, simpleSunny) {
     program->accept(tester);
     auto parsed = tester.getParsed();
 
-    EXPECT_EQ(parsed, expected);
+    ASSERT_THAT(parsed, expected);
 }
 
 TEST(ParserSuite, complexSunny) {
     std::string code(
-                    "int main(int a, int b)"
-                    "{"
-                        "print(70);"
-                        "if(wartosc1<wartosc2)"
-                        "{"
-                            "call();"
-                        "}"
-                        "else"
-                        "{"
-                            "call2();"
-                            "call2();"
-                            "call2();"
-                            "call2();"
-                        "}"
-                    "}"
+            "int main(int a, int b)"
+            "{"
+                "print(70);"
+                "if(foo<bar)"
+                "{"
+                    "call();"
+                "}"
+                "else"
+                "{"
+                    "call2();"
+                    "call2();"
+                    "call2();"
+                    "call2();"
+                "}"
+            "}"
 
-                    "int zmienna=4+4+4;"
-                    "int zmienna2;"
+            "int baz=4+4+4;"
+            "int qux;"
 
-                    "int funkcja()"
-                    "{"
-                        "int main;"
-                        "int main2;"
-                        "main();"
-                        "main();\n"
-                        "return 3;"
-                    "}"
+            "int fun()"
+            "{"
+                "int main;"
+                "int main2;"
+                "main();"
+                "main();"
+                "return 3;"
+            "}"
     );
 
-    std::vector<std::string> expected = {"variable:zmienna",
+    std::vector<std::string> expected = {"variable:baz",
                                          "type:INT",
                                          "default:",
                                          "arithmeticExpr:",
@@ -574,9 +577,9 @@ TEST(ParserSuite, complexSunny) {
                                          "right factor:",
                                          "operator:",
                                          "right term:",
-                                         "variable:zmienna2",
+                                         "variable:qux",
                                          "type:INT",
-                                         "function:funkcja",
+                                         "function:fun",
                                          "type:INT",
                                          "Body:",
                                          "stmtBlock",
@@ -621,7 +624,7 @@ TEST(ParserSuite, complexSunny) {
                                          "left term:",
                                          "term:",
                                          "left factor:",
-                                         "variableReference:wartosc1",
+                                         "variableReference:foo",
                                          "operator:",
                                          "right factor:",
                                          "operator:",
@@ -632,7 +635,7 @@ TEST(ParserSuite, complexSunny) {
                                          "left term:",
                                          "term:",
                                          "left factor:",
-                                         "variableReference:wartosc2",
+                                         "variableReference:bar",
                                          "operator:",
                                          "right factor:",
                                          "operator:",

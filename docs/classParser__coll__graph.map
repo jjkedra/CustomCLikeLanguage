@@ -1,8 +1,8 @@
 <map id="Parser" name="Parser">
-<area shape="rect" id="node1" title=" " alt="" coords="659,947,906,1405"/>
+<area shape="rect" id="node1" title="Parser is a class for parsing a sequence of tokens into an abstract syntax tree. It contains function..." alt="" coords="659,947,906,1405"/>
 <area shape="rect" id="node2" href="$classToken.html" title=" " alt="" coords="179,403,299,568"/>
-<area shape="rect" id="node10" href="$classLexer.html" title=" " alt="" coords="523,631,731,884"/>
-<area shape="rect" id="node3" href="$classPosition.html" title=" " alt="" coords="316,160,447,340"/>
+<area shape="rect" id="node10" href="$classLexer.html" title="Lexer is a class for lexical analysis of a programming language. It contains functions for reading th..." alt="" coords="523,631,731,884"/>
+<area shape="rect" id="node3" href="$classPosition.html" title="Position is a class for storing the position of a character in a file. It contains functions for retu..." alt="" coords="316,160,447,340"/>
 <area shape="rect" id="node4" title=" " alt="" coords="903,5,985,83"/>
 <area shape="rect" id="node5" title=" " alt="" coords="288,5,379,83"/>
 <area shape="rect" id="node6" title=" " alt="" coords="410,5,449,83"/>

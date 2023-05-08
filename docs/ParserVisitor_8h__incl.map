@@ -1,9 +1,12 @@
 <map id="include/Visitors/ParserVisitor.h" name="include/Visitors/ParserVisitor.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,224,32"/>
-<area shape="rect" id="node2" href="$AstVisitor_8h.html" title=" " alt="" coords="67,80,163,107"/>
-<area shape="rect" id="node3" href="$Tree_8h.html" title=" " alt="" coords="84,155,145,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="55,304,115,331"/>
-<area shape="rect" id="node5" title=" " alt="" coords="89,229,140,256"/>
-<area shape="rect" id="node6" href="$Position_8h.html" title=" " alt="" coords="165,229,251,256"/>
-<area shape="rect" id="node7" title=" " alt="" coords="172,304,244,331"/>
+<area shape="rect" id="node1" title=" " alt="" coords="57,5,276,32"/>
+<area shape="rect" id="node2" href="$AstVisitor_8h.html" title=" " alt="" coords="119,80,215,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,304,83,331"/>
+<area shape="rect" id="node4" title=" " alt="" coords="107,304,175,331"/>
+<area shape="rect" id="node5" title=" " alt="" coords="199,304,262,331"/>
+<area shape="rect" id="node6" href="$Tree_8h.html" title=" " alt="" coords="283,155,344,181"/>
+<area shape="rect" id="node7" title=" " alt="" coords="383,304,443,331"/>
+<area shape="rect" id="node8" title=" " alt="" coords="392,229,443,256"/>
+<area shape="rect" id="node9" href="$Position_8h.html" title=" " alt="" coords="230,229,317,256"/>
+<area shape="rect" id="node10" title=" " alt="" coords="287,304,359,331"/>
 </map>

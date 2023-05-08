@@ -24,7 +24,7 @@
    <div id="projectname">Custom language with dictionary support
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Language written in C++ with dictionary support made for the course of Compilers at the University of Technology</div>
+   <div id="projectbrief">Language written in C++ with dictionary support made for the course of Compilers at the Warsaw University of Technology</div>
   </td>
  </tr>
  </tbody>
@@ -95,7 +95,7 @@ Collaboration diagram for Nodes::LocalVariableDeclaration:</div>
 <area shape="rect" title=" " alt="" coords="337,727,570,877"/>
 <area shape="rect" href="classNodes_1_1Statement.html" title=" " alt="" coords="213,572,352,664"/>
 <area shape="rect" href="classNode.html" title=" " alt="" coords="217,403,337,509"/>
-<area shape="rect" href="classPosition.html" title=" " alt="" coords="107,160,237,340"/>
+<area shape="rect" href="classPosition.html" title="Position is a class for storing the position of a character in a file. It contains functions for retu..." alt="" coords="107,160,237,340"/>
 <area shape="rect" title=" " alt="" coords="5,5,88,83"/>
 <area shape="rect" title=" " alt="" coords="127,5,217,83"/>
 <area shape="rect" title=" " alt="" coords="249,5,287,83"/>
@@ -147,7 +147,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00264">264</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00275">275</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2a58bc25b16fc955f89e2ba46ac55aed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2a58bc25b16fc955f89e2ba46ac55aed">&#9670;&nbsp;</a></span>LocalVariableDeclaration()</h2>
@@ -195,15 +195,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00271">271</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                                                                                   : <a class="code" href="classNodes_1_1Statement.html#ae31dba4ae3a304bdbfb1ad6ee2b75f9e">Statement</a>()</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        {</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            <a class="code" href="classNode.html#af4ce41258acdedd4c4678f182ae46e93">position_</a> = pos;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            <a class="code" href="classNode.html#ad9c07781117c5862d49c5488acc1dedc">nodeName_</a> = <span class="stringliteral">&quot;Local variable declaration&quot;</span>;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            this-&gt;<a class="code" href="classNodes_1_1LocalVariableDeclaration.html#a10e926869fc08f411827fc878f128ed6">type_</a> = t;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            this-&gt;<a class="code" href="classNodes_1_1LocalVariableDeclaration.html#a900e9080f10f6a40aab04a58f20d6996">identifier_</a> = std::move(<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            this-&gt;<a class="code" href="classNodes_1_1LocalVariableDeclaration.html#ad7f5235b08e932e5f44ad9f549aa0b00">defaultValue_</a> = std::move(dv);</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        }</div>
+<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00282">282</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                                                                                   : <a class="code" href="classNodes_1_1Statement.html#ae31dba4ae3a304bdbfb1ad6ee2b75f9e">Statement</a>()</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        {</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            <a class="code" href="classNode.html#af4ce41258acdedd4c4678f182ae46e93">position_</a> = pos;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            <a class="code" href="classNode.html#ad9c07781117c5862d49c5488acc1dedc">nodeName_</a> = <span class="stringliteral">&quot;Local variable declaration&quot;</span>;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            this-&gt;<a class="code" href="classNodes_1_1LocalVariableDeclaration.html#a10e926869fc08f411827fc878f128ed6">type_</a> = t;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            this-&gt;<a class="code" href="classNodes_1_1LocalVariableDeclaration.html#a900e9080f10f6a40aab04a58f20d6996">identifier_</a> = std::move(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            this-&gt;<a class="code" href="classNodes_1_1LocalVariableDeclaration.html#ad7f5235b08e932e5f44ad9f549aa0b00">defaultValue_</a> = std::move(dv);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -358,8 +358,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00283">283</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="classNodes_1_1LocalVariableDeclaration.html#ad7f5235b08e932e5f44ad9f549aa0b00">defaultValue_</a> != <span class="keyword">nullptr</span>; }</div>
+<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00294">294</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="classNodes_1_1LocalVariableDeclaration.html#ad7f5235b08e932e5f44ad9f549aa0b00">defaultValue_</a> != <span class="keyword">nullptr</span>; }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -393,7 +393,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00268">268</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00279">279</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
 
 </div>
 </div>
@@ -417,7 +417,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00267">267</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00278">278</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
 
 </div>
 </div>
@@ -441,7 +441,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00266">266</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00277">277</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
 
 </div>
 </div>
@@ -450,13 +450,13 @@ Here is the caller graph for this function:</div>
 <li>src/<a class="el" href="Tree_8cpp_source.html">Tree.cpp</a></li>
 </ul>
 </div><!-- contents -->
-<div class="ttc" id="aclassNodes_1_1LocalVariableDeclaration_html_ad7f5235b08e932e5f44ad9f549aa0b00"><div class="ttname"><a href="classNodes_1_1LocalVariableDeclaration.html#ad7f5235b08e932e5f44ad9f549aa0b00">Nodes::LocalVariableDeclaration::defaultValue_</a></div><div class="ttdeci">std::unique_ptr&lt; ArithmeticExpression &gt; defaultValue_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00268">Tree.h:268</a></div></div>
-<div class="ttc" id="aclassNode_html_ad9c07781117c5862d49c5488acc1dedc"><div class="ttname"><a href="classNode.html#ad9c07781117c5862d49c5488acc1dedc">Node::nodeName_</a></div><div class="ttdeci">std::string nodeName_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00085">Tree.h:85</a></div></div>
-<div class="ttc" id="aclassNode_html_af4ce41258acdedd4c4678f182ae46e93"><div class="ttname"><a href="classNode.html#af4ce41258acdedd4c4678f182ae46e93">Node::position_</a></div><div class="ttdeci">Position position_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00084">Tree.h:84</a></div></div>
-<div class="ttc" id="aclassNodes_1_1Statement_html_ae31dba4ae3a304bdbfb1ad6ee2b75f9e"><div class="ttname"><a href="classNodes_1_1Statement.html#ae31dba4ae3a304bdbfb1ad6ee2b75f9e">Nodes::Statement::Statement</a></div><div class="ttdeci">Statement()</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00258">Tree.h:258</a></div></div>
+<div class="ttc" id="aclassNodes_1_1LocalVariableDeclaration_html_ad7f5235b08e932e5f44ad9f549aa0b00"><div class="ttname"><a href="classNodes_1_1LocalVariableDeclaration.html#ad7f5235b08e932e5f44ad9f549aa0b00">Nodes::LocalVariableDeclaration::defaultValue_</a></div><div class="ttdeci">std::unique_ptr&lt; ArithmeticExpression &gt; defaultValue_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00279">Tree.h:279</a></div></div>
+<div class="ttc" id="aclassNode_html_ad9c07781117c5862d49c5488acc1dedc"><div class="ttname"><a href="classNode.html#ad9c07781117c5862d49c5488acc1dedc">Node::nodeName_</a></div><div class="ttdeci">std::string nodeName_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00096">Tree.h:96</a></div></div>
+<div class="ttc" id="aclassNode_html_af4ce41258acdedd4c4678f182ae46e93"><div class="ttname"><a href="classNode.html#af4ce41258acdedd4c4678f182ae46e93">Node::position_</a></div><div class="ttdeci">Position position_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00095">Tree.h:95</a></div></div>
+<div class="ttc" id="aclassNodes_1_1Statement_html_ae31dba4ae3a304bdbfb1ad6ee2b75f9e"><div class="ttname"><a href="classNodes_1_1Statement.html#ae31dba4ae3a304bdbfb1ad6ee2b75f9e">Nodes::Statement::Statement</a></div><div class="ttdeci">Statement()</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00269">Tree.h:269</a></div></div>
 <div class="ttc" id="aclassAstVisitor_html_a3c9ef1b3fbef755b6f81055771aa0d1b"><div class="ttname"><a href="classAstVisitor.html#a3c9ef1b3fbef755b6f81055771aa0d1b">AstVisitor::visitLocalVariableDeclaration</a></div><div class="ttdeci">virtual void visitLocalVariableDeclaration(Nodes::LocalVariableDeclaration *)=0</div></div>
-<div class="ttc" id="aclassNodes_1_1LocalVariableDeclaration_html_a10e926869fc08f411827fc878f128ed6"><div class="ttname"><a href="classNodes_1_1LocalVariableDeclaration.html#a10e926869fc08f411827fc878f128ed6">Nodes::LocalVariableDeclaration::type_</a></div><div class="ttdeci">idType type_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00266">Tree.h:266</a></div></div>
-<div class="ttc" id="aclassNodes_1_1LocalVariableDeclaration_html_a900e9080f10f6a40aab04a58f20d6996"><div class="ttname"><a href="classNodes_1_1LocalVariableDeclaration.html#a900e9080f10f6a40aab04a58f20d6996">Nodes::LocalVariableDeclaration::identifier_</a></div><div class="ttdeci">std::string identifier_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00267">Tree.h:267</a></div></div>
+<div class="ttc" id="aclassNodes_1_1LocalVariableDeclaration_html_a10e926869fc08f411827fc878f128ed6"><div class="ttname"><a href="classNodes_1_1LocalVariableDeclaration.html#a10e926869fc08f411827fc878f128ed6">Nodes::LocalVariableDeclaration::type_</a></div><div class="ttdeci">idType type_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00277">Tree.h:277</a></div></div>
+<div class="ttc" id="aclassNodes_1_1LocalVariableDeclaration_html_a900e9080f10f6a40aab04a58f20d6996"><div class="ttname"><a href="classNodes_1_1LocalVariableDeclaration.html#a900e9080f10f6a40aab04a58f20d6996">Nodes::LocalVariableDeclaration::identifier_</a></div><div class="ttdeci">std::string identifier_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00278">Tree.h:278</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

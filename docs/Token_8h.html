@@ -24,7 +24,7 @@
    <div id="projectname">Custom language with dictionary support
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">Language written in C++ with dictionary support made for the course of Compilers at the University of Technology</div>
+   <div id="projectbrief">Language written in C++ with dictionary support made for the course of Compilers at the Warsaw University of Technology</div>
   </td>
  </tr>
  </tbody>
@@ -83,12 +83,14 @@ Include dependency graph for Token.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="Token_8h__incl.png" border="0" usemap="#include_2Token_8h" alt=""/></div>
 <map name="include_2Token_8h" id="include_2Token_8h">
-<area shape="rect" title=" " alt="" coords="27,5,149,32"/>
-<area shape="rect" title=" " alt="" coords="27,155,99,181"/>
-<area shape="rect" title=" " alt="" coords="21,80,72,107"/>
-<area shape="rect" title=" " alt="" coords="97,80,165,107"/>
-<area shape="rect" href="Position_8h.html" title=" " alt="" coords="189,80,275,107"/>
-<area shape="rect" title=" " alt="" coords="202,155,262,181"/>
+<area shape="rect" title=" " alt="" coords="115,5,237,32"/>
+<area shape="rect" title=" " alt="" coords="5,155,77,181"/>
+<area shape="rect" title=" " alt="" coords="285,80,336,107"/>
+<area shape="rect" title=" " alt="" coords="102,155,170,181"/>
+<area shape="rect" href="Position_8h.html" title=" " alt="" coords="174,80,261,107"/>
+<area shape="rect" title=" " alt="" coords="194,155,254,181"/>
+<area shape="rect" title=" " alt="" coords="279,155,356,181"/>
+<area shape="rect" title=" " alt="" coords="381,155,443,181"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -164,6 +166,7 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921aff6620b605642fc8a70795b0ff429afc">TokenType::EoF</a>
 <br />
  }</td></tr>
+<tr class="memdesc:aa520fbf142ba1e7e659590c07da31921"><td class="mdescLeft">&#160;</td><td class="mdescRight">TokenType is an enum class for storing the type of a token. It contains all the types of tokens that can be found in the language.  <a href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921">More...</a><br /></td></tr>
 <tr class="separator:aa520fbf142ba1e7e659590c07da31921"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
@@ -186,6 +189,10 @@ Enumerations</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>TokenType is an enum class for storing the type of a token. It contains all the types of tokens that can be found in the language. </p>
+<dl class="section note"><dt>Note</dt><dd>This class is part of a larger system for parsing and interpreting a programming language.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classLexer.html" title="Lexer is a class for lexical analysis of a programming language. It contains functions for reading th...">Lexer</a>, <a class="el" href="classParser.html" title="Parser is a class for parsing a sequence of tokens into an abstract syntax tree. It contains function...">Parser</a>, <a class="el" href="classAstVisitor.html" title="AstVisitor is an abstract base class for visiting the nodes in an abstract syntax tree....">AstVisitor</a>, <a class="el" href="Tree_8h.html">Tree.h</a> </dd></dl>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aa520fbf142ba1e7e659590c07da31921a29ee5d1ebcc033234938a5234f1f2075"></a>Identifier&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="aa520fbf142ba1e7e659590c07da31921a173d98a36604159361a1a5dde5b7f869"></a>IntegerToken&#160;</td><td class="fielddoc"></td></tr>
@@ -226,65 +233,65 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="aa520fbf142ba1e7e659590c07da31921aff6620b605642fc8a70795b0ff429afc"></a>EoF&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="Token_8h_source.html#l00013">13</a> of file <a class="el" href="Token_8h_source.html">Token.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment">// TOKENS</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a29ee5d1ebcc033234938a5234f1f2075">Identifier</a>,          <span class="comment">// identifier</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a173d98a36604159361a1a5dde5b7f869">IntegerToken</a>,</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a68530a4f0e4516cc1b932f4b64a4c5ef">FloatToken</a>,</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921ae86c1edcfacb9e11f21711b6b3ada31d">StringToken</a>,</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">// Dictionary</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a222c7b281494ea29f12c604c056769eb">DictToken</a>,</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a0be8406951cdfda82f00f79328cf4efc">Comment</a>,</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">// ACCESS</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a185b7133db22230701a857c059360cc2">Assign</a>,             <span class="comment">// =</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">// COMPARISON</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921af5f286e73bda105e538310b3190f75c5">Equal</a>,              <span class="comment">// ==</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a19bb0af2c3c530538cb41aff7f235b96">NotEqual</a>,           <span class="comment">// !=</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">// LINQ</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a04a7da3c5b04cad85da1eebb92315b8b">Lambda</a>,             <span class="comment">// =&gt;</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a8768a6821cd735aea4f5b0df88c1fc6a">Greater</a>,            <span class="comment">// &gt;</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a758b05d899def79c9eb864ad4f96be1f">GreaterEqual</a>,       <span class="comment">// &gt;=</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a1cfdf0e8d0c87a228c1f40d9bee7888b">Less</a>,               <span class="comment">// &lt;</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921ad3e6fdac55bb7b0edd7834c968ba1f38">LessEqual</a>,          <span class="comment">// &lt;=</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">// MATHEMATICAL</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a32ba78fe43257d3e7f88e3935a8ea0d4">Plus</a>,               <span class="comment">// +</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a453fb623e752c5993f65bc410fd74fe5">Minus</a>,              <span class="comment">// -</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921ae257376d913f3b53cbb4a9b19d770648">Multiply</a>,           <span class="comment">// *</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a0b914e196182d02615487e9793ecff3d">Divide</a>,             <span class="comment">// /</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a7aeb0277500c86e4aa6bd23f9a737942">Mod</a>,                <span class="comment">// %</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">// SYMBOLS</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921ae0e1286eb00c2fac6e215cc691c6b8e9">OpenParenthesis</a>,    <span class="comment">// (</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921ae95b4237d22a2a02eda480257ebf2da1">ClosingParenthesis</a>, <span class="comment">// )</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a8ee1f3d3bba931acdcbde13ad0ae8b9e">OpenBracket</a>,        <span class="comment">// {</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a47e948bf2b82aca0d2ebd21eac9e6fb0">ClosingBracket</a>,     <span class="comment">// }</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a9806fa37a3ecd39bf637c203aa011ed0">Semicolon</a>,          <span class="comment">// ;</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a58be47db9455679e6a44df2eff9c9fa6">Comma</a>,              <span class="comment">// ,</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921aaf6c6cf7a454b4ef4a850ac4d960a2cc">Dot</a>,                <span class="comment">// .</span></div>
+<p class="definition">Definition at line <a class="el" href="Token_8h_source.html#l00022">22</a> of file <a class="el" href="Token_8h_source.html">Token.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">// TOKENS</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a29ee5d1ebcc033234938a5234f1f2075">Identifier</a>,          <span class="comment">// identifier</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a173d98a36604159361a1a5dde5b7f869">IntegerToken</a>,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a68530a4f0e4516cc1b932f4b64a4c5ef">FloatToken</a>,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921ae86c1edcfacb9e11f21711b6b3ada31d">StringToken</a>,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">// Dictionary</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a222c7b281494ea29f12c604c056769eb">DictToken</a>,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a0be8406951cdfda82f00f79328cf4efc">Comment</a>,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">// ACCESS</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a185b7133db22230701a857c059360cc2">Assign</a>,             <span class="comment">// =</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">// COMPARISON</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921af5f286e73bda105e538310b3190f75c5">Equal</a>,              <span class="comment">// ==</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a19bb0af2c3c530538cb41aff7f235b96">NotEqual</a>,           <span class="comment">// !=</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">// LINQ</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a04a7da3c5b04cad85da1eebb92315b8b">Lambda</a>,             <span class="comment">// =&gt;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a8768a6821cd735aea4f5b0df88c1fc6a">Greater</a>,            <span class="comment">// &gt;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a758b05d899def79c9eb864ad4f96be1f">GreaterEqual</a>,       <span class="comment">// &gt;=</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a1cfdf0e8d0c87a228c1f40d9bee7888b">Less</a>,               <span class="comment">// &lt;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921ad3e6fdac55bb7b0edd7834c968ba1f38">LessEqual</a>,          <span class="comment">// &lt;=</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">// MATHEMATICAL</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a32ba78fe43257d3e7f88e3935a8ea0d4">Plus</a>,               <span class="comment">// +</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a453fb623e752c5993f65bc410fd74fe5">Minus</a>,              <span class="comment">// -</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921ae257376d913f3b53cbb4a9b19d770648">Multiply</a>,           <span class="comment">// *</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a0b914e196182d02615487e9793ecff3d">Divide</a>,             <span class="comment">// /</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a7aeb0277500c86e4aa6bd23f9a737942">Mod</a>,                <span class="comment">// %</span></div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a786887572f6ef1c20f2d8177cb2f1639">If</a>,                 <span class="comment">// if</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a6a0053231db40a4539b8f783a719a54a">Else</a>,               <span class="comment">// else</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a3cddbb8f43a4e074e2c2ce3e8622f43e">While</a>,              <span class="comment">// while</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a988fd738de9c6d177440c5dcf69e73ce">Return</a>,             <span class="comment">// return</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">// LINQ</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921ae0626222614bdee31951d84c64e5e9ff">Select</a>,</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921ab3c5b21d2cb47cc950fd4667edaf404c">Where</a>,</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a8dff7ea01ba4127c44f656022b46dba9">IntegerLiteral</a>,     <span class="comment">// 0-9</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921ac87d365562b52bede2325a8b460f9214">FloatLiteral</a>,       <span class="comment">// 1.23 9.99</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a7029cff17180550e1214f19dba74a32a">StringLiteral</a>,</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a88183b946cc5f0e8c96b2e66e1c74a7e">Unknown</a>,</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921aff6620b605642fc8a70795b0ff429afc">EoF</a></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">// SYMBOLS</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921ae0e1286eb00c2fac6e215cc691c6b8e9">OpenParenthesis</a>,    <span class="comment">// (</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921ae95b4237d22a2a02eda480257ebf2da1">ClosingParenthesis</a>, <span class="comment">// )</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a8ee1f3d3bba931acdcbde13ad0ae8b9e">OpenBracket</a>,        <span class="comment">// {</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a47e948bf2b82aca0d2ebd21eac9e6fb0">ClosingBracket</a>,     <span class="comment">// }</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a9806fa37a3ecd39bf637c203aa011ed0">Semicolon</a>,          <span class="comment">// ;</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a58be47db9455679e6a44df2eff9c9fa6">Comma</a>,              <span class="comment">// ,</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921aaf6c6cf7a454b4ef4a850ac4d960a2cc">Dot</a>,                <span class="comment">// .</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a786887572f6ef1c20f2d8177cb2f1639">If</a>,                 <span class="comment">// if</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a6a0053231db40a4539b8f783a719a54a">Else</a>,               <span class="comment">// else</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a3cddbb8f43a4e074e2c2ce3e8622f43e">While</a>,              <span class="comment">// while</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a988fd738de9c6d177440c5dcf69e73ce">Return</a>,             <span class="comment">// return</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">// LINQ</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921ae0626222614bdee31951d84c64e5e9ff">Select</a>,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921ab3c5b21d2cb47cc950fd4667edaf404c">Where</a>,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a8dff7ea01ba4127c44f656022b46dba9">IntegerLiteral</a>,     <span class="comment">// 0-9</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921ac87d365562b52bede2325a8b460f9214">FloatLiteral</a>,       <span class="comment">// 1.23 9.99</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a7029cff17180550e1214f19dba74a32a">StringLiteral</a>,</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921a88183b946cc5f0e8c96b2e66e1c74a7e">Unknown</a>,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="Token_8h.html#aa520fbf142ba1e7e659590c07da31921aff6620b605642fc8a70795b0ff429afc">EoF</a></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;};</div>
 </div><!-- fragment -->
 </div>
 </div>

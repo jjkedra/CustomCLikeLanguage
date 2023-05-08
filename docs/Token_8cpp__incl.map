@@ -1,9 +1,11 @@
 <map id="src/Token.cpp" name="src/Token.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="33,5,143,32"/>
-<area shape="rect" id="node2" href="$Token_8h.html" title=" " alt="" coords="21,80,155,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="27,229,99,256"/>
-<area shape="rect" id="node4" title=" " alt="" coords="21,155,72,181"/>
-<area shape="rect" id="node5" title=" " alt="" coords="97,155,165,181"/>
-<area shape="rect" id="node6" href="$Position_8h.html" title=" " alt="" coords="189,155,275,181"/>
-<area shape="rect" id="node7" title=" " alt="" coords="202,229,262,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="121,5,231,32"/>
+<area shape="rect" id="node2" href="$Token_8h.html" title=" " alt="" coords="109,80,243,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,229,77,256"/>
+<area shape="rect" id="node4" title=" " alt="" coords="285,155,336,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="102,229,170,256"/>
+<area shape="rect" id="node6" href="$Position_8h.html" title=" " alt="" coords="174,155,261,181"/>
+<area shape="rect" id="node7" title=" " alt="" coords="194,229,254,256"/>
+<area shape="rect" id="node8" title=" " alt="" coords="279,229,356,256"/>
+<area shape="rect" id="node9" title=" " alt="" coords="381,229,443,256"/>
 </map>

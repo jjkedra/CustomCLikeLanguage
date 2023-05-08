@@ -1,4 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classAstVisitor.html" title=" " alt="" coords="5,5,91,32"/>
-<area shape="rect" id="node2" href="$classparserVisitor.html" title=" " alt="" coords="139,5,244,32"/>
+<area shape="rect" id="node1" href="$classAstVisitor.html" title="AstVisitor is an abstract base class for visiting the nodes in an abstract syntax tree...." alt="" coords="5,5,91,32"/>
+<area shape="rect" id="node2" href="$classparserVisitor.html" title="ParserVisitor is a concrete class for visiting the nodes in an abstract syntax tree...." alt="" coords="139,5,244,32"/>
 </map>

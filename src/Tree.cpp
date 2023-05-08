@@ -132,12 +132,14 @@ std::string Nodes::FunctionCallStatement::getIdentifier() const {
 idType Nodes::Number::getType() const {
     if (value_.index() == 0) {
         return idType::INT;
-    } else {
+    } else if (value_.index() == 1){
         return idType::FLOAT;
+    } else {
+        return idType::STRING;
     }
 }
 
-std::variant<int, float> Nodes::Number::getValue() const {
+std::variant<int, float, std::string> Nodes::Number::getValue() const {
     return value_;
 }
 

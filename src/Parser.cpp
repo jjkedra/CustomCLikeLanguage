@@ -477,6 +477,9 @@ std::unique_ptr<Nodes::LocalVariableDeclaration> Parser::parseLocalVariableDecla
         if (currToken_.getType() == TokenType::IntegerToken) {
             type = idType::INT;
         }
+        if (currToken_.getType() == TokenType::StringToken) {
+            type = idType::STRING;
+        }
         getNextToken();
         if (currToken_.getType() != TokenType::Identifier) {
             throw LangException("Invalid local variable declaration", currToken_.getPosition());

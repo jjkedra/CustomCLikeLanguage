@@ -9,6 +9,16 @@
 #include <stdexcept>
 #include "Position.h"
 
+/**
+ * @brief LangException is a class for throwing exceptions in the interpreter.
+ * It contains functions for returning the error message and the position of the error.
+ * The error message is used by the interpreter to print the error message.
+ *
+ * @note This class is part of a larger system for parsing and interpreting a programming language.
+ *
+ * @see Lexer, Parser, AstVisitor, Tree.h
+ */
+
 class LangException : public std::runtime_error
 {
 public:

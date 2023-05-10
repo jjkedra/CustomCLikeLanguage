@@ -3,7 +3,9 @@
 //
 
 #include "../../include/Visitors/ParserVisitor.h"
+#include "../../util/utils.h"
 #include <sstream>
+#include <string>
 
 void parserVisitor::visitProgram(Nodes::Program* program) {
     for(auto iter= program->getVariables().begin(); iter != program->getVariables().end(); iter++) {
@@ -11,24 +13,34 @@ void parserVisitor::visitProgram(Nodes::Program* program) {
         iter->second->accept(*this);
     }
 
-    for(auto it = program->getFunctions().begin(); it != program->getFunctions().end(); it++) {
-        parsed.push_back("function:" + it->first);
-        it->second->accept(*this);
+    for(auto iter = program->getFunctions().begin(); iter != program->getFunctions().end(); iter++) {
+        parsed.push_back("function:" + iter->first);
+        iter->second->accept(*this);
     }
+}
+
+void parserVisitor::visitString(Nodes::String *string) {
+    parsed.push_back("string:");
+    std::string line;
+    std::vector<char> strToBuild;
+    for (std::size_t i = 0; i < string->getValue().size(); i++) {
+        strToBuild.push_back(string->getValue()[i]);
+    }
+    parsed.push_back(buildString(strToBuild));
 }
 
 void parserVisitor::visitNumber(Nodes::Number *number) {
     std::stringstream stream;
     parsed.push_back("number:");
     if(number->getType()==idType::INT) {
-    parsed.push_back("int:");
-    stream<<std::get<int>(number->getValue());
-    } else {
+        parsed.push_back("int:");
+        stream << std::get<int>(number->getValue());
+    } else if (number->getType()==idType::FLOAT) {
         parsed.push_back("float:");
-        stream<<std::get<float>(number->getValue());
+        stream << std::get<float>(number->getValue());
     }
     std::string str;
-    stream>>str;
+    stream >> str;
     parsed.push_back(str);
 }
 
@@ -150,3 +162,4 @@ void parserVisitor::visitTermOperator(Nodes::TermOperator *termOp) {
 void parserVisitor::visitFactorOperator(Nodes::FactorOperator *factorOp) {
     return;
 }
+

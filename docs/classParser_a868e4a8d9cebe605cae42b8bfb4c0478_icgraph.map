@@ -1,23 +1,25 @@
 <map id="Parser::parseNumber" name="Parser::parseNumber">
-<area shape="rect" id="node1" title=" " alt="" coords="2565,245,2724,272"/>
-<area shape="rect" id="node2" href="$classParser.html#a1e0ed9404e146c4eb588779e586df685" title=" " alt="" coords="2372,245,2517,272"/>
-<area shape="rect" id="node3" href="$classParser.html#ab49900e75f8c595b7610e1a0e4752f7e" title=" " alt="" coords="2185,245,2324,272"/>
-<area shape="rect" id="node4" href="$classParser.html#a18f61742981feaf20c0310893ccad1ae" title=" " alt="" coords="1963,195,2137,221"/>
-<area shape="rect" id="node5" href="$classParser.html#a83542b86af84613d1fda2a788b6ff11c" title=" " alt="" coords="1715,169,1897,196"/>
-<area shape="rect" id="node6" href="$classParser.html#a7df622d1013fec5d9383367c44695fc0" title=" " alt="" coords="904,287,1081,313"/>
-<area shape="rect" id="node15" href="$classParser.html#a18d065d78dd84415101ecc8a6b215f60" title=" " alt="" coords="1703,271,1909,297"/>
-<area shape="rect" id="node17" href="$classParser.html#a9648698c9e7a9cf256a6911ddb89076e" title=" " alt="" coords="1417,220,1649,247"/>
-<area shape="rect" id="node18" href="$classParser.html#ac41afed60683411a77a53aa39e1c1745" title=" " alt="" coords="1437,69,1630,110"/>
-<area shape="rect" id="node20" href="$classParser.html#a4a375a6b62c58c22b01f46fe43715f4d" title=" " alt="" coords="1159,17,1369,44"/>
-<area shape="rect" id="node21" href="$classParser.html#a828386fb00c79c44c5becd4b3d0838f1" title=" " alt="" coords="1697,119,1915,145"/>
-<area shape="rect" id="node7" href="$classParser.html#a6a541b62c182773d305fcf209dd036f3" title=" " alt="" coords="630,236,813,263"/>
-<area shape="rect" id="node14" href="$classParser.html#aac9f1ee9c539ff15bab28eb84075f11d" title=" " alt="" coords="616,185,827,212"/>
-<area shape="rect" id="node8" href="$classParser.html#af2262d10e07743e20e2535a192f3e3a9" title=" " alt="" coords="1177,169,1351,196"/>
-<area shape="rect" id="node9" href="$classParser.html#a018d29a524709171bd65a02931f96904" title=" " alt="" coords="887,185,1098,212"/>
-<area shape="rect" id="node10" href="$classParser.html#a41c7b5a832c773695100645b8053557f" title=" " alt="" coords="626,76,817,103"/>
-<area shape="rect" id="node11" href="$classParser.html#a52f5775aa38806798b35ce1973ddf252" title=" " alt="" coords="317,47,568,73"/>
-<area shape="rect" id="node12" href="$classParser.html#a01758139cd6f58adb60a6fba6c4ed2b9" title=" " alt="" coords="108,47,269,73"/>
-<area shape="rect" id="node13" href="$test_8cpp.html#aa822343f423ab48492d38e7d6890fd19" title=" " alt="" coords="5,47,60,73"/>
-<area shape="rect" id="node16" href="$classParser.html#a9d0d780aa1547b46b7929b9121fff989" title=" " alt="" coords="1440,373,1627,414"/>
-<area shape="rect" id="node19" href="$classParser.html#a09f0fde56f18d9b0d295599521c5e400" title=" " alt="" coords="875,69,1111,110"/>
+<area shape="rect" id="node1" title=" " alt="" coords="3551,208,3709,235"/>
+<area shape="rect" id="node2" href="$classParser.html#a1e0ed9404e146c4eb588779e586df685" title=" " alt="" coords="3357,208,3503,235"/>
+<area shape="rect" id="node3" href="$classParser.html#ab49900e75f8c595b7610e1a0e4752f7e" title=" " alt="" coords="3171,208,3309,235"/>
+<area shape="rect" id="node4" href="$classParser.html#a18f61742981feaf20c0310893ccad1ae" title=" " alt="" coords="2948,157,3123,184"/>
+<area shape="rect" id="node5" href="$classParser.html#a7df622d1013fec5d9383367c44695fc0" title=" " alt="" coords="891,5,1069,32"/>
+<area shape="rect" id="node14" href="$classParser.html#a18d065d78dd84415101ecc8a6b215f60" title=" " alt="" coords="2693,208,2900,235"/>
+<area shape="rect" id="node19" href="$classParser.html#ac41afed60683411a77a53aa39e1c1745" title=" " alt="" coords="1426,167,1619,209"/>
+<area shape="rect" id="node21" href="$classParser.html#a4a375a6b62c58c22b01f46fe43715f4d" title=" " alt="" coords="1417,259,1628,285"/>
+<area shape="rect" id="node22" href="$classParser.html#a9648698c9e7a9cf256a6911ddb89076e" title=" " alt="" coords="2413,107,2645,133"/>
+<area shape="rect" id="node23" href="$classParser.html#a828386fb00c79c44c5becd4b3d0838f1" title=" " alt="" coords="2148,56,2365,83"/>
+<area shape="rect" id="node6" href="$classParser.html#a6a541b62c182773d305fcf209dd036f3" title=" " alt="" coords="630,56,813,83"/>
+<area shape="rect" id="node13" href="$classParser.html#aac9f1ee9c539ff15bab28eb84075f11d" title=" " alt="" coords="616,107,827,133"/>
+<area shape="rect" id="node7" href="$classParser.html#af2262d10e07743e20e2535a192f3e3a9" title=" " alt="" coords="1164,107,1339,133"/>
+<area shape="rect" id="node8" href="$classParser.html#a018d29a524709171bd65a02931f96904" title=" " alt="" coords="875,107,1085,133"/>
+<area shape="rect" id="node9" href="$classParser.html#a41c7b5a832c773695100645b8053557f" title=" " alt="" coords="626,208,817,235"/>
+<area shape="rect" id="node10" href="$classParser.html#a52f5775aa38806798b35ce1973ddf252" title=" " alt="" coords="317,233,568,260"/>
+<area shape="rect" id="node11" href="$classParser.html#a01758139cd6f58adb60a6fba6c4ed2b9" title=" " alt="" coords="108,233,269,260"/>
+<area shape="rect" id="node12" href="$test_8cpp.html#aa822343f423ab48492d38e7d6890fd19" title=" " alt="" coords="5,233,60,260"/>
+<area shape="rect" id="node15" href="$classParser.html#a9d0d780aa1547b46b7929b9121fff989" title=" " alt="" coords="2436,226,2623,267"/>
+<area shape="rect" id="node16" href="$classParser.html#a2ae5034ffeef27c87a5128e1e2970a84" title=" " alt="" coords="2165,233,2348,260"/>
+<area shape="rect" id="node17" href="$classParser.html#a53d753f677edd2bd0be9694b9dcb3b14" title=" " alt="" coords="1924,259,2100,285"/>
+<area shape="rect" id="node18" href="$classParser.html#a129a42f1924178390a3544f2d64286f9" title=" " alt="" coords="1676,233,1876,260"/>
+<area shape="rect" id="node20" href="$classParser.html#a09f0fde56f18d9b0d295599521c5e400" title=" " alt="" coords="1133,175,1369,217"/>
 </map>

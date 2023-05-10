@@ -20,8 +20,8 @@ class parserVisitor: public AstVisitor
 {
 private:
     std::vector<std::string> parsed;
-    int ident=0;
 
+    void visitString(Nodes::String*) override;
     void visitNumber(Nodes::Number*) override;
     void visitTerm(Nodes::Term*)  override;
     void visitArithmeticExpression(Nodes::ArithmeticExpression*)  override;

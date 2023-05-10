@@ -38,7 +38,12 @@ class Parser {
     bool parseRestDeclaration(idType, std::string);
 
     std::vector<std::unique_ptr<Nodes::LocalVariableDeclaration>> parseFunctionDeclarationArgList();
-    std::unique_ptr<Nodes::Declaration> parseDeclaration();
+
+    std::unique_ptr<Nodes::ArithmeticExpression> parseConcatenation();
+    std::unique_ptr<Nodes::Term> parseStringTerm();
+    std::unique_ptr<Nodes::Factor> parseStringFactor();
+    std::unique_ptr<Nodes::String> parseString();
+
     std::unique_ptr<Nodes::ArithmeticExpression> parseArithmetic();
     std::unique_ptr<Nodes::Term> parseTerm();
     std::unique_ptr<Nodes::TermOperator> parseTermOperator();

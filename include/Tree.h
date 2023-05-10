@@ -133,7 +133,7 @@ namespace Nodes {
     public:
         explicit TermOperator(termOperator top_, Position pos) : top_(top_) {
             position_ = pos;
-            nodeName_ = "Beetwen operators: " + termOperators[top_];
+            nodeName_ = "Between operators: " + termOperators[top_];
         }
         termOperator getType() { return top_; }
         virtual void accept(AstVisitor &v);
@@ -200,16 +200,30 @@ namespace Nodes {
         virtual void accept(AstVisitor &v);
     };
 
+    class String : public Factor
+    {
+        std::string value_;
+    public:
+        String(std::string s, Position pos) : Factor() {
+            position_ = pos;
+            nodeName_ = "String";
+            this->value_ = s;
+        }
+        std::string getValue() const;
+        idType getType() const;
+        virtual void accept(AstVisitor &v);
+    };
+
     class Number : public Factor
     {
-        std::variant<int, float, std::string> value_;
+        std::variant<int, float> value_;
     public:
-        Number(std::variant<int, float, std::string> v, Position pos) : Factor() {
+        Number(std::variant<int, float> v, Position pos) : Factor() {
             position_ = pos;
             nodeName_ = "Number";
             this->value_ = v;
         }
-        std::variant<int, float, std::string> getValue() const;
+        std::variant<int, float> getValue() const;
         idType getType() const;
         virtual void accept(AstVisitor &v);
     };
@@ -276,11 +290,11 @@ namespace Nodes {
     {
         idType type_;
         std::string identifier_;
-        std::unique_ptr<ArithmeticExpression> defaultValue_;
+        std::variant<std::unique_ptr<ArithmeticExpression>, std::unique_ptr<String>> defaultValue_;
 
     public:
         LocalVariableDeclaration(idType t, std::string id, Position pos,
-                                 std::unique_ptr<ArithmeticExpression> dv = nullptr) : Statement()
+                                 std::variant<std::unique_ptr<ArithmeticExpression>, std::unique_ptr<String>> dv) : Statement()
         {
             position_ = pos;
             nodeName_ = "Local variable declaration";
@@ -291,7 +305,7 @@ namespace Nodes {
 
         idType getType() const;
         std::string getIdentifier() const;
-        bool hasDefault() const { return defaultValue_ != nullptr; }
+        bool hasDefault() const;
         void acceptDefault(AstVisitor &v) const;
         virtual void accept(AstVisitor &v);
     };
@@ -359,11 +373,8 @@ namespace Nodes {
             this->condition_ = std::move(con);
             this->whileBlock_ = std::move(wh);
         }
-
         void acceptCondition(AstVisitor &v);
-
         void acceptWhileBlock(AstVisitor &v);
-
         virtual void accept(AstVisitor &v);
     };
 
@@ -376,9 +387,7 @@ namespace Nodes {
             nodeName_ = "Return statement";
             this->returnedExpression_ = std::move(re);
         }
-
         void acceptReturned(AstVisitor &v);
-
         virtual void accept(AstVisitor &v);
     };
 
@@ -406,10 +415,11 @@ namespace Nodes {
     {
         idType type_;
         std::string identifier_;
-        std::unique_ptr<ArithmeticExpression> defaultValue_;
+        std::variant<std::unique_ptr<ArithmeticExpression>, std::unique_ptr<String>> defaultValue_;
+
     public:
         explicit Declaration(idType t, std::string id, Position pos,
-                             std::unique_ptr<ArithmeticExpression> dv = nullptr) : Node() {
+                             std::variant<std::unique_ptr<ArithmeticExpression>, std::unique_ptr<String>> dv) : Node() {
             position_ = pos;
             nodeName_ = "Declaration";
             this->type_ = t;
@@ -418,13 +428,9 @@ namespace Nodes {
         }
 
         idType getType() const;
-
         std::string getIdentifier();
-
         void acceptDefault(AstVisitor &v) const;
-
-        bool hasDefault() const { return defaultValue_ != nullptr; }
-
+        bool hasDefault() const;
         virtual void accept(AstVisitor &v);
     };
 

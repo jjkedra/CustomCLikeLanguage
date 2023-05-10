@@ -16,27 +16,32 @@ void Parser::getNextToken() {
     }
     if (currToken_.getType() == TokenType::Unknown) {
         throw LangException("Unknown token", currToken_.getPosition());
-        return;
     }
 }
 
 void Parser::consumeToken(TokenType tt, const std::string &excMsg) {
     if (currToken_.getType() != tt) {
         throw LangException(excMsg, currToken_.getPosition());
-        return;
     }
     getNextToken();
 }
 
 bool Parser::parseFunctionOrDeclaration() {
-    if (!match(TokenType::IntegerToken) && !match(TokenType::FloatToken)) {
+    if (!match(TokenType::IntegerToken) && !match(TokenType::FloatToken) && !match(TokenType::StringToken)
+    && !match(TokenType::DictToken)) {
         return false;
     } else {
         idType type = INT;
         if (currToken_.getType() == TokenType::FloatToken) {
             type = FLOAT;
+        } else if (currToken_.getType() == TokenType::StringToken) {
+            type = STRING;
+        } else if (currToken_.getType() == TokenType::DictToken) {
+            type = DICT;
         }
+
         getNextToken();
+
         if (!match(TokenType::Identifier)) {
             throw LangException("No identifier after type", currToken_.getPosition());
         }
@@ -48,6 +53,7 @@ bool Parser::parseFunctionOrDeclaration() {
         }
 
         auto lookUpFun = function_.find(identifier);
+
         if (lookUpFun != function_.end()) {
             throw LangException("Function redefinition", currToken_.getPosition());
         }
@@ -92,6 +98,14 @@ bool Parser::parseRestDeclaration(idType type, std::string identifier) {
     std::unique_ptr<Nodes::ArithmeticExpression> defaultValue = nullptr;
     if (currToken_.getType() == TokenType::Assign) {
         getNextToken();
+        if (currToken_.getType() == TokenType::StringLiteral) {
+            defaultValue = std::move(parseConcatenation());
+            variables_.insert(std::make_pair(identifier,
+                                             std::make_unique<Nodes::Declaration>(type, identifier,
+                                                      currToken_.getPosition(),
+                                                      std::move(defaultValue))));
+            return true;
+        }
         defaultValue = std::move(parseArithmetic());
         if (!defaultValue) {
             throw LangException("No assignment after operator", currToken_.getPosition());
@@ -101,8 +115,8 @@ bool Parser::parseRestDeclaration(idType type, std::string identifier) {
 
     variables_.insert(std::make_pair(identifier,
                                      std::make_unique<Nodes::Declaration>(type, identifier,
-                                                                          currToken_.getPosition(),
-                                                                          std::move(defaultValue))));
+                                                  currToken_.getPosition(),
+                                                  std::move(defaultValue))));
     return true;
 }
 
@@ -126,38 +140,66 @@ std::vector<std::unique_ptr<Nodes::LocalVariableDeclaration>> Parser::parseFunct
         return args;
     }
 }
+std::unique_ptr<Nodes::String> Parser::parseString() {
+    if (currToken_.getType() == TokenType::StringLiteral) {
+        std::string value = std::get<std::string>(currToken_.getValue());
+        getNextToken();
+        return std::make_unique<Nodes::String>(value, currToken_.getPosition());
+    }
+    return nullptr;
+}
 
-//TODO: Add more types
-std::unique_ptr<Nodes::Declaration> Parser::parseDeclaration() {
-    if (!match(TokenType::IntegerToken) && !match(TokenType::FloatToken)) {
+std::unique_ptr<Nodes::Factor> Parser::parseStringFactor() {
+    if (currToken_.getType() == TokenType::OpenParenthesis) {
+        getNextToken();
+        std::unique_ptr<Nodes::ArithmeticExpression> concatenationExpression = std::move(parseConcatenation());
+
+        if (!concatenationExpression) {
+            throw LangException("Invalid arithmetic expression", currToken_.getPosition());
+        }
+        consumeToken(TokenType::ClosingParenthesis, "Missing closing parenthesis");
+        return concatenationExpression;
+    }
+    std::unique_ptr<Nodes::String> string = std::move(parseString());
+    if (string) {
+        return string;
+    }
+    return parseFunctionCallOrVariableRef();
+}
+
+std::unique_ptr<Nodes::Term> Parser::parseStringTerm() {
+    std::unique_ptr<Nodes::Factor> left = std::move(parseStringFactor());
+    if (!left) {
         return nullptr;
+    }
+    return std::make_unique<Nodes::Term>(std::move(left), nullptr, nullptr, currToken_.getPosition());
+
+}
+
+std::unique_ptr<Nodes::ArithmeticExpression> Parser::parseConcatenation() {
+    std::unique_ptr<Nodes::Term> left = parseStringTerm();
+    std::unique_ptr<Nodes::TermOperator> op = parseTermOperator();
+
+    if (left) {
+        if (!op) {
+            return std::make_unique<Nodes::ArithmeticExpression>(std::move(left), nullptr, nullptr, currToken_.getPosition());
+        }
     } else {
-        idType type = idType::FLOAT;
-        if (currToken_.getType() == TokenType::IntegerToken) {
-            type = idType::INT;
-        } else if (currToken_.getType() == TokenType::StringToken) {
-            type = idType::STRING;
-        }
-        getNextToken();
-
-        if (currToken_.getType() != TokenType::Identifier) {
-            throw LangException("No identifier after type", currToken_.getPosition());
-        }
-        std::string identifier = std::get<std::string>(currToken_.getValue());
-        getNextToken();
-
-        std::unique_ptr<Nodes::ArithmeticExpression> defaultValue = nullptr;
-
-        if (currToken_.getType() == TokenType::Assign) {
-            getNextToken();
-            defaultValue = std::move(parseArithmetic());
-            if (!defaultValue) {
-                throw LangException("No assignment after operator", currToken_.getPosition());
+        if (!op) {
+            return nullptr;
+        } else {
+            if (op) {
+                throw LangException("Cannot put plus term before string", currToken_.getPosition());
             }
         }
-        return std::make_unique<Nodes::Declaration>(type, identifier, currToken_.getPosition(),
-                                                    std::move(defaultValue));
     }
+
+    std::unique_ptr<Nodes::ArithmeticExpression> right = parseConcatenation();
+
+    if (!right) {
+        throw LangException("Expected value after operator", currToken_.getPosition());
+    }
+    return std::make_unique<Nodes::ArithmeticExpression>(std::move(left), std::move(op), std::move(right), currToken_.getPosition());
 }
 
 std::unique_ptr<Nodes::ArithmeticExpression> Parser::parseArithmetic() {
@@ -178,6 +220,7 @@ std::unique_ptr<Nodes::ArithmeticExpression> Parser::parseArithmetic() {
         }
     }
     std::unique_ptr<Nodes::ArithmeticExpression> right = parseArithmetic();
+
     if (!right) {
         throw LangException("Expected value after operator", currToken_.getPosition());
     }
@@ -216,8 +259,9 @@ std::unique_ptr<Nodes::Factor> Parser::parseFactor() {
     if (currToken_.getType() == TokenType::OpenParenthesis) {
         getNextToken();
         std::unique_ptr<Nodes::ArithmeticExpression> arithmeticExpression = std::move(parseArithmetic());
+
         if (!arithmeticExpression) {
-            throw LangException("Invalid factor", currToken_.getPosition());
+            throw LangException("Invalid arithmetic expression", currToken_.getPosition());
         }
         consumeToken(TokenType::ClosingParenthesis, "Missing closing parenthesis");
         return arithmeticExpression;
@@ -470,10 +514,13 @@ std::unique_ptr<Nodes::Statement> Parser::parseIdentifierStatement() {
 }
 
 std::unique_ptr<Nodes::LocalVariableDeclaration> Parser::parseLocalVariableDeclaration(std::set<std::string> & declaredIdentifers) {
-    if (!match(TokenType::IntegerToken) && !match(TokenType::FloatToken)) {
+    if (!match(TokenType::IntegerToken) && !match(TokenType::FloatToken) && !match(TokenType::StringToken) && !match(TokenType::DictToken)) {
         return nullptr;
     } else {
-        idType type = idType::FLOAT;
+        idType type;
+        if (currToken_.getType() == TokenType::FloatToken) {
+            type = idType::FLOAT;
+        }
         if (currToken_.getType() == TokenType::IntegerToken) {
             type = idType::INT;
         }
@@ -492,15 +539,18 @@ std::unique_ptr<Nodes::LocalVariableDeclaration> Parser::parseLocalVariableDecla
         std::unique_ptr<Nodes::ArithmeticExpression> defaultValue = nullptr;
         if (currToken_.getType() == TokenType::Assign) {
             getNextToken();
-            defaultValue = std::move(parseArithmetic());
-            if (!defaultValue) {
-                throw LangException("Invalid default value", currToken_.getPosition());
+            if (currToken_.getType() == TokenType::StringLiteral) {
+                defaultValue = std::move(parseConcatenation());
+            } else {
+                defaultValue = std::move(parseArithmetic());
+                if (!defaultValue) {
+                    throw LangException("Invalid default value", currToken_.getPosition());
+                }
             }
         }
         return std::make_unique<Nodes::LocalVariableDeclaration>(type, identifier,
                                                                  currToken_.getPosition(), std::move(defaultValue));
     }
-
 }
 
 std::unique_ptr<Nodes::Program> Parser::parseProgram() {

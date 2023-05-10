@@ -26,6 +26,7 @@
 
 class AstVisitor {
 public:
+    virtual void visitString(Nodes::String*) = 0;
     virtual void visitNumber(Nodes::Number*) = 0;
     virtual void visitTerm(Nodes::Term*) = 0;
     virtual void visitArithmeticExpression(Nodes::ArithmeticExpression*) = 0;

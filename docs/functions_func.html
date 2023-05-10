@@ -85,6 +85,7 @@ $(function() {
 , <a class="el" href="classNodes_1_1ReturnStatement.html#a278d5668384626fdf90085dbb3471a25">Nodes::ReturnStatement</a>
 , <a class="el" href="classNodes_1_1Statement.html#afcfdfe2add2ccd9f0360cef60111f27f">Nodes::Statement</a>
 , <a class="el" href="classNodes_1_1StatementBlock.html#aa349df489f8f52893a5c741ccfb6dd35">Nodes::StatementBlock</a>
+, <a class="el" href="classNodes_1_1String.html#aca4d45425e9bb0fae3775713d03a5d0b">Nodes::String</a>
 , <a class="el" href="classNodes_1_1Term.html#adb0d7c3dc91bb1e20e7d413f23e66f90">Nodes::Term</a>
 , <a class="el" href="classNodes_1_1TermOperator.html#a77858945cbd243fc1be69b9ef1bcdcf9">Nodes::TermOperator</a>
 , <a class="el" href="classNodes_1_1VariableReference.html#a71826cdd460255010ee83e9ed8dde7c7">Nodes::VariableReference</a>
@@ -175,7 +176,7 @@ $(function() {
 
 <h3><a id="index_d"></a>- d -</h3><ul>
 <li>Declaration()
-: <a class="el" href="classNodes_1_1Declaration.html#ae8e1b85dbafb9faf617596c9237cfb65">Nodes::Declaration</a>
+: <a class="el" href="classNodes_1_1Declaration.html#aba726cd5f93efcea1b781f12b09a836c">Nodes::Declaration</a>
 </li>
 </ul>
 
@@ -262,11 +263,13 @@ $(function() {
 , <a class="el" href="classNodes_1_1LocalVariableDeclaration.html#a56a5f857c9fec288f6f74055fbe0693b">Nodes::LocalVariableDeclaration</a>
 , <a class="el" href="classNodes_1_1Number.html#a5b4f016a28fd155dece3bff0760fb6c2">Nodes::Number</a>
 , <a class="el" href="classNodes_1_1RelationalOperator.html#a0856d8f64c87e9c4ae0d67f15559bebd">Nodes::RelationalOperator</a>
+, <a class="el" href="classNodes_1_1String.html#ad6091f5069a12268072ff3f5ecdbbedc">Nodes::String</a>
 , <a class="el" href="classNodes_1_1TermOperator.html#addeafa574deb5bfb0f92bb305d906f23">Nodes::TermOperator</a>
 , <a class="el" href="classToken.html#a31eae18f897e22a446c82e864dfbf5d4">Token</a>
 </li>
 <li>getValue()
-: <a class="el" href="classNodes_1_1Number.html#ae845fcc088a3beef2c22d15c5a7e84bf">Nodes::Number</a>
+: <a class="el" href="classNodes_1_1Number.html#a365e8f665f4311ede1cfbf85a2954a64">Nodes::Number</a>
+, <a class="el" href="classNodes_1_1String.html#a98fd457dc34ed5734793e21466d625f3">Nodes::String</a>
 , <a class="el" href="classToken.html#aebec9e09ff4818d6608360c59e5fc7d7">Token</a>
 </li>
 <li>getVariables()
@@ -304,7 +307,7 @@ $(function() {
 : <a class="el" href="classLexer.html#a77671cfe4fe7d69f9ae591ed29b2d198">Lexer</a>
 </li>
 <li>LocalVariableDeclaration()
-: <a class="el" href="classNodes_1_1LocalVariableDeclaration.html#a2a58bc25b16fc955f89e2ba46ac55aed">Nodes::LocalVariableDeclaration</a>
+: <a class="el" href="classNodes_1_1LocalVariableDeclaration.html#a6fc840a637b524dcd4feb4a6dbecb691">Nodes::LocalVariableDeclaration</a>
 </li>
 </ul>
 
@@ -331,7 +334,7 @@ $(function() {
 : <a class="el" href="classLexer.html#a50148a987be44b158fe8698da8d9b433">Lexer</a>
 </li>
 <li>Number()
-: <a class="el" href="classNodes_1_1Number.html#ac10e92f16d177ce556e4a2ac88f3bdf0">Nodes::Number</a>
+: <a class="el" href="classNodes_1_1Number.html#afdcb8014b692ae07e5fa5fbe4e781ae9">Nodes::Number</a>
 </li>
 </ul>
 
@@ -340,8 +343,8 @@ $(function() {
 <li>parseArithmetic()
 : <a class="el" href="classParser.html#a18f61742981feaf20c0310893ccad1ae">Parser</a>
 </li>
-<li>parseDeclaration()
-: <a class="el" href="classParser.html#a83542b86af84613d1fda2a788b6ff11c">Parser</a>
+<li>parseConcatenation()
+: <a class="el" href="classParser.html#a129a42f1924178390a3544f2d64286f9">Parser</a>
 </li>
 <li>parseExpression()
 : <a class="el" href="classParser.html#a7df622d1013fec5d9383367c44695fc0">Parser</a>
@@ -397,6 +400,15 @@ $(function() {
 <li>parseStatementBlock()
 : <a class="el" href="classParser.html#a018d29a524709171bd65a02931f96904">Parser</a>
 </li>
+<li>parseString()
+: <a class="el" href="classParser.html#af127d9c92e53899da4dbaf873e5a5039">Parser</a>
+</li>
+<li>parseStringFactor()
+: <a class="el" href="classParser.html#a2ae5034ffeef27c87a5128e1e2970a84">Parser</a>
+</li>
+<li>parseStringTerm()
+: <a class="el" href="classParser.html#a53d753f677edd2bd0be9694b9dcb3b14">Parser</a>
+</li>
 <li>parseTerm()
 : <a class="el" href="classParser.html#ab49900e75f8c595b7610e1a0e4752f7e">Parser</a>
 </li>
@@ -437,6 +449,9 @@ $(function() {
 </li>
 <li>StatementBlock()
 : <a class="el" href="classNodes_1_1StatementBlock.html#af04aabb4d40a028cff4edf0d847f4040">Nodes::StatementBlock</a>
+</li>
+<li>String()
+: <a class="el" href="classNodes_1_1String.html#a13fc3c77821a151d23928b226ca493dc">Nodes::String</a>
 </li>
 </ul>
 
@@ -517,6 +532,10 @@ $(function() {
 <li>visitStatementBlock()
 : <a class="el" href="classAstVisitor.html#ac8188041cfcbd5f262c35b7381ad4781">AstVisitor</a>
 , <a class="el" href="classparserVisitor.html#a3cc72783866e95ce849387c9c45fd087">parserVisitor</a>
+</li>
+<li>visitString()
+: <a class="el" href="classAstVisitor.html#ad126ace335a4c79933622ff0b1b43db5">AstVisitor</a>
+, <a class="el" href="classparserVisitor.html#a642d5af3ecdb05eeae12c218652e443b">parserVisitor</a>
 </li>
 <li>visitTerm()
 : <a class="el" href="classAstVisitor.html#a2931176733a0c0edd883bc1b1a205ac8">AstVisitor</a>

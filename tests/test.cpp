@@ -61,7 +61,30 @@ TEST(LexerSuite, simpleFloat) {
     EXPECT_EQ(tokens, types);
 }
 
+TEST(LexerSuite, simpleString) {
+    std::vector<std::pair<std::string, std::vector<tt>>> test;
 
+    std::string program("string a = \"Hello world\";");
+    std::vector<tt> types = {
+            tt::StringToken,
+            tt::Identifier,
+            tt::Assign,
+            tt::StringLiteral,
+            tt::Semicolon,
+            tt::EoF};
+
+    std::vector<tt> tokens;
+    std::stringstream ss;
+    ss << program;
+    Lexer lexer(ss);
+    Token t(tt::Unknown, Position());
+    do {
+        t = lexer.nextToken();
+        tokens.push_back(t.getType());
+    } while (t.getType() != tt::EoF);
+
+    EXPECT_EQ(tokens, types);
+}
 
 TEST(LexerSuite, simpleComment) {
     std::vector<std::pair<std::string, std::vector<tt>>> test;
@@ -171,6 +194,29 @@ TEST(LexerSuite, complexSunnyAll) {
             tt::Identifier, tt::OpenParenthesis, tt::FloatToken, tt::Comma, tt::FloatToken, tt::Comma, tt::IntegerToken,
             tt::Comma, tt::If, tt::Comma, tt::While, tt::ClosingParenthesis, tt::OpenBracket, tt::Identifier,
             tt::OpenParenthesis, tt::Identifier, tt::ClosingParenthesis, tt::Semicolon,
+            tt::EoF};
+
+    std::vector<tt> tokens;
+    std::stringstream ss;
+    ss << program;
+    Lexer lexer(ss);
+    Token t(tt::Unknown, Position());
+    do {
+        t = lexer.nextToken();
+        tokens.push_back(t.getType());
+    } while (t.getType() != tt::EoF);
+
+    EXPECT_EQ(tokens, types);
+}
+
+
+TEST(LexerSuite, simpleSunnyDictionaryWhere) {
+    std::vector<std::pair<std::string, std::vector<tt>>> test;
+
+    std::string program("dictionary.where(n => n % 2 == 0);");
+    std::vector<tt> types = {
+            tt::Identifier, tt::Dot, tt::Where, tt::OpenParenthesis, tt::Identifier, tt::Lambda, tt::Identifier,
+            tt::Mod, tt::IntegerLiteral, tt::Equal, tt::IntegerLiteral, tt::ClosingParenthesis, tt::Semicolon,
             tt::EoF};
 
     std::vector<tt> tokens;
@@ -507,7 +553,7 @@ TEST(ParserSuite, simpleSunny) {
     program->accept(tester);
     auto parsed = tester.getParsed();
 
-    ASSERT_THAT(parsed, expected);
+    EXPECT_EQ(parsed, expected);
 }
 
 TEST(ParserSuite, complexSunny) {
@@ -661,24 +707,127 @@ TEST(ParserSuite, complexSunny) {
     EXPECT_EQ(parsed, expected);
 }
 
-TEST(LexerSuite, simpleSunnyDictionaryWhere) {
-    std::vector<std::pair<std::string, std::vector<tt>>> test;
+TEST(ParserSuite, simpleInt) {
+    std::string code("int main()  { int a = 1; }");
 
-    std::string program("dictionary.where(n => n % 2 == 0);");
-    std::vector<tt> types = {
-            tt::Identifier, tt::Dot, tt::Where, tt::OpenParenthesis, tt::Identifier, tt::Lambda, tt::Identifier,
-            tt::Mod, tt::IntegerLiteral, tt::Equal, tt::IntegerLiteral, tt::ClosingParenthesis, tt::Semicolon,
-            tt::EoF};
-
-    std::vector<tt> tokens;
+    std::vector<std::string> expected = { "function:main",
+                                          "type:INT",
+                                          "Body:",
+                                          "stmtBlock",
+                                          "localVariable:a",
+                                          "default:",
+                                          "arithmeticExpr:",
+                                          "left term:",
+                                          "term:",
+                                          "left factor:",
+                                          "number:",
+                                          "int:",
+                                          "1",
+                                          "operator:",
+                                          "right factor:",
+                                          "operator:",
+                                          "right term:" };
     std::stringstream ss;
-    ss << program;
-    Lexer lexer(ss);
-    Token t(tt::Unknown, Position());
-    do {
-        t = lexer.nextToken();
-        tokens.push_back(t.getType());
-    } while (t.getType() != tt::EoF);
+    ss << code;
+    Parser parser(ss);
+    std::unique_ptr<Nodes::Program> program = std::move(parser.parseProgram());
+    parserVisitor tester;
+    program->accept(tester);
+    auto parsed = tester.getParsed();
 
-    EXPECT_EQ(tokens, types);
+    EXPECT_EQ(parsed, expected);
+}
+
+TEST(ParserSuite, simpleStringLocal) {
+    std::string code("int main() { string a = \"Hello\nworld!\"; }");
+
+    std::vector<std::string> expected = { "function:main",
+                                          "type:INT",
+                                          "Body:",
+                                          "stmtBlock",
+                                          "localVariable:a",
+                                          "default:",
+                                          "arithmeticExpr:",
+                                          "left term:",
+                                          "term:",
+                                          "left factor:",
+                                          "string:",
+                                          "Hello\nworld!",
+                                          "operator:",
+                                          "right factor:",
+                                          "operator:",
+                                          "right term:"};
+    std::stringstream ss;
+    ss << code;
+    Parser parser(ss);
+    std::unique_ptr<Nodes::Program> program = std::move(parser.parseProgram());
+    parserVisitor tester;
+    program->accept(tester);
+    auto parsed = tester.getParsed();
+
+    EXPECT_EQ(parsed, expected);
+}
+
+TEST(ParserSuite, simpleStringGlobal) {
+    std::string code("string a = \"Hello\nworld!\";");
+
+    std::vector<std::string> expected = { "variable:a",
+                                          "type:STRING",
+                                          "default:",
+                                          "arithmeticExpr:",
+                                          "left term:",
+                                          "term:",
+                                          "left factor:",
+                                          "string:",
+                                          "Hello\nworld!",
+                                          "operator:",
+                                          "right factor:",
+                                          "operator:",
+                                          "right term:" };
+    std::stringstream ss;
+    ss << code;
+    Parser parser(ss);
+    std::unique_ptr<Nodes::Program> program = std::move(parser.parseProgram());
+    parserVisitor tester;
+    program->accept(tester);
+    auto parsed = tester.getParsed();
+
+    EXPECT_EQ(parsed, expected);
+}
+
+TEST(ParserSuite, simpleStringConcatenation) {
+    std::string code("string a = \"b\" + \"c\";");
+
+    std::vector<std::string> expected = { "variable:a",
+                                          "type:STRING",
+                                          "default:",
+                                          "arithmeticExpr:",
+                                          "left term:",
+                                          "term:",
+                                          "left factor:",
+                                          "string:",
+                                          "b",
+                                          "operator:",
+                                          "right factor:",
+                                          "operator:",
+                                          "right term:",
+                                          "arithmeticExpr:",
+                                          "left term:",
+                                          "term:",
+                                          "left factor:",
+                                          "string:",
+                                          "c",
+                                          "operator:",
+                                          "right factor:",
+                                          "operator:",
+                                          "right term:" };
+    std::stringstream ss;
+    ss << code;
+    Parser parser(ss);
+    std::unique_ptr<Nodes::Program> program = std::move(parser.parseProgram());
+    parserVisitor tester;
+    program->accept(tester);
+    auto parsed = tester.getParsed();
+
+    EXPECT_EQ(parsed, expected);
 }

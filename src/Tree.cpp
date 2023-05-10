@@ -13,6 +13,7 @@ std::ostream &operator<<(std::ostream &os, Node *node)
 
 Position Node::getPosition() { return position_; }
 
+void Nodes::String::accept(AstVisitor &v)                               { v.visitString(this); }
 void Nodes::Number::accept(AstVisitor &v)                               { v.visitNumber(this); }
 void Nodes::TermOperator::accept(AstVisitor &v)                         { v.visitTermOperator(this); }
 void Nodes::FactorOperator::accept(AstVisitor &v)                       { v.visitFactorOperator(this); }
@@ -107,9 +108,26 @@ std::string Nodes::LocalVariableDeclaration::getIdentifier() const {
     return identifier_;
 }
 
+bool Nodes::LocalVariableDeclaration::hasDefault() const {
+    if (std::holds_alternative<std::unique_ptr<ArithmeticExpression>>(defaultValue_)) {
+        if (std::get<std::unique_ptr<ArithmeticExpression>>(defaultValue_) != nullptr) {
+            return true;
+        }
+    } else if (std::holds_alternative<std::unique_ptr<String>>(defaultValue_)) {
+        if (std::get<std::unique_ptr<String>>(defaultValue_) != nullptr) {
+            return true;
+        }
+    }
+    return false;
+}
+
 void Nodes::LocalVariableDeclaration::acceptDefault(AstVisitor &v) const {
-    if (defaultValue_) {
-        defaultValue_->accept(v);
+    if (std::holds_alternative<std::unique_ptr<ArithmeticExpression>>(defaultValue_)) {
+        if (std::get<std::unique_ptr<ArithmeticExpression>>(defaultValue_) != nullptr) {
+            std::get<std::unique_ptr<ArithmeticExpression>>(defaultValue_)->accept(v);
+        }
+    } else if (std::holds_alternative<std::unique_ptr<String>>(defaultValue_)) {
+        std::get<std::unique_ptr<String>>(defaultValue_)->accept(v);
     }
 }
 
@@ -129,17 +147,22 @@ std::string Nodes::FunctionCallStatement::getIdentifier() const {
     return identifier_;
 }
 
+idType Nodes::String::getType() const {
+    return idType::STRING;
+}
+
+std::string Nodes::String::getValue() const {
+    return value_;
+}
+
 idType Nodes::Number::getType() const {
     if (value_.index() == 0) {
         return idType::INT;
-    } else if (value_.index() == 1){
-        return idType::FLOAT;
-    } else {
-        return idType::STRING;
     }
+    return idType::FLOAT;
 }
 
-std::variant<int, float, std::string> Nodes::Number::getValue() const {
+std::variant<int, float> Nodes::Number::getValue() const {
     return value_;
 }
 
@@ -152,9 +175,27 @@ idType Nodes::Declaration::getType() const {
 }
 
 void Nodes::Declaration::acceptDefault(AstVisitor &v) const {
-    if (defaultValue_) {
-        defaultValue_->accept(v);
+    if (std::holds_alternative<std::unique_ptr<ArithmeticExpression>>(defaultValue_)) {
+        if (std::get<std::unique_ptr<ArithmeticExpression>>(defaultValue_) != nullptr) {
+            std::get<std::unique_ptr<ArithmeticExpression>>(defaultValue_)->accept(v);
+        }
+    } else if (std::holds_alternative<std::unique_ptr<String>>(defaultValue_)) {
+        std::get<std::unique_ptr<String>>(defaultValue_)->accept(v);
     }
+}
+
+
+bool Nodes::Declaration::hasDefault() const {
+    if (std::holds_alternative<std::unique_ptr<ArithmeticExpression>>(defaultValue_)) {
+        if (std::get<std::unique_ptr<ArithmeticExpression>>(defaultValue_) != nullptr) {
+            return true;
+        }
+    } else if (std::holds_alternative<std::unique_ptr<String>>(defaultValue_)) {
+        if (std::get<std::unique_ptr<String>>(defaultValue_) != nullptr) {
+            return true;
+        }
+    }
+    return false;
 }
 
 void Nodes::Term::acceptLeft(AstVisitor &v) const {

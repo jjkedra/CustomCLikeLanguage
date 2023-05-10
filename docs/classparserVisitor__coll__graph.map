@@ -1,6 +1,5 @@
 <map id="parserVisitor" name="parserVisitor">
-<area shape="rect" id="node1" title="ParserVisitor is a concrete class for visiting the nodes in an abstract syntax tree...." alt="" coords="231,409,462,765"/>
-<area shape="rect" id="node2" href="$classAstVisitor.html" title="AstVisitor is an abstract base class for visiting the nodes in an abstract syntax tree...." alt="" coords="5,5,243,347"/>
-<area shape="rect" id="node3" title=" " alt="" coords="267,137,426,215"/>
-<area shape="rect" id="node4" title=" " alt="" coords="450,137,489,215"/>
+<area shape="rect" id="node1" title="ParserVisitor is a concrete class for visiting the nodes in an abstract syntax tree...." alt="" coords="119,424,350,795"/>
+<area shape="rect" id="node2" href="$classAstVisitor.html" title="AstVisitor is an abstract base class for visiting the nodes in an abstract syntax tree...." alt="" coords="5,5,243,361"/>
+<area shape="rect" id="node3" title=" " alt="" coords="267,145,426,222"/>
 </map>

@@ -2,6 +2,7 @@
 // Created by Jan Kędra on 02/05/2023.
 //
 
+#include <variant>
 #include "Tree.h"
 #include "../include/Visitors/AstVisitor.h"
 
@@ -118,6 +119,10 @@ bool Nodes::LocalVariableDeclaration::hasDefault() const {
         if (std::get<std::unique_ptr<String>>(defaultValue_) != nullptr) {
             return true;
         }
+    } else if (std::holds_alternative<std::unique_ptr<Dictionary>>(defaultValue_)) {
+        if (std::get<std::unique_ptr<Dictionary>>(defaultValue_) != nullptr) {
+            return true;
+        }
     }
     return false;
 }
@@ -129,6 +134,8 @@ void Nodes::LocalVariableDeclaration::acceptDefault(AstVisitor &v) const {
         }
     } else if (std::holds_alternative<std::unique_ptr<String>>(defaultValue_)) {
         std::get<std::unique_ptr<String>>(defaultValue_)->accept(v);
+    } else if (std::holds_alternative<std::unique_ptr<Dictionary>>(defaultValue_)) {
+        std::get<std::unique_ptr<Dictionary>>(defaultValue_)->accept(v);
     }
 }
 
@@ -156,27 +163,31 @@ idType Nodes::Dictionary::getValueType() const {
     return value_;
 }
 
-std::vector<Nodes::Number *> Nodes::Dictionary::getKeyValue() const {
-    if (keyValue_.empty()) {
-        return {};
-    } else {
-        std::vector<Nodes::Number*> keys;
-        for (const auto & iter : keyValue_) {
-            keys.push_back(iter.get());
+std::vector<std::variant<std::unique_ptr<Nodes::Number>, std::unique_ptr<Nodes::String>>> const& Nodes::Dictionary::getKeyValue() {
+    return keyValue_;
+}
+
+std::vector<std::variant<std::unique_ptr<Nodes::Number>, std::unique_ptr<Nodes::String>>> const& Nodes::Dictionary::getValueValue() {
+    return valueValue_;
+}
+
+void Nodes::Dictionary::acceptKey(AstVisitor &v) const {
+    for (const auto & iter : keyValue_) {
+        if (std::holds_alternative<std::unique_ptr<Nodes::Number>>(iter)) {
+            std::get<std::unique_ptr<Nodes::Number>>(iter)->accept(v);
+        } else {
+            std::get<std::unique_ptr<Nodes::String>>(iter)->accept(v);
         }
-        return keys;
     }
 }
 
-std::vector<Nodes::Number *> Nodes::Dictionary::getValueValue() const {
-    if (valueValue_.empty()) {
-        return {};
-    } else {
-        std::vector<Nodes::Number*> values;
-        for (const auto & iter : valueValue_) {
-            values.push_back(iter.get());
+void Nodes::Dictionary::acceptValue(AstVisitor &v) const {
+    for (const auto & iter : valueValue_) {
+        if (std::holds_alternative<std::unique_ptr<Nodes::Number>>(iter)) {
+            std::get<std::unique_ptr<Nodes::Number>>(iter)->accept(v);
+        } else {
+            std::get<std::unique_ptr<Nodes::String>>(iter)->accept(v);
         }
-        return values;
     }
 }
 
@@ -230,7 +241,9 @@ bool Nodes::Declaration::hasDefault() const {
             return true;
         }
     } else if (std::holds_alternative<std::unique_ptr<Dictionary>>(defaultValue_)) {
-        return true;
+        if (std::get<std::unique_ptr<Dictionary>>(defaultValue_) != nullptr) {
+            return true;
+        }
     }
     return false;
 }

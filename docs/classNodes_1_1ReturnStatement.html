@@ -136,7 +136,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00403">403</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00408">408</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad9eb57edfce5542347763b7e7d4230d2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad9eb57edfce5542347763b7e7d4230d2">&#9670;&nbsp;</a></span>ReturnStatement()</h2>
@@ -172,12 +172,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00407">407</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;                                                                                                 : <a class="code" href="classNodes_1_1Statement.html#ae31dba4ae3a304bdbfb1ad6ee2b75f9e">Statement</a>() {</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;            <a class="code" href="classNode.html#af4ce41258acdedd4c4678f182ae46e93">position_</a> = pos;</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;            <a class="code" href="classNode.html#ad9c07781117c5862d49c5488acc1dedc">nodeName_</a> = <span class="stringliteral">&quot;Return statement&quot;</span>;</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;            this-&gt;<a class="code" href="classNodes_1_1ReturnStatement.html#a5a53e59eb59a52a4e2449637588a87fb">returnedExpression_</a> = std::move(re);</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        }</div>
+<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00412">412</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;                                                                                                 : <a class="code" href="classNodes_1_1Statement.html#ae31dba4ae3a304bdbfb1ad6ee2b75f9e">Statement</a>() {</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;            <a class="code" href="classNode.html#af4ce41258acdedd4c4678f182ae46e93">position_</a> = pos;</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;            <a class="code" href="classNode.html#ad9c07781117c5862d49c5488acc1dedc">nodeName_</a> = <span class="stringliteral">&quot;Return statement&quot;</span>;</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;            this-&gt;<a class="code" href="classNodes_1_1ReturnStatement.html#a5a53e59eb59a52a4e2449637588a87fb">returnedExpression_</a> = std::move(re);</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -208,8 +208,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classNodes_1_1Statement.html#afcfdfe2add2ccd9f0360cef60111f27f">Nodes::Statement</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Tree_8cpp_source.html#l00032">32</a> of file <a class="el" href="Tree_8cpp_source.html">Tree.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{ v.<a class="code" href="classAstVisitor.html#a546bc4ae600c892fa161179910b9eeef">visitReturnStatement</a>(<span class="keyword">this</span>); }</div>
+<p class="definition">Definition at line <a class="el" href="Tree_8cpp_source.html#l00033">33</a> of file <a class="el" href="Tree_8cpp_source.html">Tree.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{ v.<a class="code" href="classAstVisitor.html#a546bc4ae600c892fa161179910b9eeef">visitReturnStatement</a>(<span class="keyword">this</span>); }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -238,10 +238,10 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Tree_8cpp_source.html#l00100">100</a> of file <a class="el" href="Tree_8cpp_source.html">Tree.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                                                       {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="classNodes_1_1ReturnStatement.html#a5a53e59eb59a52a4e2449637588a87fb">returnedExpression_</a>-&gt;accept(v);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="Tree_8cpp_source.html#l00101">101</a> of file <a class="el" href="Tree_8cpp_source.html">Tree.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                                                       {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="classNodes_1_1ReturnStatement.html#a5a53e59eb59a52a4e2449637588a87fb">returnedExpression_</a>-&gt;accept(v);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -275,7 +275,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00405">405</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00410">410</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
 
 </div>
 </div>
@@ -287,8 +287,8 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="aclassNode_html_ad9c07781117c5862d49c5488acc1dedc"><div class="ttname"><a href="classNode.html#ad9c07781117c5862d49c5488acc1dedc">Node::nodeName_</a></div><div class="ttdeci">std::string nodeName_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00096">Tree.h:96</a></div></div>
 <div class="ttc" id="aclassAstVisitor_html_a546bc4ae600c892fa161179910b9eeef"><div class="ttname"><a href="classAstVisitor.html#a546bc4ae600c892fa161179910b9eeef">AstVisitor::visitReturnStatement</a></div><div class="ttdeci">virtual void visitReturnStatement(Nodes::ReturnStatement *)=0</div></div>
 <div class="ttc" id="aclassNode_html_af4ce41258acdedd4c4678f182ae46e93"><div class="ttname"><a href="classNode.html#af4ce41258acdedd4c4678f182ae46e93">Node::position_</a></div><div class="ttdeci">Position position_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00095">Tree.h:95</a></div></div>
-<div class="ttc" id="aclassNodes_1_1Statement_html_ae31dba4ae3a304bdbfb1ad6ee2b75f9e"><div class="ttname"><a href="classNodes_1_1Statement.html#ae31dba4ae3a304bdbfb1ad6ee2b75f9e">Nodes::Statement::Statement</a></div><div class="ttdeci">Statement()</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00305">Tree.h:305</a></div></div>
-<div class="ttc" id="aclassNodes_1_1ReturnStatement_html_a5a53e59eb59a52a4e2449637588a87fb"><div class="ttname"><a href="classNodes_1_1ReturnStatement.html#a5a53e59eb59a52a4e2449637588a87fb">Nodes::ReturnStatement::returnedExpression_</a></div><div class="ttdeci">std::unique_ptr&lt; ArithmeticExpression &gt; returnedExpression_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00405">Tree.h:405</a></div></div>
+<div class="ttc" id="aclassNodes_1_1Statement_html_ae31dba4ae3a304bdbfb1ad6ee2b75f9e"><div class="ttname"><a href="classNodes_1_1Statement.html#ae31dba4ae3a304bdbfb1ad6ee2b75f9e">Nodes::Statement::Statement</a></div><div class="ttdeci">Statement()</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00310">Tree.h:310</a></div></div>
+<div class="ttc" id="aclassNodes_1_1ReturnStatement_html_a5a53e59eb59a52a4e2449637588a87fb"><div class="ttname"><a href="classNodes_1_1ReturnStatement.html#a5a53e59eb59a52a4e2449637588a87fb">Nodes::ReturnStatement::returnedExpression_</a></div><div class="ttdeci">std::unique_ptr&lt; ArithmeticExpression &gt; returnedExpression_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00410">Tree.h:410</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

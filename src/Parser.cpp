@@ -26,117 +26,6 @@ void Parser::consumeToken(TokenType tt, const std::string &excMsg) {
     getNextToken();
 }
 
-idType Parser::dictionaryType(TokenType t) {
-    if (t == TokenType::IntegerToken) {
-        getNextToken();
-        return INT;
-    } else if (t == TokenType::FloatToken) {
-        getNextToken();
-        return FLOAT;
-    } else {
-        throw LangException("Invalid type in dictionary declaration", currToken_.getPosition());
-    }
-}
-
-//TODO type check
-void Parser::parseDictionaryDeclaration() {
-    std::vector<std::unique_ptr<Nodes::Number>> keyVal;
-    std::vector<std::unique_ptr<Nodes::Number>> valueVal;
-    getNextToken();
-    size_t dict_size = 0;
-    std::string identifier;
-
-    if (currToken_.getType() != TokenType::OpenParenthesis) {
-        throw LangException("Missing opening parenthesis on dictionary declaration", currToken_.getPosition());
-    }
-    getNextToken();
-
-    idType type_key = dictionaryType(currToken_.getType());
-
-    if (currToken_.getType() != TokenType::Comma) {
-        throw LangException("Missing comma in dictionary declaration", currToken_.getPosition());
-    }
-    getNextToken();
-
-    idType type_value = dictionaryType(currToken_.getType());
-
-    if (currToken_.getType() != TokenType::ClosingParenthesis) {
-        throw LangException("Missing closing parenthesis on dictionary declaration", currToken_.getPosition());
-    }
-    getNextToken();
-
-    if (currToken_.getType() != TokenType::Identifier) {
-        throw LangException("Missing identifier in dictionary declaration", currToken_.getPosition());
-    }
-    identifier = std::get<std::string>(currToken_.getValue());
-    auto lookUpVar = variables_.find(identifier);
-    if (lookUpVar != variables_.end()) {
-        throw LangException("Variable redefinition", currToken_.getPosition());
-    }
-    auto lookUpFun = function_.find(identifier);
-    if (lookUpFun != function_.end()) {
-        throw LangException("Function redefinition", currToken_.getPosition());
-    }
-    
-    getNextToken();
-
-    if (currToken_.getType() != TokenType::OpenParenthesis) {
-        std::unique_ptr<Nodes::Dictionary> dicPtr = std::make_unique<Nodes::Dictionary>(type_key, type_value,
-                                                                                       currToken_.getPosition(),
-                                                                                       std::move(keyVal), std::move(valueVal));
-        variables_.insert(std::make_pair(identifier,
-                                         std::make_unique<Nodes::Declaration>(DICT, identifier,
-                                                                              currToken_.getPosition(),
-                                                                              std::move(dicPtr))));
-        getNextToken();
-        return;
-    }
-
-
-
-    if (currToken_.getType() == TokenType::OpenParenthesis) {
-        getNextToken();
-        if (currToken_.getType() == TokenType::OpenBracket) {
-            while (currToken_.getType() != TokenType::ClosingParenthesis) {
-                getNextToken();
-                keyVal.push_back(std::move(parseNumber()));
-
-                // Comma
-                if (currToken_.getType() != TokenType::Comma) {
-                    throw LangException("Missing comma in dictionary value declaration", currToken_.getPosition());
-                }
-                getNextToken();
-                valueVal.push_back(std::move(parseNumber()));
-
-                // Closing bracket for pair
-                if (currToken_.getType() != TokenType::ClosingBracket) {
-                    throw LangException("Missing bracket in dictionary pair declaration", currToken_.getPosition());
-                }
-
-                getNextToken();
-                if (currToken_.getType() == TokenType::Comma) {
-                    getNextToken();
-                }
-
-                dict_size++;
-                if (dict_size > 128) {
-                    throw LangException("Dictionary too big or missing closing parenthesis", currToken_.getPosition());
-                }
-            }
-        }
-    }
-    getNextToken();
-    std::unique_ptr<Nodes::Dictionary> dicPtr = std::make_unique<Nodes::Dictionary>(type_key, type_value,
-                                                                                    currToken_.getPosition(),
-                                                                                    std::move(keyVal), std::move(valueVal));
-    variables_.insert(std::make_pair(identifier,
-                                     std::make_unique<Nodes::Declaration>(DICT, identifier,
-                                                                          currToken_.getPosition(),
-                                                                          std::move(dicPtr))));
-    getNextToken();
-    return;
-}
-
 bool Parser::parseFunctionOrDeclaration() {
     if (!match(TokenType::IntegerToken) && !match(TokenType::FloatToken) && !match(TokenType::StringToken)
     && !match(TokenType::DictToken)) {
@@ -151,9 +40,9 @@ bool Parser::parseFunctionOrDeclaration() {
         }
         if (currToken_.getType() == TokenType::DictToken) {
             type = DICT;
-            parseDictionaryDeclaration();
-            getNextToken();
-            return true;
+//            parseDictionaryDeclaration();
+//            getNextToken();
+//            return true;
         }
 
         getNextToken();
@@ -210,19 +99,30 @@ bool Parser::parseRestFunction(idType type, std::string identifier) {
 }
 
 bool Parser::parseRestDeclaration(idType type, std::string identifier) {
-    std::unique_ptr<Nodes::ArithmeticExpression> defaultValue = nullptr;
+    std::unique_ptr<Nodes::ArithmeticExpression> defaultArithmeticValue = nullptr;
+    std::unique_ptr<Nodes::Dictionary> defualtDictionaryValue = nullptr;
+
     if (currToken_.getType() == TokenType::Assign) {
         getNextToken();
-        if (currToken_.getType() == TokenType::StringLiteral) {
-            defaultValue = std::move(parseConcatenation());
+        if (currToken_.getType() == TokenType::OpenSquareBracket) {
+            std::unique_ptr<Nodes::Dictionary> defualtDictionaryValue = std::move(parseDictionary());
             variables_.insert(std::make_pair(identifier,
                                              std::make_unique<Nodes::Declaration>(type, identifier,
                                                       currToken_.getPosition(),
-                                                      std::move(defaultValue))));
+                                                      std::move(defualtDictionaryValue))));
             return true;
         }
-        defaultValue = std::move(parseArithmetic());
-        if (!defaultValue) {
+        if (currToken_.getType() == TokenType::StringLiteral) {
+
+            defaultArithmeticValue = std::move(parseConcatenation());
+            variables_.insert(std::make_pair(identifier,
+                                             std::make_unique<Nodes::Declaration>(type, identifier,
+                                                      currToken_.getPosition(),
+                                                      std::move(defaultArithmeticValue))));
+            return true;
+        }
+        defaultArithmeticValue = std::move(parseArithmetic());
+        if (!defaultArithmeticValue) {
             throw LangException("No assignment after operator", currToken_.getPosition());
         }
     }
@@ -231,7 +131,7 @@ bool Parser::parseRestDeclaration(idType type, std::string identifier) {
     variables_.insert(std::make_pair(identifier,
                                      std::make_unique<Nodes::Declaration>(type, identifier,
                                                   currToken_.getPosition(),
-                                                  std::move(defaultValue))));
+                                                  std::move(defaultArithmeticValue))));
     return true;
 }
 
@@ -255,6 +155,161 @@ std::vector<std::unique_ptr<Nodes::LocalVariableDeclaration>> Parser::parseFunct
         return args;
     }
 }
+
+idType Parser::dictionaryKeyType(Token t) {
+    TokenType tt = t.getType();
+    if (tt == TokenType::IntegerToken) {
+        return INT;
+    } else if (tt == TokenType::FloatToken) {
+        return FLOAT;
+    } else if (tt == TokenType::StringToken) {
+        return STRING;
+    } else {
+        throw LangException("Invalid key type in dictionary declaration", currToken_.getPosition());
+    }
+}
+
+TokenType Parser::dictionaryValueType(Token t) {
+    TokenType tt = t.getType();
+    if (tt == TokenType::IntegerToken) {
+        return TokenType::IntegerLiteral;
+    } else if (tt == TokenType::FloatToken) {
+        return TokenType::FloatLiteral;
+    } else if (tt == TokenType::StringToken) {
+        return TokenType::StringLiteral;
+    } else {
+        throw LangException("Invalid literal type in dictionary declaration", currToken_.getPosition());
+    }
+}
+
+std::unique_ptr<Nodes::Dictionary> Parser::parseDictionary() {
+    idType type_key;
+    idType type_value;
+
+    TokenType tt_key;
+    TokenType tt_value;
+
+    std::vector<std::variant<std::unique_ptr<Nodes::Number>, std::unique_ptr<Nodes::String>>> value_key;
+    std::vector<std::variant<std::unique_ptr<Nodes::Number>, std::unique_ptr<Nodes::String>>> value_value;
+    size_t dict_len = 0;
+
+    // [(int, int) ((1, 2), (4, 5)) ()];
+    if (currToken_.getType() == TokenType::OpenSquareBracket) {
+        getNextToken();
+        if (currToken_.getType() == TokenType::OpenParenthesis) {
+            getNextToken();
+            tt_key = dictionaryValueType(currToken_);
+            type_key = dictionaryKeyType(currToken_);
+            getNextToken();
+            if (currToken_.getType() != TokenType::Comma) {
+                throw LangException("Missing comma in dict type declaration", currToken_.getPosition());
+            }
+
+            getNextToken();
+            tt_value = dictionaryValueType(currToken_);
+            type_value = dictionaryKeyType(currToken_);
+            getNextToken();
+            if (currToken_.getType() != TokenType::ClosingParenthesis) {
+                throw LangException("Missing closing parenthesis in dict type declaration", currToken_.getPosition());
+            }
+
+            getNextToken();
+            if (currToken_.getType() != TokenType::OpenParenthesis) {
+                throw LangException("Missing open parenthesis in dict value declaration", currToken_.getPosition());
+            }
+            getNextToken();
+            while (true) {
+                // Case no init variables
+                if (currToken_.getType() != TokenType::OpenParenthesis) {
+                    return std::make_unique<Nodes::Dictionary>(type_key, type_value, currToken_.getPosition(), std::move(value_key), std::move(value_value));
+                }
+                getNextToken();
+
+                // Get key value
+                if (currToken_.getType() != tt_key) {
+                    throw LangException("Invalid key type in dict value pair declaration", currToken_.getPosition());
+                }
+                if (tt_key == TokenType::IntegerLiteral || tt_key == TokenType::FloatLiteral) {
+                    value_key.push_back(std::move(parseNumber()));
+                } else if (tt_key == TokenType::StringToken) {
+                    value_key.push_back(std::move(parseString()));
+                } else {
+                    throw LangException("Invalid literal key type in dict value pair declaration", currToken_.getPosition());
+                }
+
+                // Check comma
+                if (currToken_.getType() != TokenType::Comma) {
+                    throw LangException("Missing comma in dict value pair declaration", currToken_.getPosition());
+                }
+                getNextToken();
+
+                // Get value value
+                if (currToken_.getType() != tt_value) {
+                    throw LangException("Invalid value type in dict value pair declaration", currToken_.getPosition());
+                }
+                if (tt_value == TokenType::IntegerLiteral || tt_value == TokenType::FloatLiteral) {
+                    value_value.push_back(std::move(parseNumber()));
+                } else if (tt_value == TokenType::StringToken) {
+                    value_value.push_back(std::move(parseString()));
+                } else {
+                    throw LangException("Invalid literal value type in dict value pair declaration", currToken_.getPosition());
+                }
+
+                // Check closing parenthesis
+                if (currToken_.getType() != TokenType::ClosingParenthesis) {
+                    throw LangException("Missing closing parenthesis in dict value pair declaration", currToken_.getPosition());
+                }
+                getNextToken();
+
+                // Check for another pair or end of val
+                if (currToken_.getType() == TokenType::ClosingParenthesis) {
+                    getNextToken();
+                    break;
+                } else if (currToken_.getType() == TokenType::Comma) {
+                    getNextToken();
+                } else {
+                    throw LangException("Invalid symbol in dict value declaration", currToken_.getPosition());
+                }
+            }
+            // Check for dict function parenthesis
+            if (currToken_.getType() != TokenType::OpenParenthesis) {
+                throw LangException("Missing open parenthesis in dict function declaration", currToken_.getPosition());
+            }
+            getNextToken();
+
+            // Check if there is function parameter
+            if (currToken_.getType() == TokenType::Identifier)
+            {
+                // Check if function exists
+                std::string function = std::get<std::string>(currToken_.getValue());
+                auto lookUpFun = function_.find(function);
+                if (lookUpFun == function_.end()) {
+                    throw LangException("No such function to use as dictionary function", currToken_.getPosition());
+                }
+                getNextToken();
+            }
+
+
+            // Check for closing parenthesis
+            if (currToken_.getType() != TokenType::ClosingParenthesis) {
+                throw LangException("Missing closing parenthesis in dict function declaration", currToken_.getPosition());
+            }
+            getNextToken();
+
+            // Check for closing square bracket parenthesis
+            if (currToken_.getType() != TokenType::ClosingSquareBracket) {
+                throw LangException("Missing closing bracket in dict declaration", currToken_.getPosition());
+            }
+            getNextToken();
+
+            return std::make_unique<Nodes::Dictionary>(type_key, type_value, currToken_.getPosition(), std::move(value_key), std::move(value_value));
+        } else {
+            throw LangException("Missing open parenthesis in dict type declaration", currToken_.getPosition());
+        }
+    }
+    return nullptr;
+}
+
 std::unique_ptr<Nodes::String> Parser::parseString() {
     if (currToken_.getType() == TokenType::StringLiteral) {
         std::string value = std::get<std::string>(currToken_.getValue());
@@ -501,10 +556,6 @@ std::unique_ptr<Nodes::StatementBlock> Parser::parseStatementBlock() {
     std::set<std::string> declaredIdentifiers;
     consumeToken(TokenType::OpenBracket, "Missing opening bracket");
 
-    if (currToken_.getType() == TokenType::DictToken) {
-        parseDictionaryDeclaration();
-    }
-
     std::vector<std::unique_ptr<Nodes::Statement>> statements;
     std::unique_ptr<Nodes::Statement> statement;
     while ((statement = std::move(parseStatement(declaredIdentifiers)))) {
@@ -516,8 +567,6 @@ std::unique_ptr<Nodes::StatementBlock> Parser::parseStatementBlock() {
 
 std::unique_ptr<Nodes::Statement> Parser::parseStatement(std::set<std::string> &declaredIdentifiers) {
     std::unique_ptr<Nodes::Statement> statement;
-
-
     statement = std::move(parseIfStatement());
     if (statement) { return statement; }
 
@@ -647,6 +696,9 @@ std::unique_ptr<Nodes::LocalVariableDeclaration> Parser::parseLocalVariableDecla
         if (currToken_.getType() == TokenType::StringToken) {
             type = idType::STRING;
         }
+        if (currToken_.getType() == TokenType::DictToken) {
+            type = idType::DICT;
+        }
         getNextToken();
         if (currToken_.getType() != TokenType::Identifier) {
             throw LangException("Invalid local variable declaration", currToken_.getPosition());
@@ -659,7 +711,11 @@ std::unique_ptr<Nodes::LocalVariableDeclaration> Parser::parseLocalVariableDecla
         std::unique_ptr<Nodes::ArithmeticExpression> defaultValue = nullptr;
         if (currToken_.getType() == TokenType::Assign) {
             getNextToken();
-            if (currToken_.getType() == TokenType::StringLiteral) {
+            if (currToken_.getType() == TokenType::OpenSquareBracket) {
+                std::unique_ptr<Nodes::Dictionary> defualtDictionaryValue = std::move(parseDictionary());
+                return std::make_unique<Nodes::LocalVariableDeclaration>(type, identifier,
+                                                                         currToken_.getPosition(), std::move(defualtDictionaryValue));
+            } else if (currToken_.getType() == TokenType::StringLiteral) {
                 defaultValue = std::move(parseConcatenation());
             } else {
                 defaultValue = std::move(parseArithmetic());

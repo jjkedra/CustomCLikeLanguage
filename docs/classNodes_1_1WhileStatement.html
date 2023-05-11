@@ -141,7 +141,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00386">386</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00391">391</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac8b54653e28f09784310f947341e93ff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac8b54653e28f09784310f947341e93ff">&#9670;&nbsp;</a></span>WhileStatement()</h2>
@@ -183,13 +183,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00391">391</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;                                              : <a class="code" href="classNodes_1_1Statement.html#ae31dba4ae3a304bdbfb1ad6ee2b75f9e">Statement</a>() {</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;            <a class="code" href="classNode.html#af4ce41258acdedd4c4678f182ae46e93">position_</a> = pos;</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;            <a class="code" href="classNode.html#ad9c07781117c5862d49c5488acc1dedc">nodeName_</a> = <span class="stringliteral">&quot;While statement&quot;</span>;</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;            this-&gt;<a class="code" href="classNodes_1_1WhileStatement.html#a2aba84a0ef6b38b67b0588c6d4ae7646">condition_</a> = std::move(con);</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;            this-&gt;<a class="code" href="classNodes_1_1WhileStatement.html#a65e477586dbe4ac145ab21c3910431a6">whileBlock_</a> = std::move(wh);</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        }</div>
+<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00396">396</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;                                              : <a class="code" href="classNodes_1_1Statement.html#ae31dba4ae3a304bdbfb1ad6ee2b75f9e">Statement</a>() {</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;            <a class="code" href="classNode.html#af4ce41258acdedd4c4678f182ae46e93">position_</a> = pos;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;            <a class="code" href="classNode.html#ad9c07781117c5862d49c5488acc1dedc">nodeName_</a> = <span class="stringliteral">&quot;While statement&quot;</span>;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;            this-&gt;<a class="code" href="classNodes_1_1WhileStatement.html#a2aba84a0ef6b38b67b0588c6d4ae7646">condition_</a> = std::move(con);</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;            this-&gt;<a class="code" href="classNodes_1_1WhileStatement.html#a65e477586dbe4ac145ab21c3910431a6">whileBlock_</a> = std::move(wh);</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -220,8 +220,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classNodes_1_1Statement.html#afcfdfe2add2ccd9f0360cef60111f27f">Nodes::Statement</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="Tree_8cpp_source.html#l00031">31</a> of file <a class="el" href="Tree_8cpp_source.html">Tree.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{ v.<a class="code" href="classAstVisitor.html#afaa5859825677d2bf4db77fa60c0b144">visitWhileStatement</a>(<span class="keyword">this</span>); }</div>
+<p class="definition">Definition at line <a class="el" href="Tree_8cpp_source.html#l00032">32</a> of file <a class="el" href="Tree_8cpp_source.html">Tree.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{ v.<a class="code" href="classAstVisitor.html#afaa5859825677d2bf4db77fa60c0b144">visitWhileStatement</a>(<span class="keyword">this</span>); }</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -250,10 +250,10 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Tree_8cpp_source.html#l00092">92</a> of file <a class="el" href="Tree_8cpp_source.html">Tree.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                                                       {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="classNodes_1_1WhileStatement.html#a2aba84a0ef6b38b67b0588c6d4ae7646">condition_</a>-&gt;accept(v);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="Tree_8cpp_source.html#l00093">93</a> of file <a class="el" href="Tree_8cpp_source.html">Tree.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                                                       {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="classNodes_1_1WhileStatement.html#a2aba84a0ef6b38b67b0588c6d4ae7646">condition_</a>-&gt;accept(v);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -282,10 +282,10 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Tree_8cpp_source.html#l00096">96</a> of file <a class="el" href="Tree_8cpp_source.html">Tree.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                                                        {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="classNodes_1_1WhileStatement.html#a65e477586dbe4ac145ab21c3910431a6">whileBlock_</a>-&gt;accept(v);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="Tree_8cpp_source.html#l00097">97</a> of file <a class="el" href="Tree_8cpp_source.html">Tree.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                                                        {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="classNodes_1_1WhileStatement.html#a65e477586dbe4ac145ab21c3910431a6">whileBlock_</a>-&gt;accept(v);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -319,7 +319,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00388">388</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00393">393</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
 
 </div>
 </div>
@@ -343,7 +343,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00389">389</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00394">394</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
 
 </div>
 </div>
@@ -352,11 +352,11 @@ Here is the caller graph for this function:</div>
 <li>src/<a class="el" href="Tree_8cpp_source.html">Tree.cpp</a></li>
 </ul>
 </div><!-- contents -->
-<div class="ttc" id="aclassNodes_1_1WhileStatement_html_a65e477586dbe4ac145ab21c3910431a6"><div class="ttname"><a href="classNodes_1_1WhileStatement.html#a65e477586dbe4ac145ab21c3910431a6">Nodes::WhileStatement::whileBlock_</a></div><div class="ttdeci">std::unique_ptr&lt; StatementBlock &gt; whileBlock_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00389">Tree.h:389</a></div></div>
+<div class="ttc" id="aclassNodes_1_1WhileStatement_html_a65e477586dbe4ac145ab21c3910431a6"><div class="ttname"><a href="classNodes_1_1WhileStatement.html#a65e477586dbe4ac145ab21c3910431a6">Nodes::WhileStatement::whileBlock_</a></div><div class="ttdeci">std::unique_ptr&lt; StatementBlock &gt; whileBlock_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00394">Tree.h:394</a></div></div>
 <div class="ttc" id="aclassNode_html_ad9c07781117c5862d49c5488acc1dedc"><div class="ttname"><a href="classNode.html#ad9c07781117c5862d49c5488acc1dedc">Node::nodeName_</a></div><div class="ttdeci">std::string nodeName_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00096">Tree.h:96</a></div></div>
 <div class="ttc" id="aclassNode_html_af4ce41258acdedd4c4678f182ae46e93"><div class="ttname"><a href="classNode.html#af4ce41258acdedd4c4678f182ae46e93">Node::position_</a></div><div class="ttdeci">Position position_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00095">Tree.h:95</a></div></div>
-<div class="ttc" id="aclassNodes_1_1WhileStatement_html_a2aba84a0ef6b38b67b0588c6d4ae7646"><div class="ttname"><a href="classNodes_1_1WhileStatement.html#a2aba84a0ef6b38b67b0588c6d4ae7646">Nodes::WhileStatement::condition_</a></div><div class="ttdeci">std::unique_ptr&lt; Expression &gt; condition_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00388">Tree.h:388</a></div></div>
-<div class="ttc" id="aclassNodes_1_1Statement_html_ae31dba4ae3a304bdbfb1ad6ee2b75f9e"><div class="ttname"><a href="classNodes_1_1Statement.html#ae31dba4ae3a304bdbfb1ad6ee2b75f9e">Nodes::Statement::Statement</a></div><div class="ttdeci">Statement()</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00305">Tree.h:305</a></div></div>
+<div class="ttc" id="aclassNodes_1_1WhileStatement_html_a2aba84a0ef6b38b67b0588c6d4ae7646"><div class="ttname"><a href="classNodes_1_1WhileStatement.html#a2aba84a0ef6b38b67b0588c6d4ae7646">Nodes::WhileStatement::condition_</a></div><div class="ttdeci">std::unique_ptr&lt; Expression &gt; condition_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00393">Tree.h:393</a></div></div>
+<div class="ttc" id="aclassNodes_1_1Statement_html_ae31dba4ae3a304bdbfb1ad6ee2b75f9e"><div class="ttname"><a href="classNodes_1_1Statement.html#ae31dba4ae3a304bdbfb1ad6ee2b75f9e">Nodes::Statement::Statement</a></div><div class="ttdeci">Statement()</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00310">Tree.h:310</a></div></div>
 <div class="ttc" id="aclassAstVisitor_html_afaa5859825677d2bf4db77fa60c0b144"><div class="ttname"><a href="classAstVisitor.html#afaa5859825677d2bf4db77fa60c0b144">AstVisitor::visitWhileStatement</a></div><div class="ttdeci">virtual void visitWhileStatement(Nodes::WhileStatement *)=0</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

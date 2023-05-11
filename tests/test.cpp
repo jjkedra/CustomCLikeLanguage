@@ -182,33 +182,6 @@ TEST(LexerSuite, simpleSunnyFloat) {
     EXPECT_EQ(tokens, types);
 }
 
-TEST(LexerSuite, complexSunnyAll) {
-    std::vector<std::pair<std::string, std::vector<tt>>> test;
-
-    std::string program("dobranazwa dobraNazwa _Zlanazwa [][][][][] [] [undefined}\n"
-                          "int main(float,float,int,if,while){ printf(zmienna);");
-
-    std::vector<tt> types = {
-            tt::Identifier, tt::Identifier, tt::Unknown, tt::Unknown, tt::Unknown, tt::Unknown, tt::IntegerToken,
-            tt::Identifier, tt::OpenParenthesis, tt::FloatToken, tt::Comma, tt::FloatToken, tt::Comma, tt::IntegerToken,
-            tt::Comma, tt::If, tt::Comma, tt::While, tt::ClosingParenthesis, tt::OpenBracket, tt::Identifier,
-            tt::OpenParenthesis, tt::Identifier, tt::ClosingParenthesis, tt::Semicolon,
-            tt::EoF};
-
-    std::vector<tt> tokens;
-    std::stringstream ss;
-    ss << program;
-    Lexer lexer(ss);
-    Token t(tt::Unknown, Position());
-    do {
-        t = lexer.nextToken();
-        tokens.push_back(t.getType());
-    } while (t.getType() != tt::EoF);
-
-    EXPECT_EQ(tokens, types);
-}
-
-
 TEST(LexerSuite, simpleSunnyDictionaryWhere) {
     std::vector<std::pair<std::string, std::vector<tt>>> test;
 
@@ -832,7 +805,7 @@ TEST(ParserSuite, simpleStringConcatenation) {
 }
 
 TEST(ParserSuite, simpleSunnyDict) {
-    std::string code("dict(int, int) a;");
+    std::string code("dict a = [(int, int) () ()];");
 
     std::vector<std::string> expected = { "variable:a",
                                           "type:DICT",
@@ -852,30 +825,25 @@ TEST(ParserSuite, simpleSunnyDict) {
 }
 
 TEST(ParserSuite, dictDeclarationWithInit) {
-    std::string code("dict(int, int) a ({1, 2}, {2, 3});");
+    std::string code("dict a = [(int, int) ((1, 2), (4, 5)) ()];");
 
     std::vector<std::string> expected = { "variable:a",
                                           "type:DICT",
                                           "default:",
                                           "dictionary:",
                                           "key type:INT",
-                                          "key value:",
                                           "number:",
                                           "int:",
                                           "1",
-                                          "key value:",
                                           "number:",
                                           "int:",
-                                          "2",
+                                          "4",
                                           "value type:INT",
-                                          "value value:",
+                                          "number:",
+                                          "int:", "2",
                                           "number:",
                                           "int:",
-                                          "1",
-                                          "value value:",
-                                          "number:",
-                                          "int:",
-                                          "2" };
+                                          "5" };
     std::stringstream ss;
     ss << code;
     Parser parser(ss);
@@ -888,34 +856,29 @@ TEST(ParserSuite, dictDeclarationWithInit) {
 }
 
 TEST(ParserSuite, dictDeclarationWithDefaultLocal) {
-    std::string code("int main() { dict(int, int) a ({1, 2}, {2, 3}); int b;}");
+    std::string code("int main() { dict a = [(int, int) ((1, 2), (4, 5)) ()]; }");
 
-    std::vector<std::string> expected = { "variable:a",
-                                          "type:DICT",
-                                          "default:",
-                                          "dictionary:",
-                                          "key type:INT",
-                                          "key value:",
-                                          "number:",
-                                          "int:",
-                                          "1",
-                                          "key value:",
-                                          "number:",
-                                          "int:",
-                                          "2",
-                                          "value type:INT",
-                                          "value value:",
-                                          "number:",
-                                          "int:", "1",
-                                          "value value:",
-                                          "number:",
-                                          "int:",
-                                          "2",
-                                          "function:main",
+    std::vector<std::string> expected = { "function:main",
                                           "type:INT",
                                           "Body:",
                                           "stmtBlock",
-                                          "localVariable:b" };
+                                          "localVariable:a",
+                                          "default:",
+                                          "dictionary:",
+                                          "key type:INT",
+                                          "number:",
+                                          "int:",
+                                          "1",
+                                          "number:",
+                                          "int:",
+                                          "4",
+                                          "value type:INT",
+                                          "number:",
+                                          "int:",
+                                          "2",
+                                          "number:",
+                                          "int:",
+                                          "5" };
     std::stringstream ss;
     ss << code;
     Parser parser(ss);

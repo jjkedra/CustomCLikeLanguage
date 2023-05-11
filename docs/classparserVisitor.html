@@ -222,16 +222,16 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="classAstVisitor.html#a21e0c7090a7912885b92af941b5d7126">AstVisitor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00073">73</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                                                                                       {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;arithmeticExpr:&quot;</span>);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;left term:&quot;</span>);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    arithmeticExpr-&gt;<a class="code" href="classNodes_1_1ArithmeticExpression.html#af15913bf2a2e124aeee24aed45b3935f">acceptLeft</a>(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;operator:&quot;</span>);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    arithmeticExpr-&gt;<a class="code" href="classNodes_1_1ArithmeticExpression.html#a842a6a484d83895de8a5cb8427a351be">acceptTermOperator</a>(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;right term:&quot;</span>);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    arithmeticExpr-&gt;<a class="code" href="classNodes_1_1ArithmeticExpression.html#aa6f618dcaa455f2b35454615347f4c66">acceptRight</a>(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00066">66</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                                                                                       {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;arithmeticExpr:&quot;</span>);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;left term:&quot;</span>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    arithmeticExpr-&gt;<a class="code" href="classNodes_1_1ArithmeticExpression.html#af15913bf2a2e124aeee24aed45b3935f">acceptLeft</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;operator:&quot;</span>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    arithmeticExpr-&gt;<a class="code" href="classNodes_1_1ArithmeticExpression.html#a842a6a484d83895de8a5cb8427a351be">acceptTermOperator</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;right term:&quot;</span>);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    arithmeticExpr-&gt;<a class="code" href="classNodes_1_1ArithmeticExpression.html#aa6f618dcaa455f2b35454615347f4c66">acceptRight</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -272,13 +272,13 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classAstVisitor.html#a693238f4c09256fa5206b24877ce6875">AstVisitor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00114">114</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                                                   {</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;assigning:&quot;</span>);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(assign-&gt;<a class="code" href="classNodes_1_1Assign.html#a31357d939513e12a9b5206429d351f21">getAssignedIdentifier</a>());</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;assigned expr:&quot;</span>);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    assign-&gt;<a class="code" href="classNodes_1_1Assign.html#a3ded5a22f257e69d842d516e1c898573">acceptAssignedExpression</a>(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00107">107</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                                                   {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;assigning:&quot;</span>);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(assign-&gt;<a class="code" href="classNodes_1_1Assign.html#a31357d939513e12a9b5206429d351f21">getAssignedIdentifier</a>());</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;assigned expr:&quot;</span>);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    assign-&gt;<a class="code" href="classNodes_1_1Assign.html#a3ded5a22f257e69d842d516e1c898573">acceptAssignedExpression</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -318,14 +318,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classAstVisitor.html#a12e265c5618e87206a7668283334fc9a">AstVisitor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00156">156</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                                                                  {</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;type:&quot;</span>+ <a class="code" href="namespaceNodes.html#a4b3609d76e99dbdd519a6e92fb1730aa">Nodes::identiferTypes</a>[declaration-&gt;<a class="code" href="classNodes_1_1Declaration.html#abec2baad81f8338f39e90a1b109959c6">getType</a>()]);</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">if</span>(declaration-&gt;<a class="code" href="classNodes_1_1Declaration.html#a5722c1661254674c2cab9db0d7994c91">hasDefault</a>()) {</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;default:&quot;</span>);</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        declaration-&gt;<a class="code" href="classNodes_1_1Declaration.html#a32933f719014114d585cfde373d2ae44">acceptDefault</a>(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    }</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00149">149</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                                                                  {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;type:&quot;</span>+ <a class="code" href="namespaceNodes.html#a4b3609d76e99dbdd519a6e92fb1730aa">Nodes::identiferTypes</a>[declaration-&gt;<a class="code" href="classNodes_1_1Declaration.html#abec2baad81f8338f39e90a1b109959c6">getType</a>()]);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">if</span>(declaration-&gt;<a class="code" href="classNodes_1_1Declaration.html#a5722c1661254674c2cab9db0d7994c91">hasDefault</a>()) {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;default:&quot;</span>);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        declaration-&gt;<a class="code" href="classNodes_1_1Declaration.html#a32933f719014114d585cfde373d2ae44">acceptDefault</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -371,27 +371,20 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;dictionary:&quot;</span>);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;key type:&quot;</span> + <a class="code" href="namespaceNodes.html#a4b3609d76e99dbdd519a6e92fb1730aa">Nodes::identiferTypes</a>[dictionary-&gt;<a class="code" href="classNodes_1_1Dictionary.html#a7a7f9dc280acebd52299006684160c08">getKeyType</a>()]);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; dictionary-&gt;<a class="code" href="classNodes_1_1Dictionary.html#a33be0597d55131e0a0687d1bfa065f6c">getKeyValue</a>().size(); i++) {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;key value:&quot;</span>);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        dictionary-&gt;<a class="code" href="classNodes_1_1Dictionary.html#a33be0597d55131e0a0687d1bfa065f6c">getKeyValue</a>()[i]-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;value type:&quot;</span> + <a class="code" href="namespaceNodes.html#a4b3609d76e99dbdd519a6e92fb1730aa">Nodes::identiferTypes</a>[dictionary-&gt;<a class="code" href="classNodes_1_1Dictionary.html#a9c2e7397080d705bd586d8dceb2c787b">getValueType</a>()]);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; dictionary-&gt;<a class="code" href="classNodes_1_1Dictionary.html#ac84a44c7d79e469ada9d1fea11c84ec4">getValueValue</a>().size(); i++) {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;value value:&quot;</span>);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        dictionary-&gt;<a class="code" href="classNodes_1_1Dictionary.html#a33be0597d55131e0a0687d1bfa065f6c">getKeyValue</a>()[i]-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    dictionary-&gt;<a class="code" href="classNodes_1_1Dictionary.html#a80049fcd3fd91938ae7cf1579fd7b9db">acceptKey</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;value type:&quot;</span> + <a class="code" href="namespaceNodes.html#a4b3609d76e99dbdd519a6e92fb1730aa">Nodes::identiferTypes</a>[dictionary-&gt;<a class="code" href="classNodes_1_1Dictionary.html#a9c2e7397080d705bd586d8dceb2c787b">getValueType</a>()]);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    dictionary-&gt;<a class="code" href="classNodes_1_1Dictionary.html#adbf0117e6264d2e809b6fb07b96a4a8f">acceptValue</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classparserVisitor_a82d5aa78fbed9516fba83ecef7bba532_cgraph.png" border="0" usemap="#classparserVisitor_a82d5aa78fbed9516fba83ecef7bba532_cgraph" alt=""/></div>
 <map name="classparserVisitor_a82d5aa78fbed9516fba83ecef7bba532_cgraph" id="classparserVisitor_a82d5aa78fbed9516fba83ecef7bba532_cgraph">
 <area shape="rect" title=" " alt="" coords="5,111,213,138"/>
-<area shape="rect" href="classNodes_1_1Dictionary.html#a7a7f9dc280acebd52299006684160c08" title=" " alt="" coords="261,5,407,47"/>
-<area shape="rect" href="classNodes_1_1Dictionary.html#a33be0597d55131e0a0687d1bfa065f6c" title=" " alt="" coords="261,71,407,112"/>
-<area shape="rect" href="classNodes_1_1Dictionary.html#a9c2e7397080d705bd586d8dceb2c787b" title=" " alt="" coords="261,136,407,177"/>
-<area shape="rect" href="classNodes_1_1Dictionary.html#ac84a44c7d79e469ada9d1fea11c84ec4" title=" " alt="" coords="261,201,407,243"/>
+<area shape="rect" href="classNodes_1_1Dictionary.html#a80049fcd3fd91938ae7cf1579fd7b9db" title=" " alt="" coords="261,5,407,47"/>
+<area shape="rect" href="classNodes_1_1Dictionary.html#adbf0117e6264d2e809b6fb07b96a4a8f" title=" " alt="" coords="261,71,407,112"/>
+<area shape="rect" href="classNodes_1_1Dictionary.html#a7a7f9dc280acebd52299006684160c08" title=" " alt="" coords="261,136,407,177"/>
+<area shape="rect" href="classNodes_1_1Dictionary.html#a9c2e7397080d705bd586d8dceb2c787b" title=" " alt="" coords="261,201,407,243"/>
 </map>
 </div>
 
@@ -423,16 +416,16 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classAstVisitor.html#ad85fdd5e31b92d1acbba07015e9a83b4">AstVisitor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00091">91</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                                                         {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;expression&quot;</span>);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;leftSide:&quot;</span>);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    expr-&gt;<a class="code" href="classNodes_1_1Expression.html#a7c7b510ca98433adb6a502f29d3f05f8">acceptLeft</a>(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;operator:&quot;</span>);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    expr-&gt;<a class="code" href="classNodes_1_1Expression.html#a97602033bf09d6c7dc7dedbf45b94af4">acceptOperator</a>(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;rightSide:&quot;</span>);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    expr-&gt;<a class="code" href="classNodes_1_1Expression.html#afb89b00e89f66c0d0060f68a78e0a296">acceptRight</a>(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00084">84</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                                                         {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;expression&quot;</span>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;leftSide:&quot;</span>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    expr-&gt;<a class="code" href="classNodes_1_1Expression.html#a7c7b510ca98433adb6a502f29d3f05f8">acceptLeft</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;operator:&quot;</span>);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    expr-&gt;<a class="code" href="classNodes_1_1Expression.html#a97602033bf09d6c7dc7dedbf45b94af4">acceptOperator</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;rightSide:&quot;</span>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    expr-&gt;<a class="code" href="classNodes_1_1Expression.html#afb89b00e89f66c0d0060f68a78e0a296">acceptRight</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -473,10 +466,10 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classAstVisitor.html#a99f82cdef40782ed23e112a1c0ff0cb9">AstVisitor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00178">178</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                                                                     {</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00171">171</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                                                                     {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -506,10 +499,10 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classAstVisitor.html#a3763c7ccd97f6fb9cb08b1eb9ef31405">AstVisitor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00083">83</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                                                                 {</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00076">76</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                                                                 {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -539,16 +532,16 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classAstVisitor.html#abbf6ee5dfd9333c9593e8afc307e9204">AstVisitor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00146">146</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                                                                                       {</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;FunctionCall:&quot;</span>+funcCallStmt-&gt;<a class="code" href="classNodes_1_1FunctionCallStatement.html#a5760a9150b2bbea5bb18c7e4f57f0e7a">getIdentifier</a>());</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">if</span>(funcCallStmt-&gt;<a class="code" href="classNodes_1_1FunctionCallStatement.html#a202ee8480f6ab4ae2cb8984a371faecd">getArgList</a>().has_value()) {</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;arguments:&quot;</span>);</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i&lt; funcCallStmt-&gt;<a class="code" href="classNodes_1_1FunctionCallStatement.html#a202ee8480f6ab4ae2cb8984a371faecd">getArgList</a>().value().size() ; i++) {</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            funcCallStmt-&gt;<a class="code" href="classNodes_1_1FunctionCallStatement.html#a202ee8480f6ab4ae2cb8984a371faecd">getArgList</a>().value()[i]-&gt;accept(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        }</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    }</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00139">139</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                                                                                       {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;FunctionCall:&quot;</span>+funcCallStmt-&gt;<a class="code" href="classNodes_1_1FunctionCallStatement.html#a5760a9150b2bbea5bb18c7e4f57f0e7a">getIdentifier</a>());</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordflow">if</span>(funcCallStmt-&gt;<a class="code" href="classNodes_1_1FunctionCallStatement.html#a202ee8480f6ab4ae2cb8984a371faecd">getArgList</a>().has_value()) {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;arguments:&quot;</span>);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i&lt; funcCallStmt-&gt;<a class="code" href="classNodes_1_1FunctionCallStatement.html#a202ee8480f6ab4ae2cb8984a371faecd">getArgList</a>().value().size() ; i++) {</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            funcCallStmt-&gt;<a class="code" href="classNodes_1_1FunctionCallStatement.html#a202ee8480f6ab4ae2cb8984a371faecd">getArgList</a>().value()[i]-&gt;accept(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -588,12 +581,12 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classAstVisitor.html#a7c985713af1b62bb647d268894bb0da3">AstVisitor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00164">164</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                                                                               {</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;type:&quot;</span> + <a class="code" href="namespaceNodes.html#a4b3609d76e99dbdd519a6e92fb1730aa">Nodes::identiferTypes</a>[funcDecl-&gt;<a class="code" href="classNodes_1_1FunctionDeclaration.html#a2158516cd4ee7c3c3e16a99c2ad1bc14">getType</a>()]);</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;Body:&quot;</span>);</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    funcDecl-&gt;<a class="code" href="classNodes_1_1FunctionDeclaration.html#acdad69b27d6944d97a392d2a766919da">acceptFunctionBody</a>(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00157">157</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                                                                               {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;type:&quot;</span> + <a class="code" href="namespaceNodes.html#a4b3609d76e99dbdd519a6e92fb1730aa">Nodes::identiferTypes</a>[funcDecl-&gt;<a class="code" href="classNodes_1_1FunctionDeclaration.html#a2158516cd4ee7c3c3e16a99c2ad1bc14">getType</a>()]);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;Body:&quot;</span>);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    funcDecl-&gt;<a class="code" href="classNodes_1_1FunctionDeclaration.html#acdad69b27d6944d97a392d2a766919da">acceptFunctionBody</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -633,18 +626,18 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classAstVisitor.html#ab7254159710c18a403acc498b4bf6752">AstVisitor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00121">121</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                                                             {</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;if:&quot;</span>);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;condition:&quot;</span>);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    ifStmt-&gt;<a class="code" href="classNodes_1_1IfStatement.html#a4f2fddec1a278f50ce7d3e90672ccddf">acceptCondition</a>(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;body:&quot;</span>);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    ifStmt-&gt;<a class="code" href="classNodes_1_1IfStatement.html#af5688799d0fb40cbbccf17b700e72576">acceptIfBlock</a>(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">if</span>(ifStmt-&gt;<a class="code" href="classNodes_1_1IfStatement.html#ab173244a3a20f348713f12f89077edb5">hasElseBlock</a>()) {</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;else:&quot;</span>);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        ifStmt-&gt;<a class="code" href="classNodes_1_1IfStatement.html#a2ebf584867a071171a62874a9556be11">acceptElseBlock</a>(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    }</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00114">114</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                                                             {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;if:&quot;</span>);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;condition:&quot;</span>);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    ifStmt-&gt;<a class="code" href="classNodes_1_1IfStatement.html#a4f2fddec1a278f50ce7d3e90672ccddf">acceptCondition</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;body:&quot;</span>);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    ifStmt-&gt;<a class="code" href="classNodes_1_1IfStatement.html#af5688799d0fb40cbbccf17b700e72576">acceptIfBlock</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordflow">if</span>(ifStmt-&gt;<a class="code" href="classNodes_1_1IfStatement.html#ab173244a3a20f348713f12f89077edb5">hasElseBlock</a>()) {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;else:&quot;</span>);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        ifStmt-&gt;<a class="code" href="classNodes_1_1IfStatement.html#a2ebf584867a071171a62874a9556be11">acceptElseBlock</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -686,14 +679,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classAstVisitor.html#a3c9ef1b3fbef755b6f81055771aa0d1b">AstVisitor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00101">101</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                                                                                                    {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;localVariable:&quot;</span>+localVarDeclaration-&gt;<a class="code" href="classNodes_1_1LocalVariableDeclaration.html#a9cefbe36296bec5711889d48089eb7d7">getIdentifier</a>());</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">if</span> (localVarDeclaration-&gt;<a class="code" href="classNodes_1_1LocalVariableDeclaration.html#a468bba6185b5fb49cf7083613b095ec0">hasDefault</a>()) {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;default:&quot;</span>);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        localVarDeclaration-&gt;<a class="code" href="classNodes_1_1LocalVariableDeclaration.html#ad305ab05d61109338e859a52c8cb5d31">acceptDefault</a>(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00094">94</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                                                                                                    {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;localVariable:&quot;</span>+localVarDeclaration-&gt;<a class="code" href="classNodes_1_1LocalVariableDeclaration.html#a9cefbe36296bec5711889d48089eb7d7">getIdentifier</a>());</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">if</span> (localVarDeclaration-&gt;<a class="code" href="classNodes_1_1LocalVariableDeclaration.html#a468bba6185b5fb49cf7083613b095ec0">hasDefault</a>()) {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;default:&quot;</span>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        localVarDeclaration-&gt;<a class="code" href="classNodes_1_1LocalVariableDeclaration.html#ad305ab05d61109338e859a52c8cb5d31">acceptDefault</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -734,21 +727,21 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classAstVisitor.html#a3b40467b1cfcdb3cc6e9ec4acea58989">AstVisitor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00048">48</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                                                   {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    std::stringstream stream;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;number:&quot;</span>);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">if</span>(number-&gt;<a class="code" href="classNodes_1_1Number.html#a5b4f016a28fd155dece3bff0760fb6c2">getType</a>()==<a class="code" href="Tree_8h.html#a136f25f4ef981d5bb9db011cd1f1bc0dafd5a5f51ce25953f3db2c7e93eb7864a">idType::INT</a>) {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;int:&quot;</span>);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        stream &lt;&lt; std::get&lt;int&gt;(number-&gt;<a class="code" href="classNodes_1_1Number.html#a365e8f665f4311ede1cfbf85a2954a64">getValue</a>());</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (number-&gt;<a class="code" href="classNodes_1_1Number.html#a5b4f016a28fd155dece3bff0760fb6c2">getType</a>()==<a class="code" href="Tree_8h.html#a136f25f4ef981d5bb9db011cd1f1bc0da9cf4a0866224b0bb4a7a895da27c9c4c">idType::FLOAT</a>) {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;float:&quot;</span>);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        stream &lt;&lt; std::get&lt;float&gt;(number-&gt;<a class="code" href="classNodes_1_1Number.html#a365e8f665f4311ede1cfbf85a2954a64">getValue</a>());</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    std::string str;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    stream &gt;&gt; str;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(str);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00041">41</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                                                   {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    std::stringstream stream;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;number:&quot;</span>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">if</span>(number-&gt;<a class="code" href="classNodes_1_1Number.html#a5b4f016a28fd155dece3bff0760fb6c2">getType</a>()==<a class="code" href="Tree_8h.html#a136f25f4ef981d5bb9db011cd1f1bc0dafd5a5f51ce25953f3db2c7e93eb7864a">idType::INT</a>) {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;int:&quot;</span>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        stream &lt;&lt; std::get&lt;int&gt;(number-&gt;<a class="code" href="classNodes_1_1Number.html#a365e8f665f4311ede1cfbf85a2954a64">getValue</a>());</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (number-&gt;<a class="code" href="classNodes_1_1Number.html#a5b4f016a28fd155dece3bff0760fb6c2">getType</a>()==<a class="code" href="Tree_8h.html#a136f25f4ef981d5bb9db011cd1f1bc0da9cf4a0866224b0bb4a7a895da27c9c4c">idType::FLOAT</a>) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;float:&quot;</span>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        stream &lt;&lt; std::get&lt;float&gt;(number-&gt;<a class="code" href="classNodes_1_1Number.html#a365e8f665f4311ede1cfbf85a2954a64">getValue</a>());</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    std::string str;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    stream &gt;&gt; str;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(str);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -839,10 +832,10 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classAstVisitor.html#a67e5030c25d558e4757b13342af69cde">AstVisitor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00170">170</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                                                                          {</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00163">163</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                                                                          {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -872,11 +865,11 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classAstVisitor.html#a546bc4ae600c892fa161179910b9eeef">AstVisitor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00141">141</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                                                                         {</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;return:&quot;</span>);</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    returnStmt-&gt;<a class="code" href="classNodes_1_1ReturnStatement.html#ab882f6bd99d28b3477b768b042e3dcc4">acceptReturned</a>(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00134">134</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                                                                         {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;return:&quot;</span>);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    returnStmt-&gt;<a class="code" href="classNodes_1_1ReturnStatement.html#ab882f6bd99d28b3477b768b042e3dcc4">acceptReturned</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -915,11 +908,11 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classAstVisitor.html#ac8188041cfcbd5f262c35b7381ad4781">AstVisitor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00109">109</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                                                                      {</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;stmtBlock&quot;</span>);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    stmtBlock-&gt;<a class="code" href="classNodes_1_1StatementBlock.html#a4aa55f289109b36c4d63dac709bc0b55">acceptStatements</a>(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00102">102</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                                                                      {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;stmtBlock&quot;</span>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    stmtBlock-&gt;<a class="code" href="classNodes_1_1StatementBlock.html#a4aa55f289109b36c4d63dac709bc0b55">acceptStatements</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -958,16 +951,16 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classAstVisitor.html#ad126ace335a4c79933622ff0b1b43db5">AstVisitor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00038">38</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                                                   {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;string:&quot;</span>);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    std::string line;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    std::vector&lt;char&gt; strToBuild;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; <span class="keywordtype">string</span>-&gt;getValue().size(); i++) {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        strToBuild.push_back(string-&gt;<a class="code" href="classNodes_1_1String.html#a98fd457dc34ed5734793e21466d625f3">getValue</a>()[i]);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<a class="code" href="utils_8cpp.html#ab5e09934e108ce401e699aa459b0476f">buildString</a>(strToBuild));</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00031">31</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                                   {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;string:&quot;</span>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    std::string line;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    std::vector&lt;char&gt; strToBuild;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; <span class="keywordtype">string</span>-&gt;getValue().size(); i++) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        strToBuild.push_back(string-&gt;<a class="code" href="classNodes_1_1String.html#a98fd457dc34ed5734793e21466d625f3">getValue</a>()[i]);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<a class="code" href="utils_8cpp.html#ab5e09934e108ce401e699aa459b0476f">buildString</a>(strToBuild));</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1007,16 +1000,16 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classAstVisitor.html#a2931176733a0c0edd883bc1b1a205ac8">AstVisitor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00063">63</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                                             {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;term:&quot;</span>);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;left factor:&quot;</span>);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    term-&gt;<a class="code" href="classNodes_1_1Term.html#a686f488822ed87023f617615eb61d590">acceptLeft</a>(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;operator:&quot;</span>);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    term-&gt;<a class="code" href="classNodes_1_1Term.html#a784c984eba45ef163d9a0bf3961ad19a">acceptOperator</a>(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;right factor:&quot;</span>);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    term-&gt;<a class="code" href="classNodes_1_1Term.html#a24586ac4702968ef29ad3d999f372b40">acceptRight</a>(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00056">56</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                                             {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;term:&quot;</span>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;left factor:&quot;</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    term-&gt;<a class="code" href="classNodes_1_1Term.html#a686f488822ed87023f617615eb61d590">acceptLeft</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;operator:&quot;</span>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    term-&gt;<a class="code" href="classNodes_1_1Term.html#a784c984eba45ef163d9a0bf3961ad19a">acceptOperator</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;right factor:&quot;</span>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    term-&gt;<a class="code" href="classNodes_1_1Term.html#a24586ac4702968ef29ad3d999f372b40">acceptRight</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1057,10 +1050,10 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classAstVisitor.html#aae6a1c3a2330153f72327a7b7e71474c">AstVisitor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00174">174</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                                                               {</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00167">167</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                                                               {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1090,10 +1083,10 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classAstVisitor.html#a9eda073dec850c08fa8e2637b1036a1d">AstVisitor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00087">87</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                                                                           {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;variableReference:&quot;</span> + variable-&gt;<a class="code" href="classNodes_1_1VariableReference.html#a34a21fae13040defa483a69b3e34b640">getIdentifier</a>());</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00080">80</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                                                                           {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;variableReference:&quot;</span> + variable-&gt;<a class="code" href="classNodes_1_1VariableReference.html#a34a21fae13040defa483a69b3e34b640">getIdentifier</a>());</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1132,14 +1125,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classAstVisitor.html#afaa5859825677d2bf4db77fa60c0b144">AstVisitor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00133">133</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                                                                      {</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;while:&quot;</span>);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;condition&quot;</span>);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    whileStmt-&gt;<a class="code" href="classNodes_1_1WhileStatement.html#a1019b3ff2368c3c343629aa570808fe5">acceptCondition</a>(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;body:&quot;</span>);</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    whileStmt-&gt;<a class="code" href="classNodes_1_1WhileStatement.html#ab300824f73bf75d7dab050ec35764668">acceptWhileBlock</a>(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="ParserVisitor_8cpp_source.html#l00126">126</a> of file <a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                                                                      {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;while:&quot;</span>);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;condition&quot;</span>);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    whileStmt-&gt;<a class="code" href="classNodes_1_1WhileStatement.html#a1019b3ff2368c3c343629aa570808fe5">acceptCondition</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <a class="code" href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parsed</a>.push_back(<span class="stringliteral">&quot;body:&quot;</span>);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    whileStmt-&gt;<a class="code" href="classNodes_1_1WhileStatement.html#ab300824f73bf75d7dab050ec35764668">acceptWhileBlock</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1183,50 +1176,50 @@ Here is the call graph for this function:</div>
 <li>src/Visitors/<a class="el" href="ParserVisitor_8cpp_source.html">ParserVisitor.cpp</a></li>
 </ul>
 </div><!-- contents -->
-<div class="ttc" id="aclassNodes_1_1Program_html_a5b9b1408fa5e02befc26f15b974b2376"><div class="ttname"><a href="classNodes_1_1Program.html#a5b9b1408fa5e02befc26f15b974b2376">Nodes::Program::getFunctions</a></div><div class="ttdeci">std::map&lt; std::string, std::unique_ptr&lt; Nodes::FunctionDeclaration &gt; &gt; const  &amp; getFunctions() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00310">Tree.cpp:310</a></div></div>
-<div class="ttc" id="aclassNodes_1_1Dictionary_html_a9c2e7397080d705bd586d8dceb2c787b"><div class="ttname"><a href="classNodes_1_1Dictionary.html#a9c2e7397080d705bd586d8dceb2c787b">Nodes::Dictionary::getValueType</a></div><div class="ttdeci">idType getValueType() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00155">Tree.cpp:155</a></div></div>
-<div class="ttc" id="aclassNodes_1_1IfStatement_html_a2ebf584867a071171a62874a9556be11"><div class="ttname"><a href="classNodes_1_1IfStatement.html#a2ebf584867a071171a62874a9556be11">Nodes::IfStatement::acceptElseBlock</a></div><div class="ttdeci">void acceptElseBlock(AstVisitor &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00086">Tree.cpp:86</a></div></div>
-<div class="ttc" id="aclassNodes_1_1WhileStatement_html_ab300824f73bf75d7dab050ec35764668"><div class="ttname"><a href="classNodes_1_1WhileStatement.html#ab300824f73bf75d7dab050ec35764668">Nodes::WhileStatement::acceptWhileBlock</a></div><div class="ttdeci">void acceptWhileBlock(AstVisitor &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00096">Tree.cpp:96</a></div></div>
-<div class="ttc" id="aclassNodes_1_1FunctionDeclaration_html_acdad69b27d6944d97a392d2a766919da"><div class="ttname"><a href="classNodes_1_1FunctionDeclaration.html#acdad69b27d6944d97a392d2a766919da">Nodes::FunctionDeclaration::acceptFunctionBody</a></div><div class="ttdeci">void acceptFunctionBody(AstVisitor &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00078">Tree.cpp:78</a></div></div>
-<div class="ttc" id="aclassNodes_1_1ArithmeticExpression_html_aa6f618dcaa455f2b35454615347f4c66"><div class="ttname"><a href="classNodes_1_1ArithmeticExpression.html#aa6f618dcaa455f2b35454615347f4c66">Nodes::ArithmeticExpression::acceptRight</a></div><div class="ttdeci">void acceptRight(AstVisitor &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00264">Tree.cpp:264</a></div></div>
-<div class="ttc" id="aclassNodes_1_1IfStatement_html_ab173244a3a20f348713f12f89077edb5"><div class="ttname"><a href="classNodes_1_1IfStatement.html#ab173244a3a20f348713f12f89077edb5">Nodes::IfStatement::hasElseBlock</a></div><div class="ttdeci">bool hasElseBlock() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00382">Tree.h:382</a></div></div>
-<div class="ttc" id="aclassNodes_1_1Term_html_a686f488822ed87023f617615eb61d590"><div class="ttname"><a href="classNodes_1_1Term.html#a686f488822ed87023f617615eb61d590">Nodes::Term::acceptLeft</a></div><div class="ttdeci">void acceptLeft(AstVisitor &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00238">Tree.cpp:238</a></div></div>
-<div class="ttc" id="aclassNodes_1_1IfStatement_html_af5688799d0fb40cbbccf17b700e72576"><div class="ttname"><a href="classNodes_1_1IfStatement.html#af5688799d0fb40cbbccf17b700e72576">Nodes::IfStatement::acceptIfBlock</a></div><div class="ttdeci">void acceptIfBlock(AstVisitor &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00082">Tree.cpp:82</a></div></div>
-<div class="ttc" id="aclassNodes_1_1StatementBlock_html_a4aa55f289109b36c4d63dac709bc0b55"><div class="ttname"><a href="classNodes_1_1StatementBlock.html#a4aa55f289109b36c4d63dac709bc0b55">Nodes::StatementBlock::acceptStatements</a></div><div class="ttdeci">void acceptStatements(AstVisitor &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00048">Tree.cpp:48</a></div></div>
-<div class="ttc" id="aclassNodes_1_1String_html_a98fd457dc34ed5734793e21466d625f3"><div class="ttname"><a href="classNodes_1_1String.html#a98fd457dc34ed5734793e21466d625f3">Nodes::String::getValue</a></div><div class="ttdeci">std::string getValue() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00187">Tree.cpp:187</a></div></div>
-<div class="ttc" id="aclassNodes_1_1Term_html_a784c984eba45ef163d9a0bf3961ad19a"><div class="ttname"><a href="classNodes_1_1Term.html#a784c984eba45ef163d9a0bf3961ad19a">Nodes::Term::acceptOperator</a></div><div class="ttdeci">void acceptOperator(AstVisitor &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00248">Tree.cpp:248</a></div></div>
-<div class="ttc" id="aclassNodes_1_1Number_html_a365e8f665f4311ede1cfbf85a2954a64"><div class="ttname"><a href="classNodes_1_1Number.html#a365e8f665f4311ede1cfbf85a2954a64">Nodes::Number::getValue</a></div><div class="ttdeci">std::variant&lt; int, float &gt; getValue() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00198">Tree.cpp:198</a></div></div>
-<div class="ttc" id="aclassNodes_1_1Term_html_a24586ac4702968ef29ad3d999f372b40"><div class="ttname"><a href="classNodes_1_1Term.html#a24586ac4702968ef29ad3d999f372b40">Nodes::Term::acceptRight</a></div><div class="ttdeci">void acceptRight(AstVisitor &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00242">Tree.cpp:242</a></div></div>
-<div class="ttc" id="aclassNodes_1_1IfStatement_html_a4f2fddec1a278f50ce7d3e90672ccddf"><div class="ttname"><a href="classNodes_1_1IfStatement.html#a4f2fddec1a278f50ce7d3e90672ccddf">Nodes::IfStatement::acceptCondition</a></div><div class="ttdeci">void acceptCondition(AstVisitor &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00054">Tree.cpp:54</a></div></div>
+<div class="ttc" id="aclassNodes_1_1Program_html_a5b9b1408fa5e02befc26f15b974b2376"><div class="ttname"><a href="classNodes_1_1Program.html#a5b9b1408fa5e02befc26f15b974b2376">Nodes::Program::getFunctions</a></div><div class="ttdeci">std::map&lt; std::string, std::unique_ptr&lt; Nodes::FunctionDeclaration &gt; &gt; const  &amp; getFunctions() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00323">Tree.cpp:323</a></div></div>
+<div class="ttc" id="aclassNodes_1_1Dictionary_html_a9c2e7397080d705bd586d8dceb2c787b"><div class="ttname"><a href="classNodes_1_1Dictionary.html#a9c2e7397080d705bd586d8dceb2c787b">Nodes::Dictionary::getValueType</a></div><div class="ttdeci">idType getValueType() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00162">Tree.cpp:162</a></div></div>
+<div class="ttc" id="aclassNodes_1_1IfStatement_html_a2ebf584867a071171a62874a9556be11"><div class="ttname"><a href="classNodes_1_1IfStatement.html#a2ebf584867a071171a62874a9556be11">Nodes::IfStatement::acceptElseBlock</a></div><div class="ttdeci">void acceptElseBlock(AstVisitor &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00087">Tree.cpp:87</a></div></div>
+<div class="ttc" id="aclassNodes_1_1WhileStatement_html_ab300824f73bf75d7dab050ec35764668"><div class="ttname"><a href="classNodes_1_1WhileStatement.html#ab300824f73bf75d7dab050ec35764668">Nodes::WhileStatement::acceptWhileBlock</a></div><div class="ttdeci">void acceptWhileBlock(AstVisitor &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00097">Tree.cpp:97</a></div></div>
+<div class="ttc" id="aclassNodes_1_1FunctionDeclaration_html_acdad69b27d6944d97a392d2a766919da"><div class="ttname"><a href="classNodes_1_1FunctionDeclaration.html#acdad69b27d6944d97a392d2a766919da">Nodes::FunctionDeclaration::acceptFunctionBody</a></div><div class="ttdeci">void acceptFunctionBody(AstVisitor &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00079">Tree.cpp:79</a></div></div>
+<div class="ttc" id="aclassNodes_1_1ArithmeticExpression_html_aa6f618dcaa455f2b35454615347f4c66"><div class="ttname"><a href="classNodes_1_1ArithmeticExpression.html#aa6f618dcaa455f2b35454615347f4c66">Nodes::ArithmeticExpression::acceptRight</a></div><div class="ttdeci">void acceptRight(AstVisitor &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00277">Tree.cpp:277</a></div></div>
+<div class="ttc" id="aclassNodes_1_1IfStatement_html_ab173244a3a20f348713f12f89077edb5"><div class="ttname"><a href="classNodes_1_1IfStatement.html#ab173244a3a20f348713f12f89077edb5">Nodes::IfStatement::hasElseBlock</a></div><div class="ttdeci">bool hasElseBlock() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00387">Tree.h:387</a></div></div>
+<div class="ttc" id="aclassNodes_1_1Term_html_a686f488822ed87023f617615eb61d590"><div class="ttname"><a href="classNodes_1_1Term.html#a686f488822ed87023f617615eb61d590">Nodes::Term::acceptLeft</a></div><div class="ttdeci">void acceptLeft(AstVisitor &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00251">Tree.cpp:251</a></div></div>
+<div class="ttc" id="aclassNodes_1_1IfStatement_html_af5688799d0fb40cbbccf17b700e72576"><div class="ttname"><a href="classNodes_1_1IfStatement.html#af5688799d0fb40cbbccf17b700e72576">Nodes::IfStatement::acceptIfBlock</a></div><div class="ttdeci">void acceptIfBlock(AstVisitor &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00083">Tree.cpp:83</a></div></div>
+<div class="ttc" id="aclassNodes_1_1StatementBlock_html_a4aa55f289109b36c4d63dac709bc0b55"><div class="ttname"><a href="classNodes_1_1StatementBlock.html#a4aa55f289109b36c4d63dac709bc0b55">Nodes::StatementBlock::acceptStatements</a></div><div class="ttdeci">void acceptStatements(AstVisitor &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00049">Tree.cpp:49</a></div></div>
+<div class="ttc" id="aclassNodes_1_1String_html_a98fd457dc34ed5734793e21466d625f3"><div class="ttname"><a href="classNodes_1_1String.html#a98fd457dc34ed5734793e21466d625f3">Nodes::String::getValue</a></div><div class="ttdeci">std::string getValue() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00198">Tree.cpp:198</a></div></div>
+<div class="ttc" id="aclassNodes_1_1Dictionary_html_a80049fcd3fd91938ae7cf1579fd7b9db"><div class="ttname"><a href="classNodes_1_1Dictionary.html#a80049fcd3fd91938ae7cf1579fd7b9db">Nodes::Dictionary::acceptKey</a></div><div class="ttdeci">void acceptKey(AstVisitor &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00174">Tree.cpp:174</a></div></div>
+<div class="ttc" id="aclassNodes_1_1Term_html_a784c984eba45ef163d9a0bf3961ad19a"><div class="ttname"><a href="classNodes_1_1Term.html#a784c984eba45ef163d9a0bf3961ad19a">Nodes::Term::acceptOperator</a></div><div class="ttdeci">void acceptOperator(AstVisitor &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00261">Tree.cpp:261</a></div></div>
+<div class="ttc" id="aclassNodes_1_1Number_html_a365e8f665f4311ede1cfbf85a2954a64"><div class="ttname"><a href="classNodes_1_1Number.html#a365e8f665f4311ede1cfbf85a2954a64">Nodes::Number::getValue</a></div><div class="ttdeci">std::variant&lt; int, float &gt; getValue() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00209">Tree.cpp:209</a></div></div>
+<div class="ttc" id="aclassNodes_1_1Term_html_a24586ac4702968ef29ad3d999f372b40"><div class="ttname"><a href="classNodes_1_1Term.html#a24586ac4702968ef29ad3d999f372b40">Nodes::Term::acceptRight</a></div><div class="ttdeci">void acceptRight(AstVisitor &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00255">Tree.cpp:255</a></div></div>
+<div class="ttc" id="aclassNodes_1_1IfStatement_html_a4f2fddec1a278f50ce7d3e90672ccddf"><div class="ttname"><a href="classNodes_1_1IfStatement.html#a4f2fddec1a278f50ce7d3e90672ccddf">Nodes::IfStatement::acceptCondition</a></div><div class="ttdeci">void acceptCondition(AstVisitor &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00055">Tree.cpp:55</a></div></div>
 <div class="ttc" id="aTree_8h_html_a136f25f4ef981d5bb9db011cd1f1bc0dafd5a5f51ce25953f3db2c7e93eb7864a"><div class="ttname"><a href="Tree_8h.html#a136f25f4ef981d5bb9db011cd1f1bc0dafd5a5f51ce25953f3db2c7e93eb7864a">INT</a></div><div class="ttdeci">@ INT</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00025">Tree.h:25</a></div></div>
-<div class="ttc" id="aclassNodes_1_1Program_html_a178793264370e06443a45e0573c39d37"><div class="ttname"><a href="classNodes_1_1Program.html#a178793264370e06443a45e0573c39d37">Nodes::Program::getVariables</a></div><div class="ttdeci">std::map&lt; std::string, std::unique_ptr&lt; Nodes::Declaration &gt; &gt; const  &amp; getVariables() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00314">Tree.cpp:314</a></div></div>
-<div class="ttc" id="aclassNodes_1_1Dictionary_html_ac84a44c7d79e469ada9d1fea11c84ec4"><div class="ttname"><a href="classNodes_1_1Dictionary.html#ac84a44c7d79e469ada9d1fea11c84ec4">Nodes::Dictionary::getValueValue</a></div><div class="ttdeci">std::vector&lt; Number * &gt; getValueValue() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00171">Tree.cpp:171</a></div></div>
+<div class="ttc" id="aclassNodes_1_1Program_html_a178793264370e06443a45e0573c39d37"><div class="ttname"><a href="classNodes_1_1Program.html#a178793264370e06443a45e0573c39d37">Nodes::Program::getVariables</a></div><div class="ttdeci">std::map&lt; std::string, std::unique_ptr&lt; Nodes::Declaration &gt; &gt; const  &amp; getVariables() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00327">Tree.cpp:327</a></div></div>
 <div class="ttc" id="autils_8cpp_html_ab5e09934e108ce401e699aa459b0476f"><div class="ttname"><a href="utils_8cpp.html#ab5e09934e108ce401e699aa459b0476f">buildString</a></div><div class="ttdeci">std::string buildString(const std::vector&lt; char &gt; &amp;input, char startSign, char endSign)</div><div class="ttdef"><b>Definition:</b> <a href="utils_8cpp_source.html#l00018">utils.cpp:18</a></div></div>
-<div class="ttc" id="aclassNodes_1_1Assign_html_a31357d939513e12a9b5206429d351f21"><div class="ttname"><a href="classNodes_1_1Assign.html#a31357d939513e12a9b5206429d351f21">Nodes::Assign::getAssignedIdentifier</a></div><div class="ttdeci">std::string getAssignedIdentifier() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00038">Tree.cpp:38</a></div></div>
-<div class="ttc" id="aclassNodes_1_1Declaration_html_a5722c1661254674c2cab9db0d7994c91"><div class="ttname"><a href="classNodes_1_1Declaration.html#a5722c1661254674c2cab9db0d7994c91">Nodes::Declaration::hasDefault</a></div><div class="ttdeci">bool hasDefault() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00223">Tree.cpp:223</a></div></div>
-<div class="ttc" id="aclassNodes_1_1Declaration_html_a32933f719014114d585cfde373d2ae44"><div class="ttname"><a href="classNodes_1_1Declaration.html#a32933f719014114d585cfde373d2ae44">Nodes::Declaration::acceptDefault</a></div><div class="ttdeci">void acceptDefault(AstVisitor &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00210">Tree.cpp:210</a></div></div>
-<div class="ttc" id="aclassNodes_1_1FunctionCallStatement_html_a202ee8480f6ab4ae2cb8984a371faecd"><div class="ttname"><a href="classNodes_1_1FunctionCallStatement.html#a202ee8480f6ab4ae2cb8984a371faecd">Nodes::FunctionCallStatement::getArgList</a></div><div class="ttdeci">std::optional&lt; std::vector&lt; ArithmeticExpression * &gt; &gt; getArgList()</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00135">Tree.cpp:135</a></div></div>
+<div class="ttc" id="aclassNodes_1_1Assign_html_a31357d939513e12a9b5206429d351f21"><div class="ttname"><a href="classNodes_1_1Assign.html#a31357d939513e12a9b5206429d351f21">Nodes::Assign::getAssignedIdentifier</a></div><div class="ttdeci">std::string getAssignedIdentifier() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00039">Tree.cpp:39</a></div></div>
+<div class="ttc" id="aclassNodes_1_1Declaration_html_a5722c1661254674c2cab9db0d7994c91"><div class="ttname"><a href="classNodes_1_1Declaration.html#a5722c1661254674c2cab9db0d7994c91">Nodes::Declaration::hasDefault</a></div><div class="ttdeci">bool hasDefault() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00234">Tree.cpp:234</a></div></div>
+<div class="ttc" id="aclassNodes_1_1Declaration_html_a32933f719014114d585cfde373d2ae44"><div class="ttname"><a href="classNodes_1_1Declaration.html#a32933f719014114d585cfde373d2ae44">Nodes::Declaration::acceptDefault</a></div><div class="ttdeci">void acceptDefault(AstVisitor &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00221">Tree.cpp:221</a></div></div>
+<div class="ttc" id="aclassNodes_1_1Dictionary_html_adbf0117e6264d2e809b6fb07b96a4a8f"><div class="ttname"><a href="classNodes_1_1Dictionary.html#adbf0117e6264d2e809b6fb07b96a4a8f">Nodes::Dictionary::acceptValue</a></div><div class="ttdeci">void acceptValue(AstVisitor &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00184">Tree.cpp:184</a></div></div>
+<div class="ttc" id="aclassNodes_1_1FunctionCallStatement_html_a202ee8480f6ab4ae2cb8984a371faecd"><div class="ttname"><a href="classNodes_1_1FunctionCallStatement.html#a202ee8480f6ab4ae2cb8984a371faecd">Nodes::FunctionCallStatement::getArgList</a></div><div class="ttdeci">std::optional&lt; std::vector&lt; ArithmeticExpression * &gt; &gt; getArgList()</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00142">Tree.cpp:142</a></div></div>
 <div class="ttc" id="aTree_8h_html_a136f25f4ef981d5bb9db011cd1f1bc0da9cf4a0866224b0bb4a7a895da27c9c4c"><div class="ttname"><a href="Tree_8h.html#a136f25f4ef981d5bb9db011cd1f1bc0da9cf4a0866224b0bb4a7a895da27c9c4c">FLOAT</a></div><div class="ttdeci">@ FLOAT</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00026">Tree.h:26</a></div></div>
-<div class="ttc" id="aclassNodes_1_1Number_html_a5b4f016a28fd155dece3bff0760fb6c2"><div class="ttname"><a href="classNodes_1_1Number.html#a5b4f016a28fd155dece3bff0760fb6c2">Nodes::Number::getType</a></div><div class="ttdeci">idType getType() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00191">Tree.cpp:191</a></div></div>
-<div class="ttc" id="aclassNodes_1_1FunctionDeclaration_html_a2158516cd4ee7c3c3e16a99c2ad1bc14"><div class="ttname"><a href="classNodes_1_1FunctionDeclaration.html#a2158516cd4ee7c3c3e16a99c2ad1bc14">Nodes::FunctionDeclaration::getType</a></div><div class="ttdeci">idType getType() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00058">Tree.cpp:58</a></div></div>
-<div class="ttc" id="aclassNodes_1_1LocalVariableDeclaration_html_a468bba6185b5fb49cf7083613b095ec0"><div class="ttname"><a href="classNodes_1_1LocalVariableDeclaration.html#a468bba6185b5fb49cf7083613b095ec0">Nodes::LocalVariableDeclaration::hasDefault</a></div><div class="ttdeci">bool hasDefault() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00112">Tree.cpp:112</a></div></div>
+<div class="ttc" id="aclassNodes_1_1Number_html_a5b4f016a28fd155dece3bff0760fb6c2"><div class="ttname"><a href="classNodes_1_1Number.html#a5b4f016a28fd155dece3bff0760fb6c2">Nodes::Number::getType</a></div><div class="ttdeci">idType getType() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00202">Tree.cpp:202</a></div></div>
+<div class="ttc" id="aclassNodes_1_1FunctionDeclaration_html_a2158516cd4ee7c3c3e16a99c2ad1bc14"><div class="ttname"><a href="classNodes_1_1FunctionDeclaration.html#a2158516cd4ee7c3c3e16a99c2ad1bc14">Nodes::FunctionDeclaration::getType</a></div><div class="ttdeci">idType getType() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00059">Tree.cpp:59</a></div></div>
+<div class="ttc" id="aclassNodes_1_1LocalVariableDeclaration_html_a468bba6185b5fb49cf7083613b095ec0"><div class="ttname"><a href="classNodes_1_1LocalVariableDeclaration.html#a468bba6185b5fb49cf7083613b095ec0">Nodes::LocalVariableDeclaration::hasDefault</a></div><div class="ttdeci">bool hasDefault() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00113">Tree.cpp:113</a></div></div>
 <div class="ttc" id="aclassparserVisitor_html_a6b6e78e7cf2fc4dfbe0069ad1596bc6a"><div class="ttname"><a href="classparserVisitor.html#a6b6e78e7cf2fc4dfbe0069ad1596bc6a">parserVisitor::parsed</a></div><div class="ttdeci">std::vector&lt; std::string &gt; parsed</div><div class="ttdef"><b>Definition:</b> <a href="ParserVisitor_8h_source.html#l00022">ParserVisitor.h:22</a></div></div>
-<div class="ttc" id="aclassNodes_1_1ArithmeticExpression_html_af15913bf2a2e124aeee24aed45b3935f"><div class="ttname"><a href="classNodes_1_1ArithmeticExpression.html#af15913bf2a2e124aeee24aed45b3935f">Nodes::ArithmeticExpression::acceptLeft</a></div><div class="ttdeci">void acceptLeft(AstVisitor &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00258">Tree.cpp:258</a></div></div>
-<div class="ttc" id="aclassNodes_1_1ReturnStatement_html_ab882f6bd99d28b3477b768b042e3dcc4"><div class="ttname"><a href="classNodes_1_1ReturnStatement.html#ab882f6bd99d28b3477b768b042e3dcc4">Nodes::ReturnStatement::acceptReturned</a></div><div class="ttdeci">void acceptReturned(AstVisitor &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00100">Tree.cpp:100</a></div></div>
-<div class="ttc" id="aclassNodes_1_1ArithmeticExpression_html_a842a6a484d83895de8a5cb8427a351be"><div class="ttname"><a href="classNodes_1_1ArithmeticExpression.html#a842a6a484d83895de8a5cb8427a351be">Nodes::ArithmeticExpression::acceptTermOperator</a></div><div class="ttdeci">void acceptTermOperator(AstVisitor &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00271">Tree.cpp:271</a></div></div>
-<div class="ttc" id="aclassNodes_1_1VariableReference_html_a34a21fae13040defa483a69b3e34b640"><div class="ttname"><a href="classNodes_1_1VariableReference.html#a34a21fae13040defa483a69b3e34b640">Nodes::VariableReference::getIdentifier</a></div><div class="ttdeci">std::string getIdentifier() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00254">Tree.cpp:254</a></div></div>
-<div class="ttc" id="aclassNodes_1_1Dictionary_html_a7a7f9dc280acebd52299006684160c08"><div class="ttname"><a href="classNodes_1_1Dictionary.html#a7a7f9dc280acebd52299006684160c08">Nodes::Dictionary::getKeyType</a></div><div class="ttdeci">idType getKeyType() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00151">Tree.cpp:151</a></div></div>
-<div class="ttc" id="aclassNodes_1_1Expression_html_a7c7b510ca98433adb6a502f29d3f05f8"><div class="ttname"><a href="classNodes_1_1Expression.html#a7c7b510ca98433adb6a502f29d3f05f8">Nodes::Expression::acceptLeft</a></div><div class="ttdeci">void acceptLeft(AstVisitor &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00277">Tree.cpp:277</a></div></div>
-<div class="ttc" id="aclassNodes_1_1LocalVariableDeclaration_html_ad305ab05d61109338e859a52c8cb5d31"><div class="ttname"><a href="classNodes_1_1LocalVariableDeclaration.html#ad305ab05d61109338e859a52c8cb5d31">Nodes::LocalVariableDeclaration::acceptDefault</a></div><div class="ttdeci">void acceptDefault(AstVisitor &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00125">Tree.cpp:125</a></div></div>
-<div class="ttc" id="aclassNodes_1_1WhileStatement_html_a1019b3ff2368c3c343629aa570808fe5"><div class="ttname"><a href="classNodes_1_1WhileStatement.html#a1019b3ff2368c3c343629aa570808fe5">Nodes::WhileStatement::acceptCondition</a></div><div class="ttdeci">void acceptCondition(AstVisitor &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00092">Tree.cpp:92</a></div></div>
-<div class="ttc" id="aclassNodes_1_1Declaration_html_abec2baad81f8338f39e90a1b109959c6"><div class="ttname"><a href="classNodes_1_1Declaration.html#abec2baad81f8338f39e90a1b109959c6">Nodes::Declaration::getType</a></div><div class="ttdeci">idType getType() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00206">Tree.cpp:206</a></div></div>
-<div class="ttc" id="aclassNodes_1_1FunctionCallStatement_html_a5760a9150b2bbea5bb18c7e4f57f0e7a"><div class="ttname"><a href="classNodes_1_1FunctionCallStatement.html#a5760a9150b2bbea5bb18c7e4f57f0e7a">Nodes::FunctionCallStatement::getIdentifier</a></div><div class="ttdeci">std::string getIdentifier() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00147">Tree.cpp:147</a></div></div>
-<div class="ttc" id="aclassNodes_1_1Expression_html_a97602033bf09d6c7dc7dedbf45b94af4"><div class="ttname"><a href="classNodes_1_1Expression.html#a97602033bf09d6c7dc7dedbf45b94af4">Nodes::Expression::acceptOperator</a></div><div class="ttdeci">void acceptOperator(AstVisitor &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00287">Tree.cpp:287</a></div></div>
-<div class="ttc" id="aclassNodes_1_1Assign_html_a3ded5a22f257e69d842d516e1c898573"><div class="ttname"><a href="classNodes_1_1Assign.html#a3ded5a22f257e69d842d516e1c898573">Nodes::Assign::acceptAssignedExpression</a></div><div class="ttdeci">void acceptAssignedExpression(AstVisitor &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00042">Tree.cpp:42</a></div></div>
+<div class="ttc" id="aclassNodes_1_1ArithmeticExpression_html_af15913bf2a2e124aeee24aed45b3935f"><div class="ttname"><a href="classNodes_1_1ArithmeticExpression.html#af15913bf2a2e124aeee24aed45b3935f">Nodes::ArithmeticExpression::acceptLeft</a></div><div class="ttdeci">void acceptLeft(AstVisitor &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00271">Tree.cpp:271</a></div></div>
+<div class="ttc" id="aclassNodes_1_1ReturnStatement_html_ab882f6bd99d28b3477b768b042e3dcc4"><div class="ttname"><a href="classNodes_1_1ReturnStatement.html#ab882f6bd99d28b3477b768b042e3dcc4">Nodes::ReturnStatement::acceptReturned</a></div><div class="ttdeci">void acceptReturned(AstVisitor &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00101">Tree.cpp:101</a></div></div>
+<div class="ttc" id="aclassNodes_1_1ArithmeticExpression_html_a842a6a484d83895de8a5cb8427a351be"><div class="ttname"><a href="classNodes_1_1ArithmeticExpression.html#a842a6a484d83895de8a5cb8427a351be">Nodes::ArithmeticExpression::acceptTermOperator</a></div><div class="ttdeci">void acceptTermOperator(AstVisitor &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00284">Tree.cpp:284</a></div></div>
+<div class="ttc" id="aclassNodes_1_1VariableReference_html_a34a21fae13040defa483a69b3e34b640"><div class="ttname"><a href="classNodes_1_1VariableReference.html#a34a21fae13040defa483a69b3e34b640">Nodes::VariableReference::getIdentifier</a></div><div class="ttdeci">std::string getIdentifier() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00267">Tree.cpp:267</a></div></div>
+<div class="ttc" id="aclassNodes_1_1Dictionary_html_a7a7f9dc280acebd52299006684160c08"><div class="ttname"><a href="classNodes_1_1Dictionary.html#a7a7f9dc280acebd52299006684160c08">Nodes::Dictionary::getKeyType</a></div><div class="ttdeci">idType getKeyType() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00158">Tree.cpp:158</a></div></div>
+<div class="ttc" id="aclassNodes_1_1Expression_html_a7c7b510ca98433adb6a502f29d3f05f8"><div class="ttname"><a href="classNodes_1_1Expression.html#a7c7b510ca98433adb6a502f29d3f05f8">Nodes::Expression::acceptLeft</a></div><div class="ttdeci">void acceptLeft(AstVisitor &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00290">Tree.cpp:290</a></div></div>
+<div class="ttc" id="aclassNodes_1_1LocalVariableDeclaration_html_ad305ab05d61109338e859a52c8cb5d31"><div class="ttname"><a href="classNodes_1_1LocalVariableDeclaration.html#ad305ab05d61109338e859a52c8cb5d31">Nodes::LocalVariableDeclaration::acceptDefault</a></div><div class="ttdeci">void acceptDefault(AstVisitor &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00130">Tree.cpp:130</a></div></div>
+<div class="ttc" id="aclassNodes_1_1WhileStatement_html_a1019b3ff2368c3c343629aa570808fe5"><div class="ttname"><a href="classNodes_1_1WhileStatement.html#a1019b3ff2368c3c343629aa570808fe5">Nodes::WhileStatement::acceptCondition</a></div><div class="ttdeci">void acceptCondition(AstVisitor &amp;v)</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00093">Tree.cpp:93</a></div></div>
+<div class="ttc" id="aclassNodes_1_1Declaration_html_abec2baad81f8338f39e90a1b109959c6"><div class="ttname"><a href="classNodes_1_1Declaration.html#abec2baad81f8338f39e90a1b109959c6">Nodes::Declaration::getType</a></div><div class="ttdeci">idType getType() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00217">Tree.cpp:217</a></div></div>
+<div class="ttc" id="aclassNodes_1_1FunctionCallStatement_html_a5760a9150b2bbea5bb18c7e4f57f0e7a"><div class="ttname"><a href="classNodes_1_1FunctionCallStatement.html#a5760a9150b2bbea5bb18c7e4f57f0e7a">Nodes::FunctionCallStatement::getIdentifier</a></div><div class="ttdeci">std::string getIdentifier() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00154">Tree.cpp:154</a></div></div>
+<div class="ttc" id="aclassNodes_1_1Expression_html_a97602033bf09d6c7dc7dedbf45b94af4"><div class="ttname"><a href="classNodes_1_1Expression.html#a97602033bf09d6c7dc7dedbf45b94af4">Nodes::Expression::acceptOperator</a></div><div class="ttdeci">void acceptOperator(AstVisitor &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00300">Tree.cpp:300</a></div></div>
+<div class="ttc" id="aclassNodes_1_1Assign_html_a3ded5a22f257e69d842d516e1c898573"><div class="ttname"><a href="classNodes_1_1Assign.html#a3ded5a22f257e69d842d516e1c898573">Nodes::Assign::acceptAssignedExpression</a></div><div class="ttdeci">void acceptAssignedExpression(AstVisitor &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00043">Tree.cpp:43</a></div></div>
 <div class="ttc" id="anamespaceNodes_html_a4b3609d76e99dbdd519a6e92fb1730aa"><div class="ttname"><a href="namespaceNodes.html#a4b3609d76e99dbdd519a6e92fb1730aa">Nodes::identiferTypes</a></div><div class="ttdeci">static const std::vector&lt; std::string &gt; identiferTypes</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00109">Tree.h:109</a></div></div>
-<div class="ttc" id="aclassNodes_1_1LocalVariableDeclaration_html_a9cefbe36296bec5711889d48089eb7d7"><div class="ttname"><a href="classNodes_1_1LocalVariableDeclaration.html#a9cefbe36296bec5711889d48089eb7d7">Nodes::LocalVariableDeclaration::getIdentifier</a></div><div class="ttdeci">std::string getIdentifier() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00108">Tree.cpp:108</a></div></div>
-<div class="ttc" id="aclassNodes_1_1Dictionary_html_a33be0597d55131e0a0687d1bfa065f6c"><div class="ttname"><a href="classNodes_1_1Dictionary.html#a33be0597d55131e0a0687d1bfa065f6c">Nodes::Dictionary::getKeyValue</a></div><div class="ttdeci">std::vector&lt; Number * &gt; getKeyValue() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00159">Tree.cpp:159</a></div></div>
-<div class="ttc" id="aclassNodes_1_1Expression_html_afb89b00e89f66c0d0060f68a78e0a296"><div class="ttname"><a href="classNodes_1_1Expression.html#afb89b00e89f66c0d0060f68a78e0a296">Nodes::Expression::acceptRight</a></div><div class="ttdeci">void acceptRight(AstVisitor &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00281">Tree.cpp:281</a></div></div>
+<div class="ttc" id="aclassNodes_1_1LocalVariableDeclaration_html_a9cefbe36296bec5711889d48089eb7d7"><div class="ttname"><a href="classNodes_1_1LocalVariableDeclaration.html#a9cefbe36296bec5711889d48089eb7d7">Nodes::LocalVariableDeclaration::getIdentifier</a></div><div class="ttdeci">std::string getIdentifier() const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00109">Tree.cpp:109</a></div></div>
+<div class="ttc" id="aclassNodes_1_1Expression_html_afb89b00e89f66c0d0060f68a78e0a296"><div class="ttname"><a href="classNodes_1_1Expression.html#afb89b00e89f66c0d0060f68a78e0a296">Nodes::Expression::acceptRight</a></div><div class="ttdeci">void acceptRight(AstVisitor &amp;v) const</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8cpp_source.html#l00294">Tree.cpp:294</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

@@ -1,4 +1,4 @@
-<map id="Nodes::Dictionary::getValueValue" name="Nodes::Dictionary::getValueValue">
+<map id="Nodes::Dictionary::acceptKey" name="Nodes::Dictionary::acceptKey">
 <area shape="rect" id="node1" title=" " alt="" coords="261,5,407,47"/>
 <area shape="rect" id="node2" href="$classparserVisitor.html#a82d5aa78fbed9516fba83ecef7bba532" title=" " alt="" coords="5,13,213,39"/>
 </map>

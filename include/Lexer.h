@@ -64,6 +64,8 @@ private:
             {')', TokenType::ClosingParenthesis},
             {'{', TokenType::OpenBracket},
             {'}', TokenType::ClosingBracket},
+            {'[', TokenType::OpenSquareBracket},
+            {']', TokenType::ClosingSquareBracket},
     };
 
     std::map<std::string, TokenType> stringToTT {

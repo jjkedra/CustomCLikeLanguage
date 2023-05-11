@@ -23,16 +23,9 @@ void parserVisitor::visitDictionary(Nodes::Dictionary *dictionary) {
     parsed.push_back("dictionary:");
 
     parsed.push_back("key type:" + Nodes::identiferTypes[dictionary->getKeyType()]);
-    for (size_t i = 0; i < dictionary->getKeyValue().size(); i++) {
-        parsed.push_back("key value:");
-        dictionary->getKeyValue()[i]->accept(*this);
-    }
+    dictionary->acceptKey(*this);
     parsed.push_back("value type:" + Nodes::identiferTypes[dictionary->getValueType()]);
-    for (size_t i = 0; i < dictionary->getValueValue().size(); i++) {
-        parsed.push_back("value value:");
-        dictionary->getKeyValue()[i]->accept(*this);
-    }
-
+    dictionary->acceptValue(*this);
 }
 
 void parserVisitor::visitString(Nodes::String *string) {

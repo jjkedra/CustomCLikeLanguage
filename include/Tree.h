@@ -232,10 +232,13 @@ namespace Nodes {
     {
         idType key_;
         idType value_;
-        std::vector<std::unique_ptr<Number>> keyValue_ = {};
-        std::vector<std::unique_ptr<Number>> valueValue_ = {};
+        std::vector<std::variant<std::unique_ptr<Nodes::Number>, std::unique_ptr<Nodes::String>>> keyValue_ = {};
+        std::vector<std::variant<std::unique_ptr<Nodes::Number>, std::unique_ptr<Nodes::String>>> valueValue_ = {};
     public:
-        Dictionary(idType k, idType v, Position pos, std::vector<std::unique_ptr<Number>> kv = {}, std::vector<std::unique_ptr<Number>> vv = {}) : Factor() {
+        Dictionary(idType k, idType v, Position pos,
+                   std::vector<std::variant<std::unique_ptr<Nodes::Number>, std::unique_ptr<Nodes::String>>> kv = {},
+                   std::vector<std::variant<std::unique_ptr<Nodes::Number>, std::unique_ptr<Nodes::String>>> vv = {}
+                   ) : Factor() {
             position_ = pos;
             nodeName_ = "Dictionary";
             this->key_ = k;
@@ -243,8 +246,10 @@ namespace Nodes {
             this->keyValue_ = std::move(kv);
             this->valueValue_ = std::move(vv);
         }
-        std::vector<Number *> getKeyValue() const;
-        std::vector<Number *> getValueValue() const;
+        std::vector<std::variant<std::unique_ptr<Nodes::Number>, std::unique_ptr<Nodes::String>>> const& getKeyValue();
+        std::vector<std::variant<std::unique_ptr<Nodes::Number>, std::unique_ptr<Nodes::String>>> const& getValueValue();
+        void acceptKey(AstVisitor &v) const;
+        void acceptValue(AstVisitor &v) const;
         idType getKeyType() const;
         idType getValueType() const;
         virtual void accept(AstVisitor &v);
@@ -312,11 +317,11 @@ namespace Nodes {
     {
         idType type_;
         std::string identifier_;
-        std::variant<std::unique_ptr<ArithmeticExpression>, std::unique_ptr<String>> defaultValue_;
+        std::variant<std::unique_ptr<ArithmeticExpression>, std::unique_ptr<String>, std::unique_ptr<Dictionary>> defaultValue_;
 
     public:
         LocalVariableDeclaration(idType t, std::string id, Position pos,
-                                 std::variant<std::unique_ptr<ArithmeticExpression>, std::unique_ptr<String>> dv) : Statement()
+                                 std::variant<std::unique_ptr<ArithmeticExpression>, std::unique_ptr<String>, std::unique_ptr<Dictionary>> dv) : Statement()
         {
             position_ = pos;
             nodeName_ = "Local variable declaration";

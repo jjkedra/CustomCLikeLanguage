@@ -22,7 +22,7 @@
 enum class TokenType
 {
     // TOKENS
-    Identifier,          // identifier
+    Identifier,             // identifier
     IntegerToken,
     FloatToken,
     StringToken,
@@ -31,41 +31,43 @@ enum class TokenType
     Comment,
 
     // ACCESS
-    Assign,             // =
+    Assign,                 // =
 
     // COMPARISON
-    Equal,              // ==
-    NotEqual,           // !=
+    Equal,                  // ==
+    NotEqual,               // !=
 
     // LINQ
-    Lambda,             // =>
+    Lambda,                 // =>
 
-    Greater,            // >
-    GreaterEqual,       // >=
-    Less,               // <
-    LessEqual,          // <=
+    Greater,                // >
+    GreaterEqual,            // >=
+    Less,                   // <
+    LessEqual,              // <=
 
     // MATHEMATICAL
-    Plus,               // +
-    Minus,              // -
-    Multiply,           // *
-    Divide,             // /
-    Mod,                // %
+    Plus,                   // +
+    Minus,                  // -
+    Multiply,               // *
+    Divide,                 // /
+    Mod,                    // %
 
     // SYMBOLS
-    OpenParenthesis,    // (
-    ClosingParenthesis, // )
-    OpenBracket,        // {
-    ClosingBracket,     // }
-    Semicolon,          // ;
-    Comma,              // ,
-    Dot,                // .
+    OpenParenthesis,        // (
+    ClosingParenthesis,     // )
+    OpenBracket,            // {
+    ClosingBracket,         // }
+    OpenSquareBracket,      // [
+    ClosingSquareBracket,   // ]
+    Semicolon,              // ;
+    Comma,                  // ,
+    Dot,                    // .
 
-    If,                 // if
-    Else,               // else
-    While,              // while
+    If,                     // if
+    Else,                   // else
+    While,                  // while
 
-    Return,             // return
+    Return,                 // return
 
     // LINQ
     Select,

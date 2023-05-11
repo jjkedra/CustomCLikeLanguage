@@ -39,6 +39,9 @@ class Parser {
 
     std::vector<std::unique_ptr<Nodes::LocalVariableDeclaration>> parseFunctionDeclarationArgList();
 
+    void parseDictionaryDeclaration();
+    idType dictionaryType(TokenType);
+
     std::unique_ptr<Nodes::ArithmeticExpression> parseConcatenation();
     std::unique_ptr<Nodes::Term> parseStringTerm();
     std::unique_ptr<Nodes::Factor> parseStringFactor();

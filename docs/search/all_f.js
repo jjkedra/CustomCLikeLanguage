@@ -1,15 +1,11 @@
 var searchData=
 [
-  ['saveposition_192',['savePosition',['../classPosition.html#a43f17a8e162f9a7ddb83a1290e63aa33',1,'Position']]],
-  ['select_193',['Select',['../Token_8h.html#aa520fbf142ba1e7e659590c07da31921ae0626222614bdee31951d84c64e5e9ff',1,'Token.h']]],
-  ['semicolon_194',['Semicolon',['../Token_8h.html#aa520fbf142ba1e7e659590c07da31921a9806fa37a3ecd39bf637c203aa011ed0',1,'Token.h']]],
-  ['simpleexpr_195',['SIMPLEEXPR',['../Tree_8h.html#acac9cbaeea226ed297804c012dc12b16a459691a07b0327ebe5764b4b7f229285',1,'Tree.h']]],
-  ['skiptoken_196',['skipToken',['../classLexer.html#a2021b5dd70e31f55d51578c9cd82ff4b',1,'Lexer']]],
-  ['statement_197',['Statement',['../classNodes_1_1Statement.html',1,'Nodes::Statement'],['../classNodes_1_1Statement.html#ae31dba4ae3a304bdbfb1ad6ee2b75f9e',1,'Nodes::Statement::Statement()'],['../Tree_8h.html#acac9cbaeea226ed297804c012dc12b16a24a370d8aa13b62e0e1af648e6073044',1,'STATEMENT():&#160;Tree.h']]],
-  ['statement_5f_198',['statement_',['../classNodes_1_1StatementBlock.html#a847cc89d6f083ba61db902164f54ff24',1,'Nodes::StatementBlock']]],
-  ['statementblock_199',['StatementBlock',['../classNodes_1_1StatementBlock.html',1,'Nodes::StatementBlock'],['../classNodes_1_1StatementBlock.html#af04aabb4d40a028cff4edf0d847f4040',1,'Nodes::StatementBlock::StatementBlock()'],['../Tree_8h.html#acac9cbaeea226ed297804c012dc12b16a464253e108a745a63a53ff93e9c995c5',1,'STATEMENTBLOCK():&#160;Tree.h']]],
-  ['string_200',['String',['../classNodes_1_1String.html',1,'Nodes::String'],['../classNodes_1_1String.html#a13fc3c77821a151d23928b226ca493dc',1,'Nodes::String::String()'],['../Tree_8h.html#a136f25f4ef981d5bb9db011cd1f1bc0daee847e634a4297b274316de8a8ca9921',1,'STRING():&#160;Tree.h']]],
-  ['stringliteral_201',['StringLiteral',['../Token_8h.html#aa520fbf142ba1e7e659590c07da31921a7029cff17180550e1214f19dba74a32a',1,'Token.h']]],
-  ['stringtoken_202',['StringToken',['../Token_8h.html#aa520fbf142ba1e7e659590c07da31921ae86c1edcfacb9e11f21711b6b3ada31d',1,'Token.h']]],
-  ['stringtott_203',['stringToTT',['../classLexer.html#a8d6b3cf6b49fa989ea79239d6c0872ca',1,'Lexer']]]
+  ['relationaloperator_193',['RelationalOperator',['../classNodes_1_1RelationalOperator.html',1,'Nodes::RelationalOperator'],['../classNodes_1_1RelationalOperator.html#a2ac47d794f7fa5096eff98f36b289a14',1,'Nodes::RelationalOperator::RelationalOperator()'],['../Tree_8h.html#a2c32c3092fc045ee525f4f8079205508',1,'relationalOperator():&#160;Tree.h'],['../Tree_8h.html#ab55e554bc80af8dc15d11ed3b7c632cd',1,'relationalOperator():&#160;Tree.h']]],
+  ['relationaloperators_194',['relationalOperators',['../namespaceNodes.html#aac59a938b4973caa1dfb4f21457beea5',1,'Nodes']]],
+  ['relop_195',['RELOP',['../Tree_8h.html#acac9cbaeea226ed297804c012dc12b16a62262412de3d4267048b4cc79f311541',1,'Tree.h']]],
+  ['return_196',['Return',['../Token_8h.html#aa520fbf142ba1e7e659590c07da31921a988fd738de9c6d177440c5dcf69e73ce',1,'Token.h']]],
+  ['returnedexpression_5f_197',['returnedExpression_',['../classNodes_1_1ReturnStatement.html#a5a53e59eb59a52a4e2449637588a87fb',1,'Nodes::ReturnStatement']]],
+  ['returnstatement_198',['ReturnStatement',['../classNodes_1_1ReturnStatement.html',1,'Nodes::ReturnStatement'],['../classNodes_1_1ReturnStatement.html#ad9eb57edfce5542347763b7e7d4230d2',1,'Nodes::ReturnStatement::ReturnStatement()'],['../Tree_8h.html#acac9cbaeea226ed297804c012dc12b16a57467537535d4dc96341020559e5c928',1,'RETURNSTATEMENT():&#160;Tree.h']]],
+  ['right_5f_199',['right_',['../classNodes_1_1Term.html#a3a2e8116ecb4e87397105177a9103dac',1,'Nodes::Term::right_()'],['../classNodes_1_1ArithmeticExpression.html#a4578205ccad6a0492422c1a582f77bf1',1,'Nodes::ArithmeticExpression::right_()'],['../classNodes_1_1Expression.html#a0332f05d2c2cb43b89cd10a1f103c3df',1,'Nodes::Expression::right_()']]],
+  ['rop_5f_200',['rop_',['../classNodes_1_1RelationalOperator.html#a4be3669d1361d03cce6ab55e687858b2',1,'Nodes::RelationalOperator::rop_()'],['../classNodes_1_1Expression.html#a1c2e87ef4ee886103496c28a35d6d4e9',1,'Nodes::Expression::rop_()']]]
 ];

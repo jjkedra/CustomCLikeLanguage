@@ -19,6 +19,22 @@ void parserVisitor::visitProgram(Nodes::Program* program) {
     }
 }
 
+void parserVisitor::visitDictionary(Nodes::Dictionary *dictionary) {
+    parsed.push_back("dictionary:");
+
+    parsed.push_back("key type:" + Nodes::identiferTypes[dictionary->getKeyType()]);
+    for (size_t i = 0; i < dictionary->getKeyValue().size(); i++) {
+        parsed.push_back("key value:");
+        dictionary->getKeyValue()[i]->accept(*this);
+    }
+    parsed.push_back("value type:" + Nodes::identiferTypes[dictionary->getValueType()]);
+    for (size_t i = 0; i < dictionary->getValueValue().size(); i++) {
+        parsed.push_back("value value:");
+        dictionary->getKeyValue()[i]->accept(*this);
+    }
+
+}
+
 void parserVisitor::visitString(Nodes::String *string) {
     parsed.push_back("string:");
     std::string line;
@@ -44,7 +60,7 @@ void parserVisitor::visitNumber(Nodes::Number *number) {
     parsed.push_back(str);
 }
 
-void parserVisitor::visitTerm(Nodes::Term * term) {
+void parserVisitor::visitTerm(Nodes::Term *term) {
     parsed.push_back("term:");
     parsed.push_back("left factor:");
     term->acceptLeft(*this);

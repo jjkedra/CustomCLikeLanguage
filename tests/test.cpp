@@ -3,7 +3,6 @@
 //
 
 #include <gtest/gtest.h>
-#include <gmock/gmock.h>
 #include <variant>
 #include <limits.h>
 #include <string>
@@ -821,6 +820,102 @@ TEST(ParserSuite, simpleStringConcatenation) {
                                           "right factor:",
                                           "operator:",
                                           "right term:" };
+    std::stringstream ss;
+    ss << code;
+    Parser parser(ss);
+    std::unique_ptr<Nodes::Program> program = std::move(parser.parseProgram());
+    parserVisitor tester;
+    program->accept(tester);
+    auto parsed = tester.getParsed();
+
+    EXPECT_EQ(parsed, expected);
+}
+
+TEST(ParserSuite, simpleSunnyDict) {
+    std::string code("dict(int, int) a;");
+
+    std::vector<std::string> expected = { "variable:a",
+                                          "type:DICT",
+                                          "default:",
+                                          "dictionary:",
+                                          "key type:INT",
+                                          "value type:INT" };
+    std::stringstream ss;
+    ss << code;
+    Parser parser(ss);
+    std::unique_ptr<Nodes::Program> program = std::move(parser.parseProgram());
+    parserVisitor tester;
+    program->accept(tester);
+    auto parsed = tester.getParsed();
+
+    EXPECT_EQ(parsed, expected);
+}
+
+TEST(ParserSuite, dictDeclarationWithInit) {
+    std::string code("dict(int, int) a ({1, 2}, {2, 3});");
+
+    std::vector<std::string> expected = { "variable:a",
+                                          "type:DICT",
+                                          "default:",
+                                          "dictionary:",
+                                          "key type:INT",
+                                          "key value:",
+                                          "number:",
+                                          "int:",
+                                          "1",
+                                          "key value:",
+                                          "number:",
+                                          "int:",
+                                          "2",
+                                          "value type:INT",
+                                          "value value:",
+                                          "number:",
+                                          "int:",
+                                          "1",
+                                          "value value:",
+                                          "number:",
+                                          "int:",
+                                          "2" };
+    std::stringstream ss;
+    ss << code;
+    Parser parser(ss);
+    std::unique_ptr<Nodes::Program> program = std::move(parser.parseProgram());
+    parserVisitor tester;
+    program->accept(tester);
+    auto parsed = tester.getParsed();
+
+    EXPECT_EQ(parsed, expected);
+}
+
+TEST(ParserSuite, dictDeclarationWithDefaultLocal) {
+    std::string code("int main() { dict(int, int) a ({1, 2}, {2, 3}); int b;}");
+
+    std::vector<std::string> expected = { "variable:a",
+                                          "type:DICT",
+                                          "default:",
+                                          "dictionary:",
+                                          "key type:INT",
+                                          "key value:",
+                                          "number:",
+                                          "int:",
+                                          "1",
+                                          "key value:",
+                                          "number:",
+                                          "int:",
+                                          "2",
+                                          "value type:INT",
+                                          "value value:",
+                                          "number:",
+                                          "int:", "1",
+                                          "value value:",
+                                          "number:",
+                                          "int:",
+                                          "2",
+                                          "function:main",
+                                          "type:INT",
+                                          "Body:",
+                                          "stmtBlock",
+                                          "localVariable:b" };
     std::stringstream ss;
     ss << code;
     Parser parser(ss);

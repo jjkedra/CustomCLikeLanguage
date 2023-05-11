@@ -21,6 +21,7 @@ class parserVisitor: public AstVisitor
 private:
     std::vector<std::string> parsed;
 
+    void visitDictionary(Nodes::Dictionary*) override;
     void visitString(Nodes::String*) override;
     void visitNumber(Nodes::Number*) override;
     void visitTerm(Nodes::Term*)  override;

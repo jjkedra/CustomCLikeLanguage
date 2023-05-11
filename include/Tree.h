@@ -228,6 +228,28 @@ namespace Nodes {
         virtual void accept(AstVisitor &v);
     };
 
+    class Dictionary : public Factor
+    {
+        idType key_;
+        idType value_;
+        std::vector<std::unique_ptr<Number>> keyValue_ = {};
+        std::vector<std::unique_ptr<Number>> valueValue_ = {};
+    public:
+        Dictionary(idType k, idType v, Position pos, std::vector<std::unique_ptr<Number>> kv = {}, std::vector<std::unique_ptr<Number>> vv = {}) : Factor() {
+            position_ = pos;
+            nodeName_ = "Dictionary";
+            this->key_ = k;
+            this->value_ = v;
+            this->keyValue_ = std::move(kv);
+            this->valueValue_ = std::move(vv);
+        }
+        std::vector<Number *> getKeyValue() const;
+        std::vector<Number *> getValueValue() const;
+        idType getKeyType() const;
+        idType getValueType() const;
+        virtual void accept(AstVisitor &v);
+    };
+
     class FunctionCall : public Factor
     {
         std::vector<std::unique_ptr<ArithmeticExpression>> argList_;
@@ -415,11 +437,11 @@ namespace Nodes {
     {
         idType type_;
         std::string identifier_;
-        std::variant<std::unique_ptr<ArithmeticExpression>, std::unique_ptr<String>> defaultValue_;
+        std::variant<std::unique_ptr<ArithmeticExpression>, std::unique_ptr<String>, std::unique_ptr<Dictionary>> defaultValue_;
 
     public:
         explicit Declaration(idType t, std::string id, Position pos,
-                             std::variant<std::unique_ptr<ArithmeticExpression>, std::unique_ptr<String>> dv) : Node() {
+                             std::variant<std::unique_ptr<ArithmeticExpression>, std::unique_ptr<String>, std::unique_ptr<Dictionary>> dv) : Node() {
             position_ = pos;
             nodeName_ = "Declaration";
             this->type_ = t;

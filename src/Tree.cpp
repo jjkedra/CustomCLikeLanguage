@@ -13,6 +13,7 @@ std::ostream &operator<<(std::ostream &os, Node *node)
 
 Position Node::getPosition() { return position_; }
 
+void Nodes::Dictionary::accept(AstVisitor &v)                           { v.visitDictionary(this); }
 void Nodes::String::accept(AstVisitor &v)                               { v.visitString(this); }
 void Nodes::Number::accept(AstVisitor &v)                               { v.visitNumber(this); }
 void Nodes::TermOperator::accept(AstVisitor &v)                         { v.visitTermOperator(this); }
@@ -147,6 +148,38 @@ std::string Nodes::FunctionCallStatement::getIdentifier() const {
     return identifier_;
 }
 
+idType Nodes::Dictionary::getKeyType() const {
+    return key_;
+}
+
+idType Nodes::Dictionary::getValueType() const {
+    return value_;
+}
+
+std::vector<Nodes::Number *> Nodes::Dictionary::getKeyValue() const {
+    if (keyValue_.empty()) {
+        return {};
+    } else {
+        std::vector<Nodes::Number*> keys;
+        for (const auto & iter : keyValue_) {
+            keys.push_back(iter.get());
+        }
+        return keys;
+    }
+}
+
+std::vector<Nodes::Number *> Nodes::Dictionary::getValueValue() const {
+    if (valueValue_.empty()) {
+        return {};
+    } else {
+        std::vector<Nodes::Number*> values;
+        for (const auto & iter : valueValue_) {
+            values.push_back(iter.get());
+        }
+        return values;
+    }
+}
+
 idType Nodes::String::getType() const {
     return idType::STRING;
 }
@@ -181,6 +214,8 @@ void Nodes::Declaration::acceptDefault(AstVisitor &v) const {
         }
     } else if (std::holds_alternative<std::unique_ptr<String>>(defaultValue_)) {
         std::get<std::unique_ptr<String>>(defaultValue_)->accept(v);
+    } else if (std::holds_alternative<std::unique_ptr<Dictionary>>(defaultValue_)) {
+        std::get<std::unique_ptr<Dictionary>>(defaultValue_)->accept(v);
     }
 }
 
@@ -194,6 +229,8 @@ bool Nodes::Declaration::hasDefault() const {
         if (std::get<std::unique_ptr<String>>(defaultValue_) != nullptr) {
             return true;
         }
+    } else if (std::holds_alternative<std::unique_ptr<Dictionary>>(defaultValue_)) {
+        return true;
     }
     return false;
 }
@@ -253,7 +290,7 @@ void Nodes::Expression::acceptOperator(AstVisitor &v) const {
     }
 }
 
-std::optional<std::vector<Nodes::ArithmeticExpression*>> Nodes::FunctionCall::getArgList() const {
+std::optional<std::vector<Nodes::ArithmeticExpression *>> Nodes::FunctionCall::getArgList() const {
     if (argList_.empty()) {
         return std::nullopt;
     } else {

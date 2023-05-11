@@ -1,11 +1,16 @@
 var searchData=
 [
-  ['match_123',['match',['../classLexer.html#aa04f2cc034b69056540fd1c7e4554a92',1,'Lexer::match()'],['../classParser.html#aa6c9e54f5a6be7a4da336dfc7ffe334d',1,'Parser::match()']]],
-  ['max_5fdigits_124',['MAX_DIGITS',['../Lexer_8h.html#a001791a21d538b8b9176287ae60d9b61',1,'Lexer.h']]],
-  ['max_5ferror_5fmsg_5flen_125',['MAX_ERROR_MSG_LEN',['../Lexer_8h.html#a37de40cecb9e99d4a298d67f780f5e31',1,'Lexer.h']]],
-  ['max_5fstr_5flen_126',['MAX_STR_LEN',['../Lexer_8h.html#a58ce36916c399104e18d32ff090f21c6',1,'Lexer.h']]],
-  ['minus_127',['Minus',['../Token_8h.html#aa520fbf142ba1e7e659590c07da31921a453fb623e752c5993f65bc410fd74fe5',1,'Minus():&#160;Token.h'],['../Tree_8h.html#ac045f606497b14349f1bcacc11035efbaf613d73b4e7b570ffd967df4a13c4225',1,'MINUS():&#160;Tree.h']]],
-  ['mod_128',['Mod',['../Token_8h.html#aa520fbf142ba1e7e659590c07da31921a7aeb0277500c86e4aa6bd23f9a737942',1,'Token.h']]],
-  ['move_129',['move',['../classPosition.html#a386a8134057e288f9b92f2410af6864c',1,'Position']]],
-  ['multiply_130',['Multiply',['../Token_8h.html#aa520fbf142ba1e7e659590c07da31921ae257376d913f3b53cbb4a9b19d770648',1,'Multiply():&#160;Token.h'],['../Tree_8h.html#ad912a902f9e17902997391621b2ca210ae59a728a365f9d6b2643057973cdf4c3',1,'MULTIPLY():&#160;Tree.h']]]
+  ['lambda_118',['Lambda',['../Token_8h.html#aa520fbf142ba1e7e659590c07da31921a04a7da3c5b04cad85da1eebb92315b8b',1,'Lambda():&#160;Token.h'],['../Tree_8h.html#a2c32c3092fc045ee525f4f8079205508a40176493726a127184ca47ea6352dc1f',1,'LAMBDA():&#160;Tree.h']]],
+  ['langexception_119',['LangException',['../classLangException.html',1,'LangException'],['../classLangException.html#a5f45c26f583c8467478d956bb0b9b148',1,'LangException::LangException(std::string errorMsg, Position pos)'],['../classLangException.html#a2c639522b6d36007270c62cf842fad8b',1,'LangException::LangException(const std::string &amp;errorMsg)']]],
+  ['langexception_2ecpp_120',['LangException.cpp',['../LangException_8cpp.html',1,'']]],
+  ['langexception_2eh_121',['LangException.h',['../LangException_8h.html',1,'']]],
+  ['left_5f_122',['left_',['../classNodes_1_1Term.html#adf4c60b77a0ffbb8329b7dea94e0e7d7',1,'Nodes::Term::left_()'],['../classNodes_1_1ArithmeticExpression.html#aaed70d576bf5a2375a5069fe4439673b',1,'Nodes::ArithmeticExpression::left_()'],['../classNodes_1_1Expression.html#ac5afcafcf3ef81b9b28f10ed228d84e3',1,'Nodes::Expression::left_()']]],
+  ['less_123',['Less',['../Token_8h.html#aa520fbf142ba1e7e659590c07da31921a1cfdf0e8d0c87a228c1f40d9bee7888b',1,'Less():&#160;Token.h'],['../Tree_8h.html#a2c32c3092fc045ee525f4f8079205508a95c736070f99b99eb80d1eac1f4ca60f',1,'LESS():&#160;Tree.h']]],
+  ['lessequal_124',['LessEqual',['../Token_8h.html#aa520fbf142ba1e7e659590c07da31921ad3e6fdac55bb7b0edd7834c968ba1f38',1,'LessEqual():&#160;Token.h'],['../Tree_8h.html#a2c32c3092fc045ee525f4f8079205508a39b45d074aa5a4766237db213e96e21b',1,'LESSEQUAL():&#160;Tree.h']]],
+  ['lexer_125',['Lexer',['../classLexer.html',1,'Lexer'],['../classLexer.html#a77671cfe4fe7d69f9ae591ed29b2d198',1,'Lexer::Lexer()']]],
+  ['lexer_2ecpp_126',['Lexer.cpp',['../Lexer_8cpp.html',1,'']]],
+  ['lexer_2eh_127',['Lexer.h',['../Lexer_8h.html',1,'']]],
+  ['lexer_5f_128',['lexer_',['../classParser.html#ae76eedbe234ab7f476ed542f18411887',1,'Parser']]],
+  ['line_5f_129',['line_',['../classPosition.html#a91760e06d8a4e9b9aaa6884487d9029d',1,'Position']]],
+  ['localvariabledeclaration_130',['LocalVariableDeclaration',['../classNodes_1_1LocalVariableDeclaration.html',1,'Nodes::LocalVariableDeclaration'],['../classNodes_1_1LocalVariableDeclaration.html#a6fc840a637b524dcd4feb4a6dbecb691',1,'Nodes::LocalVariableDeclaration::LocalVariableDeclaration()']]]
 ];

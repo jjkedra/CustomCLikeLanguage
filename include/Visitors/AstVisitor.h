@@ -47,6 +47,7 @@ public:
     virtual void visitRelationalOperator(Nodes::RelationalOperator*) = 0;
     virtual void visitTermOperator(Nodes::TermOperator*) = 0;
     virtual void visitFactorOperator(Nodes::FactorOperator*) = 0;
+    virtual void visitMemberReference(Nodes::MemberReference*) = 0;
 };
 
 

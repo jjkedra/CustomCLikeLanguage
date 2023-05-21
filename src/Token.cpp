@@ -38,3 +38,4 @@ Position Token::getPosition() {
 Token::valueContainer Token::getValue() {
     return tokenValue_;
 }
+

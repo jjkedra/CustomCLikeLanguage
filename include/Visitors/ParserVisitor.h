@@ -41,6 +41,7 @@ private:
     void visitRelationalOperator(Nodes::RelationalOperator*)  override;
     void visitTermOperator(Nodes::TermOperator*)  override;
     void visitFactorOperator(Nodes::FactorOperator*)  override;
+    void visitMemberReference(Nodes::MemberReference*)  override;
 
 public:
     void visitProgram(Nodes::Program*)  override;

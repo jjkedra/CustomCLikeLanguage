@@ -270,6 +270,24 @@ namespace Nodes {
         std::string getIdentifier() const;
         virtual void accept(AstVisitor &v);
     };
+    class MemberReference : public Factor
+    {
+        std::string identifier_;
+        std::string member_;
+        std::variant<std::unique_ptr<Nodes::Number>, std::unique_ptr<Nodes::String>> memberLiteral_;
+    public:
+        MemberReference(std::string id, std::string m, std::variant<std::unique_ptr<Nodes::Number>, std::unique_ptr<Nodes::String>> ml, Position pos) : Factor() {
+            position_ = pos;
+            nodeName_ = "Member reference";
+            this->identifier_ = std::move(id);
+            this->member_ = std::move(m);
+            this->memberLiteral_ = std::move(ml);
+        }
+        std::string getIdentifier() const;
+        std::string getMember() const;
+        std::variant<std::unique_ptr<Nodes::Number>, std::unique_ptr<Nodes::String>> const& getMemberLiteral();
+        virtual void accept(AstVisitor &v);
+    };
 
     class VariableReference : public Factor
     {
@@ -346,6 +364,7 @@ namespace Nodes {
             nodeName_ = "Statement block";
             this->statement_ = std::move(s);
         }
+        std::vector<std::unique_ptr<Statement>> const& getStatements() const;
         void acceptStatements(AstVisitor &v) const;
         virtual void accept(AstVisitor &v);
     };
@@ -480,6 +499,7 @@ namespace Nodes {
         idType getType() const;
         std::string getIdentifier() const;
         std::optional<std::vector<LocalVariableDeclaration *>> getArgsDeclaration();
+        std::unique_ptr<StatementBlock> const& getFunctionBody();
         void acceptFunctionBody(AstVisitor &v);
         virtual void accept(AstVisitor &v);
     };

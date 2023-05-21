@@ -35,6 +35,7 @@ void Nodes::LocalVariableDeclaration::accept(AstVisitor &v)             { v.visi
 void Nodes::Program::accept(AstVisitor &v)                              { v.visitProgram(this); }
 void Nodes::FunctionCall::accept(AstVisitor &v)                         { v.visitFunctionCall(this); }
 void Nodes::FunctionCallStatement::accept(AstVisitor &v)                { v.visitFunctionCallStatement(this); }
+void Nodes::MemberReference::accept(AstVisitor &v)                      { v.visitMemberReference(this); }
 
 std::string Nodes::Assign::getAssignedIdentifier() const {
     return assignedIdentifier_;
@@ -44,6 +45,10 @@ void Nodes::Assign::acceptAssignedExpression(AstVisitor &v) const {
     if (assignedExpression_) {
         assignedExpression_->accept(v);
     }
+}
+
+std::vector<std::unique_ptr<Nodes::Statement>> const& Nodes::StatementBlock::getStatements() const {
+    return statement_;
 }
 
 void Nodes::StatementBlock::acceptStatements(AstVisitor &v) const {
@@ -74,6 +79,10 @@ std::optional<std::vector<Nodes::LocalVariableDeclaration*>> Nodes::FunctionDecl
         }
         return args;
     }
+}
+
+std::unique_ptr<Nodes::StatementBlock> const& Nodes::FunctionDeclaration::getFunctionBody(){
+    return functionBody_;
 }
 
 void Nodes::FunctionDeclaration::acceptFunctionBody(AstVisitor &v) {
@@ -326,4 +335,16 @@ std::map<std::string, std::unique_ptr<Nodes::FunctionDeclaration>> const &Nodes:
 
 std::map<std::string, std::unique_ptr<Nodes::Declaration>> const &Nodes::Program::getVariables() const {
     return variables_;
+}
+
+std::string Nodes::MemberReference::getIdentifier() const {
+    return identifier_;
+}
+
+std::string Nodes::MemberReference::getMember() const {
+    return member_;
+}
+
+std::variant<std::unique_ptr<Nodes::Number>, std::unique_ptr<Nodes::String>> const& Nodes::MemberReference::getMemberLiteral() {
+    return memberLiteral_;
 }

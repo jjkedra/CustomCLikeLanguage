@@ -767,6 +767,46 @@ TEST(ParserSuite, simpleStringGlobal) {
     EXPECT_EQ(parsed, expected);
 }
 
+TEST(ParserSuite, simpleStringsGlobal) {
+    std::string code("string a = \"Hello world!\"; string b = \"Goodbye world!\";");
+
+    std::vector<std::string> expected = { "variable:a",
+                                          "type:STRING",
+                                          "default:",
+                                          "arithmeticExpr:",
+                                          "left term:",
+                                          "term:",
+                                          "left factor:",
+                                          "string:",
+                                          "Hello world!",
+                                          "operator:",
+                                          "right factor:",
+                                          "operator:",
+                                          "right term:",
+                                          "variable:b",
+                                          "type:STRING",
+                                          "default:",
+                                          "arithmeticExpr:",
+                                          "left term:",
+                                          "term:",
+                                          "left factor:",
+                                          "string:",
+                                          "Goodbye world!",
+                                          "operator:",
+                                          "right factor:",
+                                          "operator:",
+                                          "right term:" };
+    std::stringstream ss;
+    ss << code;
+    Parser parser(ss);
+    std::unique_ptr<Nodes::Program> program = std::move(parser.parseProgram());
+    parserVisitor tester;
+    program->accept(tester);
+    auto parsed = tester.getParsed();
+
+    EXPECT_EQ(parsed, expected);
+}
+
 TEST(ParserSuite, simpleStringConcatenation) {
     std::string code("string a = \"b\" + \"c\";");
 
@@ -804,6 +844,8 @@ TEST(ParserSuite, simpleStringConcatenation) {
     EXPECT_EQ(parsed, expected);
 }
 
+// TODO add access member for dictionary: values, keys type
+
 TEST(ParserSuite, simpleSunnyDict) {
     std::string code("dict a = [(int, int) () ()];");
 
@@ -813,6 +855,85 @@ TEST(ParserSuite, simpleSunnyDict) {
                                           "dictionary:",
                                           "key type:INT",
                                           "value type:INT" };
+    std::stringstream ss;
+    ss << code;
+    Parser parser(ss);
+    std::unique_ptr<Nodes::Program> program = std::move(parser.parseProgram());
+    parserVisitor tester;
+    program->accept(tester);
+    auto parsed = tester.getParsed();
+
+    EXPECT_EQ(parsed, expected);
+}
+
+TEST(ParserSuite, simpleSunnyDictDeclarationFromExisting) {
+    std::string code("dict a = [(int, int) () ()]; dict b = a;");
+
+    std::vector<std::string> expected = { "variable:a",
+                                          "type:DICT",
+                                          "default:",
+                                          "dictionary:",
+                                          "key type:INT",
+                                          "value type:INT",
+                                          "variable:b",
+                                          "type:DICT",
+                                          "default:",
+                                          "arithmeticExpr:",
+                                          "left term:",
+                                          "term:",
+                                          "left factor:",
+                                          "variableReference:a",
+                                          "operator:",
+                                          "right factor:",
+                                          "operator:",
+                                          "right term:" };
+    std::stringstream ss;
+    ss << code;
+    Parser parser(ss);
+    std::unique_ptr<Nodes::Program> program = std::move(parser.parseProgram());
+    parserVisitor tester;
+    program->accept(tester);
+    auto parsed = tester.getParsed();
+
+    EXPECT_EQ(parsed, expected);
+}
+
+TEST(ParserSuite, simpleSunnyDictDeclarationFromExistingWithMemberAccess) {
+    std::string code("dict a = [(int, int) ((1, 2)) ()];"
+                     " int b = a.at(1);");
+
+    std::vector<std::string> expected = { "variable:a",
+                                          "type:DICT",
+                                          "default:",
+                                          "dictionary:",
+                                          "key type:INT",
+                                          "number:",
+                                          "int:",
+                                          "1",
+                                          "value type:INT",
+                                          "number:",
+                                          "int:",
+                                          "2",
+                                          "variable:b",
+                                          "type:INT",
+                                          "default:",
+                                          "arithmeticExpr:",
+                                          "left term:",
+                                          "term:",
+                                          "left factor:",
+                                          "MemberReference",
+                                          "object:",
+                                          "a",
+                                          "member:",
+                                          "at",
+                                          "type:",
+                                          "number:",
+                                          "int:",
+                                          "1",
+                                          "operator:",
+                                          "right factor:",
+                                          "operator:",
+                                          "right term:" };
     std::stringstream ss;
     ss << code;
     Parser parser(ss);
@@ -888,4 +1009,47 @@ TEST(ParserSuite, dictDeclarationWithDefaultLocal) {
     auto parsed = tester.getParsed();
 
     EXPECT_EQ(parsed, expected);
+}
+
+TEST(ParserSuiteClassCheck, dictDeclarationWithDefaultLocal) {
+    std::string code("int main() { dict a = [(int, int) ((1, 2), (4, 5)) ()]; }");
+
+    std::string expected = {"Node name: Function declaration"
+                               "Node name: Statement block"
+                               "Node name: Local variable declaration"};
+    std::stringstream ss;
+    ss << code;
+    Parser parser(ss);
+    std::unique_ptr<Nodes::Program> program = std::move(parser.parseProgram());
+
+    testing::internal::CaptureStdout();
+    auto const & functions = program->getFunctions().at("main");
+    std::cout << functions;
+    auto const & body = functions->getFunctionBody();
+    std::cout << body;
+    auto const & stmtBlock = body->getStatements();
+    for (auto const & iter : stmtBlock) {
+        std::cout << iter;
+    }
+    std::string output = testing::internal::GetCapturedStdout();
+
+    EXPECT_EQ(output, expected);
+}
+
+TEST(ParserSuiteClassCheck, dictDeclarationWithDefault) {
+    std::string code("dict a = [(int, int) ((1, 2), (4, 5)) ()];");
+
+    std::string expected = {"Node name: Declaration"};
+    std::stringstream ss;
+    ss << code;
+    Parser parser(ss);
+    std::unique_ptr<Nodes::Program> program = std::move(parser.parseProgram());
+    int a = 1;
+    testing::internal::CaptureStdout();
+    auto const & variables = program->getVariables().at("a");
+    std::cout << variables;
+
+    std::string output = testing::internal::GetCapturedStdout();
+
+    EXPECT_EQ(output, expected);
 }

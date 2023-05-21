@@ -8,7 +8,7 @@
 #include <string>
 
 void parserVisitor::visitProgram(Nodes::Program* program) {
-    for(auto iter= program->getVariables().begin(); iter != program->getVariables().end(); iter++) {
+    for(auto iter = program->getVariables().begin(); iter != program->getVariables().end(); iter++) {
         parsed.push_back("variable:" + iter->first);
         iter->second->accept(*this);
     }
@@ -172,3 +172,28 @@ void parserVisitor::visitFactorOperator(Nodes::FactorOperator *factorOp) {
     return;
 }
 
+void parserVisitor::visitMemberReference(Nodes::MemberReference *memberReference) {
+    parsed.push_back("MemberReference");
+    parsed.push_back("object:");
+    parsed.push_back(memberReference->getIdentifier());
+    parsed.push_back("member:");
+    parsed.push_back(memberReference->getMember());
+    parsed.push_back("type:");
+    std::variant<std::unique_ptr<Nodes::Number>, std::unique_ptr<Nodes::String>> const& memberLiteral = std::move(memberReference->getMemberLiteral());
+
+    if (std::holds_alternative<std::unique_ptr<Nodes::Number>>(memberLiteral)) {
+        parsed.push_back("number:");
+        std::unique_ptr<Nodes::Number> const& number = std::get<std::unique_ptr<Nodes::Number>>(memberLiteral);
+        if(number->getType()==idType::INT) {
+            parsed.push_back("int:");
+            parsed.push_back(std::to_string(std::get<int>(number->getValue())));
+        } else if (number->getType()==idType::FLOAT) {
+            parsed.push_back("float:");
+            parsed.push_back(std::to_string(std::get<float>(number->getValue())));
+        }
+    } else if (std::holds_alternative<std::unique_ptr<Nodes::String>>(memberLiteral)) {
+        parsed.push_back("string:");
+        std::unique_ptr<Nodes::String> const& string = std::get<std::unique_ptr<Nodes::String>>(memberLiteral);
+        parsed.push_back(string->getValue());
+    }
+}

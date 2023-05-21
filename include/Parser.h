@@ -64,6 +64,8 @@ class Parser {
     std::unique_ptr<Nodes::ReturnStatement> parseReturnStatement();
     std::unique_ptr<Nodes::Statement> parseIdentifierStatement();
     std::unique_ptr<Nodes::LocalVariableDeclaration> parseLocalVariableDeclaration(std::set<std::string> &);
+    std::variant<std::unique_ptr<Nodes::Number>, std::unique_ptr<Nodes::String>> parseMemberLiteral();
+
 public:
     Parser(std::istream &code) : lexer_(code), currToken_(lexer_.nextToken()) {}
     std::unique_ptr<Nodes::Program> parseProgram();

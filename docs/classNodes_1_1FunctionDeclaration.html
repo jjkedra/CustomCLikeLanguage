@@ -82,7 +82,7 @@ Inheritance diagram for Nodes::FunctionDeclaration:</div>
 <div class="dyncontent">
 <div class="center"><img src="classNodes_1_1FunctionDeclaration__inherit__graph.png" border="0" usemap="#Nodes_1_1FunctionDeclaration_inherit__map" alt="Inheritance graph"/></div>
 <map name="Nodes_1_1FunctionDeclaration_inherit__map" id="Nodes_1_1FunctionDeclaration_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,175,207,369"/>
+<area shape="rect" title=" " alt="" coords="5,175,207,384"/>
 <area shape="rect" href="classNode.html" title=" " alt="" coords="46,5,166,127"/>
 </map>
 </div>
@@ -91,7 +91,7 @@ Collaboration diagram for Nodes::FunctionDeclaration:</div>
 <div class="dyncontent">
 <div class="center"><img src="classNodes_1_1FunctionDeclaration__coll__graph.png" border="0" usemap="#Nodes_1_1FunctionDeclaration_coll__map" alt="Collaboration graph"/></div>
 <map name="Nodes_1_1FunctionDeclaration_coll__map" id="Nodes_1_1FunctionDeclaration_coll__map">
-<area shape="rect" title=" " alt="" coords="489,572,690,723"/>
+<area shape="rect" title=" " alt="" coords="489,572,690,737"/>
 <area shape="rect" href="classNode.html" title=" " alt="" coords="217,403,337,509"/>
 <area shape="rect" href="classPosition.html" title="Position is a class for storing the position of a character in a file. It contains functions for retu..." alt="" coords="107,160,237,340"/>
 <area shape="rect" title=" " alt="" coords="5,5,88,83"/>
@@ -114,6 +114,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6b583d0c84f717e073db63291fd9a0a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73274a2aab69e66fa4f0052199ffc473"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::vector&lt; <a class="el" href="classNodes_1_1LocalVariableDeclaration.html">LocalVariableDeclaration</a> * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNodes_1_1FunctionDeclaration.html#a73274a2aab69e66fa4f0052199ffc473">getArgsDeclaration</a> ()</td></tr>
 <tr class="separator:a73274a2aab69e66fa4f0052199ffc473"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a475e9dd00df841ba99cc0151904d0da2"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classNodes_1_1StatementBlock.html">StatementBlock</a> &gt; const  &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNodes_1_1FunctionDeclaration.html#a475e9dd00df841ba99cc0151904d0da2">getFunctionBody</a> ()</td></tr>
+<tr class="separator:a475e9dd00df841ba99cc0151904d0da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdad69b27d6944d97a392d2a766919da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNodes_1_1FunctionDeclaration.html#acdad69b27d6944d97a392d2a766919da">acceptFunctionBody</a> (<a class="el" href="classAstVisitor.html">AstVisitor</a> &amp;v)</td></tr>
 <tr class="separator:acdad69b27d6944d97a392d2a766919da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53aa36e15e2856d8c9e3986692abd0aa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classNodes_1_1FunctionDeclaration.html#a53aa36e15e2856d8c9e3986692abd0aa">accept</a> (<a class="el" href="classAstVisitor.html">AstVisitor</a> &amp;v)</td></tr>
@@ -145,7 +147,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00464">464</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00483">483</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa8206d93a0a29e84577279b4efb0f264"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa8206d93a0a29e84577279b4efb0f264">&#9670;&nbsp;</a></span>FunctionDeclaration()</h2>
@@ -199,15 +201,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00470">470</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;                                                                            : <a class="code" href="classNode.html">Node</a>() {</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;            <a class="code" href="classNode.html#af4ce41258acdedd4c4678f182ae46e93">position_</a> = pos;</div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;            <a class="code" href="classNode.html#ad9c07781117c5862d49c5488acc1dedc">nodeName_</a> = <span class="stringliteral">&quot;Function declaration&quot;</span>;</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;            this-&gt;<a class="code" href="classNodes_1_1FunctionDeclaration.html#a3c2f899501bc1d2b98efc04abbda3769">type_</a> = t;</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;            this-&gt;<a class="code" href="classNodes_1_1FunctionDeclaration.html#a6184591824742986e1ebaff08b279c94">identifier_</a> = id;</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;            this-&gt;<a class="code" href="classNodes_1_1FunctionDeclaration.html#a4942bb919d360f93b635eb01d8eceb03">argsDeclaration_</a> = std::move(ad);</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;            this-&gt;<a class="code" href="classNodes_1_1FunctionDeclaration.html#ab06689d35d1c8c6a10953d5104a01ad4">functionBody_</a> = std::move(fb);</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;        }</div>
+<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00489">489</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;                                                                            : <a class="code" href="classNode.html">Node</a>() {</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;            <a class="code" href="classNode.html#af4ce41258acdedd4c4678f182ae46e93">position_</a> = pos;</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;            <a class="code" href="classNode.html#ad9c07781117c5862d49c5488acc1dedc">nodeName_</a> = <span class="stringliteral">&quot;Function declaration&quot;</span>;</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;            this-&gt;<a class="code" href="classNodes_1_1FunctionDeclaration.html#a3c2f899501bc1d2b98efc04abbda3769">type_</a> = t;</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;            this-&gt;<a class="code" href="classNodes_1_1FunctionDeclaration.html#a6184591824742986e1ebaff08b279c94">identifier_</a> = id;</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;            this-&gt;<a class="code" href="classNodes_1_1FunctionDeclaration.html#a4942bb919d360f93b635eb01d8eceb03">argsDeclaration_</a> = std::move(ad);</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;            this-&gt;<a class="code" href="classNodes_1_1FunctionDeclaration.html#ab06689d35d1c8c6a10953d5104a01ad4">functionBody_</a> = std::move(fb);</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -268,10 +270,10 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Tree_8cpp_source.html#l00079">79</a> of file <a class="el" href="Tree_8cpp_source.html">Tree.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                                                               {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="classNodes_1_1FunctionDeclaration.html#ab06689d35d1c8c6a10953d5104a01ad4">functionBody_</a>-&gt;accept(v);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="Tree_8cpp_source.html#l00088">88</a> of file <a class="el" href="Tree_8cpp_source.html">Tree.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                                                               {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="classNodes_1_1FunctionDeclaration.html#ab06689d35d1c8c6a10953d5104a01ad4">functionBody_</a>-&gt;accept(v);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -299,18 +301,40 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Tree_8cpp_source.html#l00067">67</a> of file <a class="el" href="Tree_8cpp_source.html">Tree.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                                                                                                    {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classNodes_1_1FunctionDeclaration.html#a4942bb919d360f93b635eb01d8eceb03">argsDeclaration_</a>.empty()) {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">return</span> std::nullopt;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        std::vector&lt;Nodes::LocalVariableDeclaration*&gt; args;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> iter = <a class="code" href="classNodes_1_1FunctionDeclaration.html#a4942bb919d360f93b635eb01d8eceb03">argsDeclaration_</a>.begin(); iter != <a class="code" href="classNodes_1_1FunctionDeclaration.html#a4942bb919d360f93b635eb01d8eceb03">argsDeclaration_</a>.end(); iter++) {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            args.push_back(iter-&gt;get());</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">return</span> args;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="Tree_8cpp_source.html#l00072">72</a> of file <a class="el" href="Tree_8cpp_source.html">Tree.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                                                                                                    {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classNodes_1_1FunctionDeclaration.html#a4942bb919d360f93b635eb01d8eceb03">argsDeclaration_</a>.empty()) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        std::vector&lt;Nodes::LocalVariableDeclaration*&gt; args;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> iter = <a class="code" href="classNodes_1_1FunctionDeclaration.html#a4942bb919d360f93b635eb01d8eceb03">argsDeclaration_</a>.begin(); iter != <a class="code" href="classNodes_1_1FunctionDeclaration.html#a4942bb919d360f93b635eb01d8eceb03">argsDeclaration_</a>.end(); iter++) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            args.push_back(iter-&gt;get());</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">return</span> args;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a475e9dd00df841ba99cc0151904d0da2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a475e9dd00df841ba99cc0151904d0da2">&#9670;&nbsp;</a></span>getFunctionBody()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="classNodes_1_1StatementBlock.html">Nodes::StatementBlock</a> &gt; const  &amp; Nodes::FunctionDeclaration::getFunctionBody </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="Tree_8cpp_source.html#l00084">84</a> of file <a class="el" href="Tree_8cpp_source.html">Tree.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                                                                                   {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classNodes_1_1FunctionDeclaration.html#ab06689d35d1c8c6a10953d5104a01ad4">functionBody_</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -329,10 +353,10 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Tree_8cpp_source.html#l00063">63</a> of file <a class="el" href="Tree_8cpp_source.html">Tree.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                                                        {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classNodes_1_1FunctionDeclaration.html#a6184591824742986e1ebaff08b279c94">identifier_</a>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="Tree_8cpp_source.html#l00068">68</a> of file <a class="el" href="Tree_8cpp_source.html">Tree.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                                                        {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classNodes_1_1FunctionDeclaration.html#a6184591824742986e1ebaff08b279c94">identifier_</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -351,10 +375,10 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Tree_8cpp_source.html#l00059">59</a> of file <a class="el" href="Tree_8cpp_source.html">Tree.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                               {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classNodes_1_1FunctionDeclaration.html#a3c2f899501bc1d2b98efc04abbda3769">type_</a>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<p class="definition">Definition at line <a class="el" href="Tree_8cpp_source.html#l00064">64</a> of file <a class="el" href="Tree_8cpp_source.html">Tree.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                               {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classNodes_1_1FunctionDeclaration.html#a3c2f899501bc1d2b98efc04abbda3769">type_</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -388,7 +412,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00467">467</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00486">486</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
 
 </div>
 </div>
@@ -412,7 +436,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00468">468</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00487">487</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
 
 </div>
 </div>
@@ -436,7 +460,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00466">466</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00485">485</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
 
 </div>
 </div>
@@ -460,7 +484,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00465">465</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Tree_8h_source.html#l00484">484</a> of file <a class="el" href="Tree_8h_source.html">Tree.h</a>.</p>
 
 </div>
 </div>
@@ -470,12 +494,12 @@ Here is the caller graph for this function:</div>
 </ul>
 </div><!-- contents -->
 <div class="ttc" id="aclassNode_html_ad9c07781117c5862d49c5488acc1dedc"><div class="ttname"><a href="classNode.html#ad9c07781117c5862d49c5488acc1dedc">Node::nodeName_</a></div><div class="ttdeci">std::string nodeName_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00096">Tree.h:96</a></div></div>
-<div class="ttc" id="aclassNodes_1_1FunctionDeclaration_html_a4942bb919d360f93b635eb01d8eceb03"><div class="ttname"><a href="classNodes_1_1FunctionDeclaration.html#a4942bb919d360f93b635eb01d8eceb03">Nodes::FunctionDeclaration::argsDeclaration_</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; LocalVariableDeclaration &gt; &gt; argsDeclaration_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00467">Tree.h:467</a></div></div>
+<div class="ttc" id="aclassNodes_1_1FunctionDeclaration_html_a4942bb919d360f93b635eb01d8eceb03"><div class="ttname"><a href="classNodes_1_1FunctionDeclaration.html#a4942bb919d360f93b635eb01d8eceb03">Nodes::FunctionDeclaration::argsDeclaration_</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; LocalVariableDeclaration &gt; &gt; argsDeclaration_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00486">Tree.h:486</a></div></div>
 <div class="ttc" id="aclassNode_html_af4ce41258acdedd4c4678f182ae46e93"><div class="ttname"><a href="classNode.html#af4ce41258acdedd4c4678f182ae46e93">Node::position_</a></div><div class="ttdeci">Position position_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00095">Tree.h:95</a></div></div>
-<div class="ttc" id="aclassNodes_1_1FunctionDeclaration_html_ab06689d35d1c8c6a10953d5104a01ad4"><div class="ttname"><a href="classNodes_1_1FunctionDeclaration.html#ab06689d35d1c8c6a10953d5104a01ad4">Nodes::FunctionDeclaration::functionBody_</a></div><div class="ttdeci">std::unique_ptr&lt; StatementBlock &gt; functionBody_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00468">Tree.h:468</a></div></div>
-<div class="ttc" id="aclassNodes_1_1FunctionDeclaration_html_a6184591824742986e1ebaff08b279c94"><div class="ttname"><a href="classNodes_1_1FunctionDeclaration.html#a6184591824742986e1ebaff08b279c94">Nodes::FunctionDeclaration::identifier_</a></div><div class="ttdeci">std::string identifier_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00466">Tree.h:466</a></div></div>
+<div class="ttc" id="aclassNodes_1_1FunctionDeclaration_html_ab06689d35d1c8c6a10953d5104a01ad4"><div class="ttname"><a href="classNodes_1_1FunctionDeclaration.html#ab06689d35d1c8c6a10953d5104a01ad4">Nodes::FunctionDeclaration::functionBody_</a></div><div class="ttdeci">std::unique_ptr&lt; StatementBlock &gt; functionBody_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00487">Tree.h:487</a></div></div>
+<div class="ttc" id="aclassNodes_1_1FunctionDeclaration_html_a6184591824742986e1ebaff08b279c94"><div class="ttname"><a href="classNodes_1_1FunctionDeclaration.html#a6184591824742986e1ebaff08b279c94">Nodes::FunctionDeclaration::identifier_</a></div><div class="ttdeci">std::string identifier_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00485">Tree.h:485</a></div></div>
 <div class="ttc" id="aclassNode_html"><div class="ttname"><a href="classNode.html">Node</a></div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00088">Tree.h:88</a></div></div>
-<div class="ttc" id="aclassNodes_1_1FunctionDeclaration_html_a3c2f899501bc1d2b98efc04abbda3769"><div class="ttname"><a href="classNodes_1_1FunctionDeclaration.html#a3c2f899501bc1d2b98efc04abbda3769">Nodes::FunctionDeclaration::type_</a></div><div class="ttdeci">idType type_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00465">Tree.h:465</a></div></div>
+<div class="ttc" id="aclassNodes_1_1FunctionDeclaration_html_a3c2f899501bc1d2b98efc04abbda3769"><div class="ttname"><a href="classNodes_1_1FunctionDeclaration.html#a3c2f899501bc1d2b98efc04abbda3769">Nodes::FunctionDeclaration::type_</a></div><div class="ttdeci">idType type_</div><div class="ttdef"><b>Definition:</b> <a href="Tree_8h_source.html#l00484">Tree.h:484</a></div></div>
 <div class="ttc" id="aclassAstVisitor_html_a7c985713af1b62bb647d268894bb0da3"><div class="ttname"><a href="classAstVisitor.html#a7c985713af1b62bb647d268894bb0da3">AstVisitor::visitFunctionDeclaration</a></div><div class="ttdeci">virtual void visitFunctionDeclaration(Nodes::FunctionDeclaration *)=0</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

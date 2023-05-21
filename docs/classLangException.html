@@ -81,7 +81,7 @@ Inheritance diagram for LangException:</div>
 <div class="dyncontent">
 <div class="center"><img src="classLangException__inherit__graph.png" border="0" usemap="#LangException_inherit__map" alt="Inheritance graph"/></div>
 <map name="LangException_inherit__map" id="LangException_inherit__map">
-<area shape="rect" title="LangException is a class for throwing exceptions in the interpreter. It contains functions for return..." alt="" coords="5,131,148,252"/>
+<area shape="rect" title="LangException is a class for throwing exceptions in the interpreter. It contains functions for return..." alt="" coords="5,131,148,281"/>
 <area shape="rect" title=" " alt="" coords="7,5,146,83"/>
 </map>
 </div>
@@ -90,24 +90,25 @@ Collaboration diagram for LangException:</div>
 <div class="dyncontent">
 <div class="center"><img src="classLangException__coll__graph.png" border="0" usemap="#LangException_coll__map" alt="Collaboration graph"/></div>
 <map name="LangException_coll__map" id="LangException_coll__map">
-<area shape="rect" title="LangException is a class for throwing exceptions in the interpreter. It contains functions for return..." alt="" coords="162,403,305,509"/>
-<area shape="rect" title=" " alt="" coords="5,211,144,289"/>
-<area shape="rect" href="classPosition.html" title="Position is a class for storing the position of a character in a file. It contains functions for retu..." alt="" coords="168,160,299,340"/>
-<area shape="rect" title=" " alt="" coords="67,5,149,83"/>
-<area shape="rect" title=" " alt="" coords="188,5,279,83"/>
-<area shape="rect" title=" " alt="" coords="303,5,406,83"/>
-<area shape="rect" title=" " alt="" coords="323,211,373,289"/>
+<area shape="rect" title="LangException is a class for throwing exceptions in the interpreter. It contains functions for return..." alt="" coords="278,403,421,509"/>
+<area shape="rect" title=" " alt="" coords="8,211,147,289"/>
+<area shape="rect" href="classPosition.html" title="Position is a class for storing the position of a character in a file. It contains functions for retu..." alt="" coords="171,160,301,340"/>
+<area shape="rect" title=" " alt="" coords="5,5,88,83"/>
+<area shape="rect" title=" " alt="" coords="127,5,217,83"/>
+<area shape="rect" title=" " alt="" coords="270,5,373,83"/>
+<area shape="rect" title=" " alt="" coords="415,211,473,289"/>
+<area shape="rect" title=" " alt="" coords="497,211,548,289"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5f45c26f583c8467478d956bb0b9b148"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLangException.html#a5f45c26f583c8467478d956bb0b9b148">LangException</a> (std::string errorMsg, <a class="el" href="classPosition.html">Position</a> pos)</td></tr>
-<tr class="separator:a5f45c26f583c8467478d956bb0b9b148"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a0714eac407bce2c48feaab4fbebf64"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLangException.html#a1a0714eac407bce2c48feaab4fbebf64">LangException</a> (std::string errorMsg, <a class="el" href="classPosition.html">Position</a> pos, std::string fun=&quot;&quot;, unsigned int line=0)</td></tr>
+<tr class="separator:a1a0714eac407bce2c48feaab4fbebf64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c639522b6d36007270c62cf842fad8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLangException.html#a2c639522b6d36007270c62cf842fad8b">LangException</a> (const std::string &amp;errorMsg)</td></tr>
 <tr class="separator:a2c639522b6d36007270c62cf842fad8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e9a95ceea7fe09c0e29ae5003c21323"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLangException.html#a9e9a95ceea7fe09c0e29ae5003c21323">what2</a> (std::string errorMsg, <a class="el" href="classPosition.html">Position</a> <a class="el" href="classLangException.html#a522c259ebac94638bb69c574210c98b5">position_</a>={}, bool <a class="el" href="classLangException.html#a108a781d281ff00b169a5c82b64878af">positional_</a>={}) const</td></tr>
-<tr class="separator:a9e9a95ceea7fe09c0e29ae5003c21323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae379865dbdb558004b1cf9c44bcc615"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLangException.html#aae379865dbdb558004b1cf9c44bcc615">what2</a> (std::string errorMsg, <a class="el" href="classPosition.html">Position</a> <a class="el" href="classLangException.html#a522c259ebac94638bb69c574210c98b5">position_</a>={}, std::string fun=&quot;&quot;, unsigned int lane=0, bool <a class="el" href="classLangException.html#a108a781d281ff00b169a5c82b64878af">positional_</a>={}) const</td></tr>
+<tr class="separator:aae379865dbdb558004b1cf9c44bcc615"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -115,6 +116,10 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a522c259ebac94638bb69c574210c98b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a108a781d281ff00b169a5c82b64878af"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLangException.html#a108a781d281ff00b169a5c82b64878af">positional_</a> = false</td></tr>
 <tr class="separator:a108a781d281ff00b169a5c82b64878af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7db00510ca45b163bbbe7d752398842d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLangException.html#a7db00510ca45b163bbbe7d752398842d">fun_</a></td></tr>
+<tr class="separator:a7db00510ca45b163bbbe7d752398842d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a23cd92e251cb5c9c8434f162333acb"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLangException.html#a0a23cd92e251cb5c9c8434f162333acb">line_</a></td></tr>
+<tr class="separator:a0a23cd92e251cb5c9c8434f162333acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classLangException.html" title="LangException is a class for throwing exceptions in the interpreter. It contains functions for return...">LangException</a> is a class for throwing exceptions in the interpreter. It contains functions for returning the error message and the position of the error. The error message is used by the interpreter to print the error message. </p>
@@ -123,8 +128,8 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="LangException_8h_source.html#l00022">22</a> of file <a class="el" href="LangException_8h_source.html">LangException.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a5f45c26f583c8467478d956bb0b9b148"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f45c26f583c8467478d956bb0b9b148">&#9670;&nbsp;</a></span>LangException() <span class="overload">[1/2]</span></h2>
+<a id="a1a0714eac407bce2c48feaab4fbebf64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a0714eac407bce2c48feaab4fbebf64">&#9670;&nbsp;</a></span>LangException() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -142,7 +147,19 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classPosition.html">Position</a>&#160;</td>
-          <td class="paramname"><em>pos</em>&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>fun</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>line</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -158,11 +175,13 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="LangException_8h_source.html#l00025">25</a> of file <a class="el" href="LangException_8h_source.html">LangException.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                                                             : std::runtime_error(<a class="code" href="classLangException.html#a9e9a95ceea7fe09c0e29ae5003c21323">what2</a>(std::move(errorMsg), pos, <span class="keyword">true</span>))</div>
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                                                                                                        : std::runtime_error(<a class="code" href="classLangException.html#aae379865dbdb558004b1cf9c44bcc615">what2</a>(std::move(errorMsg), pos, fun, line, <span class="keyword">true</span>))</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="classLangException.html#a522c259ebac94638bb69c574210c98b5">position_</a> = pos;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="classLangException.html#a108a781d281ff00b169a5c82b64878af">positional_</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="classLangException.html#a7db00510ca45b163bbbe7d752398842d">fun_</a> = fun;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="classLangException.html#a0a23cd92e251cb5c9c8434f162333acb">line_</a> = line;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -190,14 +209,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LangException_8h_source.html#l00030">30</a> of file <a class="el" href="LangException_8h_source.html">LangException.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;: std::runtime_error(<a class="code" href="classLangException.html#a9e9a95ceea7fe09c0e29ae5003c21323">what2</a>(std::move(errorMsg))) {}</div>
+<p class="definition">Definition at line <a class="el" href="LangException_8h_source.html#l00032">32</a> of file <a class="el" href="LangException_8h_source.html">LangException.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;: std::runtime_error(<a class="code" href="classLangException.html#aae379865dbdb558004b1cf9c44bcc615">what2</a>(std::move(errorMsg))) {}</div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a9e9a95ceea7fe09c0e29ae5003c21323"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e9a95ceea7fe09c0e29ae5003c21323">&#9670;&nbsp;</a></span>what2()</h2>
+<a id="aae379865dbdb558004b1cf9c44bcc615"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae379865dbdb558004b1cf9c44bcc615">&#9670;&nbsp;</a></span>what2()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -220,6 +239,18 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>fun</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>lane</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>positional_</em> = <code>{}</code>&#160;</td>
         </tr>
@@ -236,24 +267,77 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LangException_8h_source.html#l00032">32</a> of file <a class="el" href="LangException_8h_source.html">LangException.h</a>.</p>
-<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                                                             {}, <span class="keywordtype">bool</span> <a class="code" href="classLangException.html#a108a781d281ff00b169a5c82b64878af">positional_</a> = {}) <span class="keyword">const</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classLangException.html#a108a781d281ff00b169a5c82b64878af">positional_</a>) {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            std::string error;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            error += errorMsg;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            error += <span class="stringliteral">&quot;\n\tAT LINE:&quot;</span>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            error += std::to_string(<a class="code" href="classLangException.html#a522c259ebac94638bb69c574210c98b5">position_</a>.<a class="code" href="classPosition.html#a4f97b346469f2955db8f8339647c6c05">getLine</a>());</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            error += <span class="stringliteral">&quot; COLUMN: &quot;</span>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            error += std::to_string(<a class="code" href="classLangException.html#a522c259ebac94638bb69c574210c98b5">position_</a>.<a class="code" href="classPosition.html#a3da3ab04ecf8a79a6531a5f9b69af09d">getColumn</a>());</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordflow">return</span> error;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">return</span> errorMsg;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="LangException_8h_source.html#l00034">34</a> of file <a class="el" href="LangException_8h_source.html">LangException.h</a>.</p>
+<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                                                             {}, std::string fun = <span class="stringliteral">&quot;&quot;</span>, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> lane=0, <span class="keywordtype">bool</span> <a class="code" href="classLangException.html#a108a781d281ff00b169a5c82b64878af">positional_</a> = {}) <span class="keyword">const</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classLangException.html#a108a781d281ff00b169a5c82b64878af">positional_</a>) {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            std::string error;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            error += errorMsg;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            error += <span class="stringliteral">&quot;\n\tAT LINE:&quot;</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            error += std::to_string(<a class="code" href="classLangException.html#a522c259ebac94638bb69c574210c98b5">position_</a>.<a class="code" href="classPosition.html#a4f97b346469f2955db8f8339647c6c05">getLine</a>());</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            error += <span class="stringliteral">&quot; COLUMN: &quot;</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            error += std::to_string(<a class="code" href="classLangException.html#a522c259ebac94638bb69c574210c98b5">position_</a>.<a class="code" href="classPosition.html#a3da3ab04ecf8a79a6531a5f9b69af09d">getColumn</a>());</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            error += <span class="stringliteral">&quot;\n\tIN FUNCTION: &quot;</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            error += fun;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            error += <span class="stringliteral">&quot;\n\tAT LINE: &quot;</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            error += std::to_string(lane);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">return</span> error;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> errorMsg;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a7db00510ca45b163bbbe7d752398842d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7db00510ca45b163bbbe7d752398842d">&#9670;&nbsp;</a></span>fun_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string LangException::fun_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="LangException_8h_source.html#l00055">55</a> of file <a class="el" href="LangException_8h_source.html">LangException.h</a>.</p>
+
+</div>
+</div>
+<a id="a0a23cd92e251cb5c9c8434f162333acb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a23cd92e251cb5c9c8434f162333acb">&#9670;&nbsp;</a></span>line_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int LangException::line_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="LangException_8h_source.html#l00056">56</a> of file <a class="el" href="LangException_8h_source.html">LangException.h</a>.</p>
+
+</div>
+</div>
 <a id="a522c259ebac94638bb69c574210c98b5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a522c259ebac94638bb69c574210c98b5">&#9670;&nbsp;</a></span>position_</h2>
 
@@ -274,7 +358,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LangException_8h_source.html#l00046">46</a> of file <a class="el" href="LangException_8h_source.html">LangException.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LangException_8h_source.html#l00053">53</a> of file <a class="el" href="LangException_8h_source.html">LangException.h</a>.</p>
 
 </div>
 </div>
@@ -298,7 +382,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="LangException_8h_source.html#l00047">47</a> of file <a class="el" href="LangException_8h_source.html">LangException.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="LangException_8h_source.html#l00054">54</a> of file <a class="el" href="LangException_8h_source.html">LangException.h</a>.</p>
 
 </div>
 </div>
@@ -306,11 +390,13 @@ Private Attributes</h2></td></tr>
 <li>include/<a class="el" href="LangException_8h_source.html">LangException.h</a></li>
 </ul>
 </div><!-- contents -->
-<div class="ttc" id="aclassLangException_html_a9e9a95ceea7fe09c0e29ae5003c21323"><div class="ttname"><a href="classLangException.html#a9e9a95ceea7fe09c0e29ae5003c21323">LangException::what2</a></div><div class="ttdeci">std::string what2(std::string errorMsg, Position position_={}, bool positional_={}) const</div><div class="ttdef"><b>Definition:</b> <a href="LangException_8h_source.html#l00032">LangException.h:32</a></div></div>
 <div class="ttc" id="aclassPosition_html_a4f97b346469f2955db8f8339647c6c05"><div class="ttname"><a href="classPosition.html#a4f97b346469f2955db8f8339647c6c05">Position::getLine</a></div><div class="ttdeci">unsigned int getLine() const</div><div class="ttdef"><b>Definition:</b> <a href="Position_8cpp_source.html#l00017">Position.cpp:17</a></div></div>
-<div class="ttc" id="aclassLangException_html_a108a781d281ff00b169a5c82b64878af"><div class="ttname"><a href="classLangException.html#a108a781d281ff00b169a5c82b64878af">LangException::positional_</a></div><div class="ttdeci">bool positional_</div><div class="ttdef"><b>Definition:</b> <a href="LangException_8h_source.html#l00047">LangException.h:47</a></div></div>
+<div class="ttc" id="aclassLangException_html_a0a23cd92e251cb5c9c8434f162333acb"><div class="ttname"><a href="classLangException.html#a0a23cd92e251cb5c9c8434f162333acb">LangException::line_</a></div><div class="ttdeci">unsigned int line_</div><div class="ttdef"><b>Definition:</b> <a href="LangException_8h_source.html#l00056">LangException.h:56</a></div></div>
+<div class="ttc" id="aclassLangException_html_a7db00510ca45b163bbbe7d752398842d"><div class="ttname"><a href="classLangException.html#a7db00510ca45b163bbbe7d752398842d">LangException::fun_</a></div><div class="ttdeci">std::string fun_</div><div class="ttdef"><b>Definition:</b> <a href="LangException_8h_source.html#l00055">LangException.h:55</a></div></div>
+<div class="ttc" id="aclassLangException_html_a108a781d281ff00b169a5c82b64878af"><div class="ttname"><a href="classLangException.html#a108a781d281ff00b169a5c82b64878af">LangException::positional_</a></div><div class="ttdeci">bool positional_</div><div class="ttdef"><b>Definition:</b> <a href="LangException_8h_source.html#l00054">LangException.h:54</a></div></div>
 <div class="ttc" id="aclassPosition_html_a3da3ab04ecf8a79a6531a5f9b69af09d"><div class="ttname"><a href="classPosition.html#a3da3ab04ecf8a79a6531a5f9b69af09d">Position::getColumn</a></div><div class="ttdeci">unsigned int getColumn() const</div><div class="ttdef"><b>Definition:</b> <a href="Position_8cpp_source.html#l00021">Position.cpp:21</a></div></div>
-<div class="ttc" id="aclassLangException_html_a522c259ebac94638bb69c574210c98b5"><div class="ttname"><a href="classLangException.html#a522c259ebac94638bb69c574210c98b5">LangException::position_</a></div><div class="ttdeci">Position position_</div><div class="ttdef"><b>Definition:</b> <a href="LangException_8h_source.html#l00046">LangException.h:46</a></div></div>
+<div class="ttc" id="aclassLangException_html_a522c259ebac94638bb69c574210c98b5"><div class="ttname"><a href="classLangException.html#a522c259ebac94638bb69c574210c98b5">LangException::position_</a></div><div class="ttdeci">Position position_</div><div class="ttdef"><b>Definition:</b> <a href="LangException_8h_source.html#l00053">LangException.h:53</a></div></div>
+<div class="ttc" id="aclassLangException_html_aae379865dbdb558004b1cf9c44bcc615"><div class="ttname"><a href="classLangException.html#aae379865dbdb558004b1cf9c44bcc615">LangException::what2</a></div><div class="ttdeci">std::string what2(std::string errorMsg, Position position_={}, std::string fun=&quot;&quot;, unsigned int lane=0, bool positional_={}) const</div><div class="ttdef"><b>Definition:</b> <a href="LangException_8h_source.html#l00034">LangException.h:34</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

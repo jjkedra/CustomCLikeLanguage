@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['statement_295',['Statement',['../classNodes_1_1Statement.html',1,'Nodes']]],
-  ['statementblock_296',['StatementBlock',['../classNodes_1_1StatementBlock.html',1,'Nodes']]],
-  ['string_297',['String',['../classNodes_1_1String.html',1,'Nodes']]]
+  ['relationaloperator_304',['RelationalOperator',['../classNodes_1_1RelationalOperator.html',1,'Nodes']]],
+  ['returnstatement_305',['ReturnStatement',['../classNodes_1_1ReturnStatement.html',1,'Nodes']]]
 ];

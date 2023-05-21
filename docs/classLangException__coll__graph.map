@@ -1,9 +1,10 @@
 <map id="LangException" name="LangException">
-<area shape="rect" id="node1" title="LangException is a class for throwing exceptions in the interpreter. It contains functions for return..." alt="" coords="162,403,305,509"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,211,144,289"/>
-<area shape="rect" id="node3" href="$classPosition.html" title="Position is a class for storing the position of a character in a file. It contains functions for retu..." alt="" coords="168,160,299,340"/>
-<area shape="rect" id="node4" title=" " alt="" coords="67,5,149,83"/>
-<area shape="rect" id="node5" title=" " alt="" coords="188,5,279,83"/>
-<area shape="rect" id="node6" title=" " alt="" coords="303,5,406,83"/>
-<area shape="rect" id="node7" title=" " alt="" coords="323,211,373,289"/>
+<area shape="rect" id="node1" title="LangException is a class for throwing exceptions in the interpreter. It contains functions for return..." alt="" coords="278,403,421,509"/>
+<area shape="rect" id="node2" title=" " alt="" coords="8,211,147,289"/>
+<area shape="rect" id="node3" href="$classPosition.html" title="Position is a class for storing the position of a character in a file. It contains functions for retu..." alt="" coords="171,160,301,340"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,5,88,83"/>
+<area shape="rect" id="node5" title=" " alt="" coords="127,5,217,83"/>
+<area shape="rect" id="node6" title=" " alt="" coords="270,5,373,83"/>
+<area shape="rect" id="node7" title=" " alt="" coords="415,211,473,289"/>
+<area shape="rect" id="node8" title=" " alt="" coords="497,211,548,289"/>
 </map>

@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['value_5f_503',['value_',['../classNodes_1_1String.html#ac8c770cc7b125122ef87be98762b88c5',1,'Nodes::String::value_()'],['../classNodes_1_1Number.html#a0abcd6455ae115aaae345f0fc4eda18d',1,'Nodes::Number::value_()'],['../classNodes_1_1Dictionary.html#abc1bf1c1ea342033d3ef0066c929c33e',1,'Nodes::Dictionary::value_()']]],
-  ['valuevalue_5f_504',['valueValue_',['../classNodes_1_1Dictionary.html#a764331946901f541c3e1ba2de8528e71',1,'Nodes::Dictionary']]],
-  ['variables_5f_505',['variables_',['../classParser.html#a5f42db47d3fa5ae6235a4a5dcd5703a0',1,'Parser::variables_()'],['../classNodes_1_1Program.html#a16592b53b1e8e7b4afd2a10247a19b64',1,'Nodes::Program::variables_()']]]
+  ['termoperators_519',['termOperators',['../namespaceNodes.html#aae0e5eb4466cce611d69415967acbebd',1,'Nodes']]],
+  ['tokenstartposition_5f_520',['tokenStartPosition_',['../classLexer.html#a706b2e0a9f503eeee7f8e88d307b10e8',1,'Lexer']]],
+  ['tokenvalue_5f_521',['tokenValue_',['../classToken.html#aeea5198281f3ac21bf8edec4c83f5691',1,'Token']]],
+  ['top_5f_522',['top_',['../classNodes_1_1TermOperator.html#ab13b3005ed019fd18eaea51c40362657',1,'Nodes::TermOperator']]],
+  ['type_5f_523',['type_',['../classToken.html#ad553caad96b1f36406baeb168a33de3f',1,'Token::type_()'],['../classNodes_1_1LocalVariableDeclaration.html#a10e926869fc08f411827fc878f128ed6',1,'Nodes::LocalVariableDeclaration::type_()'],['../classNodes_1_1Declaration.html#ac84424723bf81bb07ebe9916c07f1f26',1,'Nodes::Declaration::type_()'],['../classNodes_1_1FunctionDeclaration.html#a3c2f899501bc1d2b98efc04abbda3769',1,'Nodes::FunctionDeclaration::type_()']]]
 ];

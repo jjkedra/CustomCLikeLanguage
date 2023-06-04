@@ -1238,3 +1238,49 @@ TEST(InterpreterSuite, simpleStringConcatenation) {
     }
     EXPECT_EQ(compared, code.second);
 }
+
+TEST(InterpreterSuite, simpleVarRef) {
+    std::pair<std::string, std::vector<std::string>> code = {"int main(){ string a = \"Hi\"; string b = a; print(b);}",{"Hi"}};
+    std::stringstream redirected;
+    auto prev = std::cout.rdbuf(redirected.rdbuf());
+
+    std::stringstream ss;
+    ss << code.first;
+    SemanticAnalyzerVisitor semanticAnalyzerVisitor;
+    InterpreterVisitor interpreterVisitor;
+    Parser parser(ss);
+    std::unique_ptr<Nodes::Program> program = parser.parseProgram();
+    program->accept(semanticAnalyzerVisitor);
+    program->accept(interpreterVisitor);
+
+    std::string output;
+    std::vector<std::string> compared;
+
+    while (std::getline(redirected, output)) {
+        compared.push_back(output);
+    }
+    EXPECT_EQ(compared, code.second);
+}
+
+TEST(InterpreterSuite, simpleFibonaciWhile) {
+    std::pair<std::string, std::vector<std::string>> code = {"int main(){int n=19; int a=0; int b=1; int i=2; int temp; while(i <= n){temp=a+b; a=b; b=temp; i=i+1;} print(b);}",{"4181"}};
+    std::stringstream redirected;
+    auto prev = std::cout.rdbuf(redirected.rdbuf());
+
+    std::stringstream ss;
+    ss << code.first;
+    SemanticAnalyzerVisitor semanticAnalyzerVisitor;
+    InterpreterVisitor interpreterVisitor;
+    Parser parser(ss);
+    std::unique_ptr<Nodes::Program> program = parser.parseProgram();
+    program->accept(semanticAnalyzerVisitor);
+    program->accept(interpreterVisitor);
+
+    std::string output;
+    std::vector<std::string> compared;
+
+    while (std::getline(redirected, output)) {
+        compared.push_back(output);
+    }
+    EXPECT_EQ(compared, code.second);
+}

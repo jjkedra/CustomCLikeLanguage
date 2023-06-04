@@ -1344,7 +1344,7 @@ Here is the call graph for this function:</div>
 <div class="fragment"><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                                                                                         {</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keyword">auto</span> symbol = <a class="code" href="classInterpreterVisitor.html#a09e59734875dc6eef7dd297d278f7504">symbolManager_</a>.<a class="code" href="classSymbolManager.html#a020727cb6f60260358f3da357e229766">getSymbol</a>(variableReference-&gt;<a class="code" href="classNodes_1_1VariableReference.html#a34a21fae13040defa483a69b3e34b640">getIdentifier</a>(), <span class="keyword">false</span>);</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordflow">if</span> (symbol.value().hasValue()) {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordflow">if</span> (symbol.has_value()) {</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <a class="code" href="classInterpreterVisitor.html#a23b293fe23102e1105323311d0c66905">currentValue_</a> = symbol.value().getValue();</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keyword">auto</span> type = symbol-&gt;getType();</div>

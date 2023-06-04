@@ -121,7 +121,7 @@ void InterpreterVisitor::visitArithmeticExpression(Nodes::ArithmeticExpression *
 void InterpreterVisitor::visitVariableReference(Nodes::VariableReference *variableReference) {
     auto symbol = symbolManager_.getSymbol(variableReference->getIdentifier(), false);
 
-    if (symbol.value().hasValue()) {
+    if (symbol.has_value()) {
         currentValue_ = symbol.value().getValue();
     } else {
         auto type = symbol->getType();

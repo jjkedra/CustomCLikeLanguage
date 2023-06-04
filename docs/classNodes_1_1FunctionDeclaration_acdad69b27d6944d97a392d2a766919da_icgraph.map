@@ -1,4 +1,6 @@
 <map id="Nodes::FunctionDeclaration::acceptFunctionBody" name="Nodes::FunctionDeclaration::acceptFunctionBody">
-<area shape="rect" id="node1" title=" " alt="" coords="249,5,451,47"/>
-<area shape="rect" id="node2" href="$classparserVisitor.html#a38cba0c812371c3eb0c15efcf82b53dc" title=" " alt="" coords="5,5,201,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="249,71,451,112"/>
+<area shape="rect" id="node2" href="$classSemanticAnalyzerVisitor.html#a071e893196d8e01fec3faea4508c0a60" title=" " alt="" coords="9,5,197,47"/>
+<area shape="rect" id="node3" href="$classparserVisitor.html#a38cba0c812371c3eb0c15efcf82b53dc" title=" " alt="" coords="5,71,201,112"/>
+<area shape="rect" id="node4" href="$classInterpreterVisitor.html#a181ba207058d4711f48d8ca52f8e8798" title=" " alt="" coords="9,136,197,177"/>
 </map>

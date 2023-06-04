@@ -1,4 +1,6 @@
 <map id="Nodes::ReturnStatement::acceptReturned" name="Nodes::ReturnStatement::acceptReturned">
-<area shape="rect" id="node1" title=" " alt="" coords="237,5,420,47"/>
-<area shape="rect" id="node2" href="$classparserVisitor.html#a515aefd2a2af78c19f1045050890d686" title=" " alt="" coords="5,5,189,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="237,71,420,112"/>
+<area shape="rect" id="node2" href="$classSemanticAnalyzerVisitor.html#a52926c9f1d029c1557cc91ab1ec87c37" title=" " alt="" coords="6,5,189,47"/>
+<area shape="rect" id="node3" href="$classparserVisitor.html#a515aefd2a2af78c19f1045050890d686" title=" " alt="" coords="5,71,189,112"/>
+<area shape="rect" id="node4" href="$classInterpreterVisitor.html#a806006a5deec937b2501a3d1d3bb95b3" title=" " alt="" coords="13,136,182,177"/>
 </map>

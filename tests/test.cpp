@@ -2,14 +2,15 @@
 // Created by Jan Kędra on 16/04/2023.
 //
 
-#include <gtest/gtest.h>
 #include <variant>
-#include <limits.h>
 #include <string>
 #include "../include/Token.h"
 #include "../include/Lexer.h"
 #include "Parser.h"
 #include "Visitors/ParserVisitor.h"
+#include "gtest/gtest.h"
+#include "SemanticAnalyzerVisitor.h"
+#include "InterpreterVisitor.h"
 
 typedef TokenType tt;
 using tv = std::variant<int, float, std::string>;
@@ -1052,4 +1053,188 @@ TEST(ParserSuiteClassCheck, dictDeclarationWithDefault) {
     std::string output = testing::internal::GetCapturedStdout();
 
     EXPECT_EQ(output, expected);
+}
+
+TEST(InterpreterSuite, simplePrint) {
+    std::pair<std::string, std::vector<std::string>> code = {"int main(){ print(10,11,12,13);}",{"10","11","12","13"}};
+    std::stringstream redirected;
+    auto prev = std::cout.rdbuf(redirected.rdbuf());
+
+    std::stringstream ss;
+    ss << code.first;
+    SemanticAnalyzerVisitor semanticAnalyzerVisitor;
+    InterpreterVisitor interpreterVisitor;
+    Parser parser(ss);
+    std::unique_ptr<Nodes::Program> program = parser.parseProgram();
+    program->accept(semanticAnalyzerVisitor);
+    program->accept(interpreterVisitor);
+
+    std::string output;
+    std::vector<std::string> compared;
+
+    while (std::getline(redirected, output)) {
+        compared.push_back(output);
+    }
+    EXPECT_EQ(compared, code.second);
+}
+
+TEST(InterpreterSuite, simplePrintVar) {
+    std::pair<std::string, std::vector<std::string>> code = {"int main(){ int a=5;float b=10.5; print(a,b,b,b,a,b);}",{"5","10.5","10.5","10.5","5","10.5",}};
+    std::stringstream redirected;
+    auto prev = std::cout.rdbuf(redirected.rdbuf());
+
+    std::stringstream ss;
+    ss << code.first;
+    SemanticAnalyzerVisitor semanticAnalyzerVisitor;
+    InterpreterVisitor interpreterVisitor;
+    Parser parser(ss);
+    std::unique_ptr<Nodes::Program> program = parser.parseProgram();
+    program->accept(semanticAnalyzerVisitor);
+    program->accept(interpreterVisitor);
+
+    std::string output;
+    std::vector<std::string> compared;
+
+    while (std::getline(redirected, output)) {
+        compared.push_back(output);
+    }
+    EXPECT_EQ(compared, code.second);
+}
+
+TEST(InterpreterSuite, simplePrintWhile) {
+    std::pair<std::string, std::vector<std::string>> code = {"int main(){int n=6; while(n>0){print(n); n=n-1;} }",{"6","5","4","3","2","1"}};
+    std::stringstream redirected;
+    auto prev = std::cout.rdbuf(redirected.rdbuf());
+
+    std::stringstream ss;
+    ss << code.first;
+    SemanticAnalyzerVisitor semanticAnalyzerVisitor;
+    InterpreterVisitor interpreterVisitor;
+    Parser parser(ss);
+    std::unique_ptr<Nodes::Program> program = parser.parseProgram();
+    program->accept(semanticAnalyzerVisitor);
+    program->accept(interpreterVisitor);
+
+    std::string output;
+    std::vector<std::string> compared;
+
+    while (std::getline(redirected, output)) {
+        compared.push_back(output);
+    }
+    EXPECT_EQ(compared, code.second);
+}
+
+TEST(InterpreterSuite, simplePrintRecursion) {
+    std::pair<std::string, std::vector<std::string>> code = {"int func(int n){print(n); if(n>0){func(n-1);}} int main(){func(6);}",{"6","5","4","3","2","1","0"}};
+    std::stringstream redirected;
+    auto prev = std::cout.rdbuf(redirected.rdbuf());
+
+    std::stringstream ss;
+    ss << code.first;
+    SemanticAnalyzerVisitor semanticAnalyzerVisitor;
+    InterpreterVisitor interpreterVisitor;
+    Parser parser(ss);
+    std::unique_ptr<Nodes::Program> program = parser.parseProgram();
+    program->accept(semanticAnalyzerVisitor);
+    program->accept(interpreterVisitor);
+
+    std::string output;
+    std::vector<std::string> compared;
+
+    while (std::getline(redirected, output)) {
+        compared.push_back(output);
+    }
+    EXPECT_EQ(compared, code.second);
+}
+
+TEST(InterpreterSuite, simpleIfElse) {
+    std::pair<std::string, std::vector<std::string>> code = {"float cond(){if(4>5){return 2.5;} else {return 7.5;} print(100);} int main(){print(cond());}",{"7.5"}};
+    std::stringstream redirected;
+    auto prev = std::cout.rdbuf(redirected.rdbuf());
+
+    std::stringstream ss;
+    ss << code.first;
+    SemanticAnalyzerVisitor semanticAnalyzerVisitor;
+    InterpreterVisitor interpreterVisitor;
+    Parser parser(ss);
+    std::unique_ptr<Nodes::Program> program = parser.parseProgram();
+    program->accept(semanticAnalyzerVisitor);
+    program->accept(interpreterVisitor);
+
+    std::string output;
+    std::vector<std::string> compared;
+
+    while (std::getline(redirected, output)) {
+        compared.push_back(output);
+    }
+    EXPECT_EQ(compared, code.second);
+}
+
+TEST(InterpreterSuite, simpleModifyingGlobalVariables) {
+    std::pair<std::string, std::vector<std::string>> code = {"int a; int b; int c; int main(){a=4;b=100;c=50; print(a,b,c);}",{"4","100","50"}};
+    std::stringstream redirected;
+    auto prev = std::cout.rdbuf(redirected.rdbuf());
+
+    std::stringstream ss;
+    ss << code.first;
+    SemanticAnalyzerVisitor semanticAnalyzerVisitor;
+    InterpreterVisitor interpreterVisitor;
+    Parser parser(ss);
+    std::unique_ptr<Nodes::Program> program = parser.parseProgram();
+    program->accept(semanticAnalyzerVisitor);
+    program->accept(interpreterVisitor);
+
+    std::string output;
+    std::vector<std::string> compared;
+
+    while (std::getline(redirected, output)) {
+        compared.push_back(output);
+    }
+    EXPECT_EQ(compared, code.second);
+}
+
+TEST(InterpreterSuite, simpleString) {
+    std::pair<std::string, std::vector<std::string>> code = {"int main(){ string a = \"Hello world!\"; print(a);}",{"Hello world!"}};
+    std::stringstream redirected;
+    auto prev = std::cout.rdbuf(redirected.rdbuf());
+
+    std::stringstream ss;
+    ss << code.first;
+    SemanticAnalyzerVisitor semanticAnalyzerVisitor;
+    InterpreterVisitor interpreterVisitor;
+    Parser parser(ss);
+    std::unique_ptr<Nodes::Program> program = parser.parseProgram();
+    program->accept(semanticAnalyzerVisitor);
+    program->accept(interpreterVisitor);
+
+    std::string output;
+    std::vector<std::string> compared;
+
+    while (std::getline(redirected, output)) {
+        compared.push_back(output);
+    }
+    EXPECT_EQ(compared, code.second);
+}
+
+TEST(InterpreterSuite, simpleStringConcatenation) {
+    std::pair<std::string, std::vector<std::string>> code = {"int main(){ string a = \"H\"+\"e\"+\"l\"+\"l\"+\"o\"; print(a);}",{"Hello"}};
+    std::stringstream redirected;
+    auto prev = std::cout.rdbuf(redirected.rdbuf());
+
+    std::stringstream ss;
+    ss << code.first;
+    SemanticAnalyzerVisitor semanticAnalyzerVisitor;
+    InterpreterVisitor interpreterVisitor;
+    Parser parser(ss);
+    std::unique_ptr<Nodes::Program> program = parser.parseProgram();
+    program->accept(semanticAnalyzerVisitor);
+    program->accept(interpreterVisitor);
+
+    std::string output;
+    std::vector<std::string> compared;
+
+    while (std::getline(redirected, output)) {
+        compared.push_back(output);
+    }
+    EXPECT_EQ(compared, code.second);
 }

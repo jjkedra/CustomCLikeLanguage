@@ -1,4 +1,6 @@
 <map id="Nodes::Declaration::acceptDefault" name="Nodes::Declaration::acceptDefault">
-<area shape="rect" id="node1" title=" " alt="" coords="269,5,416,47"/>
-<area shape="rect" id="node2" href="$classparserVisitor.html#a3706498b1c2a90c885c9fe42eeb6e3f7" title=" " alt="" coords="5,13,221,39"/>
+<area shape="rect" id="node1" title=" " alt="" coords="269,64,416,105"/>
+<area shape="rect" id="node2" href="$classSemanticAnalyzerVisitor.html#aee01a5ab03b2d25bfa8317161b1bf901" title=" " alt="" coords="22,5,205,47"/>
+<area shape="rect" id="node3" href="$classparserVisitor.html#a3706498b1c2a90c885c9fe42eeb6e3f7" title=" " alt="" coords="5,71,221,98"/>
+<area shape="rect" id="node4" href="$classInterpreterVisitor.html#ada645435831ed350ee259b681f227919" title=" " alt="" coords="47,123,180,164"/>
 </map>

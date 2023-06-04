@@ -1,4 +1,5 @@
 <map id="Nodes::Number::getValue" name="Nodes::Number::getValue">
-<area shape="rect" id="node1" title=" " alt="" coords="247,5,435,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="247,35,435,61"/>
 <area shape="rect" id="node2" href="$classparserVisitor.html#a4e0aa3f77933545797ab891e31684ab4" title=" " alt="" coords="5,5,199,32"/>
+<area shape="rect" id="node3" href="$classInterpreterVisitor.html#a714968e7e89b4a0b81153c7823eb5f4b" title=" " alt="" coords="35,57,169,98"/>
 </map>

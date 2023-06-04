@@ -1,4 +1,6 @@
 <map id="Nodes::WhileStatement::acceptCondition" name="Nodes::WhileStatement::acceptCondition">
-<area shape="rect" id="node1" title=" " alt="" coords="232,5,408,47"/>
-<area shape="rect" id="node2" href="$classparserVisitor.html#aff99a2e5fe068e9210a219ddb2651f85" title=" " alt="" coords="5,5,184,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="236,71,412,112"/>
+<area shape="rect" id="node2" href="$classSemanticAnalyzerVisitor.html#a31ea8e809841f678882dab56339f2fdd" title=" " alt="" coords="5,5,188,47"/>
+<area shape="rect" id="node3" href="$classparserVisitor.html#aff99a2e5fe068e9210a219ddb2651f85" title=" " alt="" coords="7,71,186,112"/>
+<area shape="rect" id="node4" href="$classInterpreterVisitor.html#ac631d6baed69e65bcca8c3b85e76dbbe" title=" " alt="" coords="15,136,178,177"/>
 </map>

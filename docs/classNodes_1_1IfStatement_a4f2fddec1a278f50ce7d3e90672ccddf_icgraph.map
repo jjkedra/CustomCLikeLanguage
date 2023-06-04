@@ -1,4 +1,6 @@
 <map id="Nodes::IfStatement::acceptCondition" name="Nodes::IfStatement::acceptCondition">
-<area shape="rect" id="node1" title=" " alt="" coords="272,5,420,47"/>
-<area shape="rect" id="node2" href="$classparserVisitor.html#a2ec0ceeef49490f73b84a73548a4d011" title=" " alt="" coords="5,13,224,39"/>
+<area shape="rect" id="node1" title=" " alt="" coords="272,64,420,105"/>
+<area shape="rect" id="node2" href="$classSemanticAnalyzerVisitor.html#a7ca4a59d4756dff4b82c530b575416be" title=" " alt="" coords="23,5,206,47"/>
+<area shape="rect" id="node3" href="$classparserVisitor.html#a2ec0ceeef49490f73b84a73548a4d011" title=" " alt="" coords="5,71,224,98"/>
+<area shape="rect" id="node4" href="$classInterpreterVisitor.html#a9a06e0bf737d0762aee4ef4b6c661f8e" title=" " alt="" coords="47,123,182,164"/>
 </map>

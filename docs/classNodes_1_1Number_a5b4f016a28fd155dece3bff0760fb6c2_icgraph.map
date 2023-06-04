@@ -1,4 +1,6 @@
 <map id="Nodes::Number::getType" name="Nodes::Number::getType">
-<area shape="rect" id="node1" title=" " alt="" coords="247,5,429,32"/>
-<area shape="rect" id="node2" href="$classparserVisitor.html#a4e0aa3f77933545797ab891e31684ab4" title=" " alt="" coords="5,5,199,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="247,71,429,98"/>
+<area shape="rect" id="node2" href="$classSemanticAnalyzerVisitor.html#a31ab2c0d7e9eb816093387ae060419fb" title=" " alt="" coords="11,5,193,47"/>
+<area shape="rect" id="node3" href="$classparserVisitor.html#a4e0aa3f77933545797ab891e31684ab4" title=" " alt="" coords="5,71,199,98"/>
+<area shape="rect" id="node4" href="$classInterpreterVisitor.html#a714968e7e89b4a0b81153c7823eb5f4b" title=" " alt="" coords="35,123,169,164"/>
 </map>

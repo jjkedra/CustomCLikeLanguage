@@ -22,7 +22,7 @@
 class LangException : public std::runtime_error
 {
 public:
-    explicit LangException(std::string errorMsg, Position pos, std::string fun = "", unsigned int line = 0) : std::runtime_error(what2(std::move(errorMsg), pos, fun, line, true))
+    explicit LangException(std::string errorMsg, Position pos = {}, std::string fun = "", unsigned int line = 0) : std::runtime_error(what2(std::move(errorMsg), pos, fun, line, true))
     {
         position_ = pos;
         positional_ = true;
@@ -31,7 +31,7 @@ public:
     }
     explicit LangException(const std::string &errorMsg) : std::runtime_error(what2(std::move(errorMsg))) {}
 
-    std::string what2(std::string errorMsg, Position position_ = {}, std::string fun = "", unsigned int lane=0, bool positional_ = {}) const
+    std::string what2(std::string errorMsg, Position position_ = {}, std::string fun = "", unsigned int lane = 0, bool positional_ = false) const
     {
         if (positional_) {
             std::string error;

@@ -1,4 +1,6 @@
 <map id="Nodes::Program::getVariables" name="Nodes::Program::getVariables">
-<area shape="rect" id="node1" title=" " alt="" coords="249,5,464,32"/>
-<area shape="rect" id="node2" href="$classparserVisitor.html#a901ba3439b5d177d9c32d3c1f044e802" title=" " alt="" coords="5,5,201,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="249,78,464,105"/>
+<area shape="rect" id="node2" href="$classSemanticAnalyzerVisitor.html#a105b25ecbad45b4ecfa2478da49e94aa" title=" " alt="" coords="12,5,195,47"/>
+<area shape="rect" id="node3" href="$classInterpreterVisitor.html#aa38c7cadde29f2ba3ff26caa86bf4860" title=" " alt="" coords="37,71,170,112"/>
+<area shape="rect" id="node4" href="$classparserVisitor.html#a901ba3439b5d177d9c32d3c1f044e802" title=" " alt="" coords="5,137,201,163"/>
 </map>

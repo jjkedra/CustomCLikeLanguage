@@ -1,4 +1,6 @@
 <map id="Nodes::LocalVariableDeclaration::getIdentifier" name="Nodes::LocalVariableDeclaration::getIdentifier">
-<area shape="rect" id="node1" title=" " alt="" coords="228,5,461,47"/>
-<area shape="rect" id="node2" href="$classparserVisitor.html#a96830222dc0607ca33e96295fb95ab18" title=" " alt="" coords="5,5,180,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="273,71,507,112"/>
+<area shape="rect" id="node2" href="$classSemanticAnalyzerVisitor.html#a38e25fede672d51054de427dd820c548" title=" " alt="" coords="5,5,225,47"/>
+<area shape="rect" id="node3" href="$classparserVisitor.html#a96830222dc0607ca33e96295fb95ab18" title=" " alt="" coords="28,71,203,112"/>
+<area shape="rect" id="node4" href="$classInterpreterVisitor.html#a6ecbb9a1fe533fd8517e415ac4832c77" title=" " alt="" coords="5,136,225,177"/>
 </map>
